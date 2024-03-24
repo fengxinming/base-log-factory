@@ -1,7 +1,7 @@
 {
-  "name": "log-base",
+  "name": "base-log-factory",
   "version": "1.0.0",
-  "description": "Pluggable logging utility.",
+  "description": "Pluggable logging factory.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengxinming/log-base.git"
+    "url": "git+https://github.com/fengxinming/base-log-factory.git"
   },
   "bugs": {
-    "url": "https://github.com/fengxinming/log-base/issues"
+    "url": "https://github.com/fengxinming/base-log-factory/issues"
   },
-  "homepage": "https://github.com/fengxinming/log-base#readme",
+  "homepage": "https://github.com/fengxinming/base-log-factory#readme",
   "dependencies": {
     "tslib": "^2.6.2"
   },
