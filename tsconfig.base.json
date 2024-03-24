@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "sourceMap": false,
-    "target": "es5",
-    "module": "esnext",
+    "target": "ES5",
+    "module": "ESNext",
     "moduleResolution": "node",
     "newLine": "LF",
     "strict": true,
@@ -18,7 +18,8 @@
     "removeComments": false,
     "jsx": "preserve",
     "lib": [
-      "esnext"
+      "ESNext",
+      "DOM"
     ]
   }
 }
