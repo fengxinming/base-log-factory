@@ -1,22 +1,22 @@
-# log-base
+# base-log-factory
 
-[![npm package](https://nodei.co/npm/log-base.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/log-base)
+[![npm package](https://nodei.co/npm/base-log-factory.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/base-log-factory)
 
 > Pluggable logging utility.
 
-[![NPM version](https://img.shields.io/npm/v/log-base.svg?style=flat)](https://npmjs.org/package/log-base)
-[![NPM Downloads](https://img.shields.io/npm/dm/log-base.svg?style=flat)](https://npmjs.org/package/log-base)
+[![NPM version](https://img.shields.io/npm/v/base-log-factory.svg?style=flat)](https://npmjs.org/package/base-log-factory)
+[![NPM Downloads](https://img.shields.io/npm/dm/base-log-factory.svg?style=flat)](https://npmjs.org/package/base-log-factory)
 
 ## Installation
 
 ```bash
-npm install --save log-base
+npm install --save base-log-factory
 ```
 
 ## Usage
 
 ```js
-import { createFactory } from 'log-base';
+import { createFactory } from 'base-log-factory';
 
 const factory = createFactory();
 
