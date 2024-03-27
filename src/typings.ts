@@ -24,7 +24,8 @@ export interface AppenderOptions {
 
 export interface ILogger {
   name: string;
-  level(l?: TLogLevel): TLogLevel | void;
+  level(l: TLogLevel): void;
+  level(): TLogLevel;
   trace(...args: any[]): void;
   debug(...args: any[]): void;
   info(...args: any[]): void;

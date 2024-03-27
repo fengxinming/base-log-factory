@@ -43,7 +43,9 @@ class Logger implements ILogger {
     this.level(this._level);
   }
 
-  level(l?: TLogLevel): TLogLevel | void {
+  level(l: TLogLevel): void;
+  level(): TLogLevel;
+  level(l?: TLogLevel) {
     if (!l) {
       return this._level;
     }

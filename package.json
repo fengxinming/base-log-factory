@@ -1,6 +1,6 @@
 {
   "name": "base-log-factory",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pluggable logging factory.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
