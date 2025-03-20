@@ -1,18 +1,8 @@
-import basicLogPrefix from 'src/_basicLogPrefix';
+import basicLogPrefix from 'src/_internal/basicLogPrefix';
 import { ILayout, ILogEvent } from '../typings';
+import pad from '../_internal/pad';
 
 export default class BasicLayout implements ILayout {
-  static pad(str: string, width: number, alignLeft: boolean = true): string {
-    const diff = width - str.length;
-
-    if (diff <= 0) {
-      return str;
-    }
-
-    const padding = ' '.repeat(diff);
-    return alignLeft ? str + padding : padding + str;
-  }
-
   static transform(
     message: any[],
     minWidth: number = 0,
@@ -36,7 +26,7 @@ export default class BasicLayout implements ILayout {
         msg = `${msg.substring(0, maxLength)}...`;
       }
 
-      msg = BasicLayout.pad(msg, minWidth, alignLeft);
+      msg = pad(msg, minWidth, alignLeft);
 
       return index === 0 ? msg : `${prev} ${msg}`;
     }, '');

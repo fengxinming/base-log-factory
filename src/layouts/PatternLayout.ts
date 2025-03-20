@@ -1,10 +1,11 @@
 import { ILayout, ILogEvent } from '../typings';
 import { format as dateFormat } from 'date-manip';
 import BasicLayout from './BasicLayout';
+import pad from '../_internal/pad';
 
 type TConverter = (...args: any[]) => string;
 
-const { pad, transform } = BasicLayout;
+const { transform } = BasicLayout;
 
 
 // 基础转换器实现
@@ -62,7 +63,7 @@ function mdcConverter(
 
   return (event: ILogEvent): string => {
     const value = event.context[key] || '';
-    return BasicLayout.pad(String(value), minWidth, alignLeft);
+    return pad(String(value), minWidth, alignLeft);
   };
 }
 

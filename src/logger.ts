@@ -8,6 +8,7 @@ export default class Logger implements ILogger {
   protected readonly appenders: IAppender[] = [];
   protected context: Record<string, any> = {};
   protected _level: Level = Level.INFO;
+
   constructor(
     readonly name: string,
     { level, appenders = [] }: ILogOptions = {},
@@ -19,18 +20,23 @@ export default class Logger implements ILogger {
       this.appenders = [...appenders];
     }
   }
+
   get level(): Level {
     return this._level;
   }
 
   set level(level: Level | TLevel) {
+    this._level = Logger.normalizeLevel(level);
+  }
+
+  static normalizeLevel(level: Level | TLevel): Level {
     if (typeof level === 'string') {
       level = Level[level.toUpperCase()];
       if (level == null) {
         level = Level.INFO;
       }
     }
-    this._level = level as Level;
+    return level as Level;
   }
 
   addContext(key, value) {

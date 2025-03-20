@@ -1,4 +1,4 @@
-import basicLogPrefix from 'src/_basicLogPrefix';
+import basicLogPrefix from 'src/_internal/basicLogPrefix';
 import { IAppender, ILayout, ILogEvent } from '../typings';
 
 /**

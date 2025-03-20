@@ -7,143 +7,217 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/lang-TypeScript-007ACC.svg)](https://www.typescriptlang.org/)
 
-> A flexible and efficient Node.js logging library supporting console output, file rolling records, custom formats, and log levels.
+> 🚀 A flexible and efficient Node.js logging library supporting console output, file rolling, custom formats, and log levels.
 
-## [中文](README_zh-CN.md) | English
+## 📅 [中文](README_zh-CN.md) | English
 
-## Features
+---
 
-- **Multi-level logging**: Supports TRACE/DEBUG/INFO/WARN/ERROR/FATAL/OFF seven levels
-- **Multiple Appenders**: Built-in console, file rolling (by size/date) appenders
-- **Customizable layouts**: Basic layout and pattern layout (similar to Log4j format)
-- **Context management**: Supports Mapped Diagnostic Context (MDC)
-- **High-performance async**: Non-blocking I/O with backpressure control
-- **Cluster support**: Built-in process ID and cluster sequence recording
+## 🌟 Core Features
 
-## Installation
+- **Multi-level logging**  
+  Supports `TRACE/DEBUG/INFO/WARN/ERROR/FATAL/OFF` with precise control over log granularity.
 
+- **Flexible Appender Configuration**  
+  Built-in `ConsoleAppender`, `FileAppender` (size-based rolling), `DateFileAppender` (date-based rolling), and custom Appender extensions.
+
+- **Rich Formatting Options**  
+  Provides `BasicLayout` and `PatternLayout` (similar to Log4j) with customizable placeholders.
+
+- **Context Management**  
+  Supports Mapped Diagnostic Context (MDC) for attaching request IDs, user information, etc.
+
+- **High-Performance & Cluster Support**  
+  Non-blocking I/O, backpressure control, and file locking for reliable logging in high-concurrency environments.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Installation
 ```bash
 npm install base-log-factory
 ```
 
-## Quick Start
-
-### Basic Usage
-
-`factory.ts`:
+### 2. Basic Usage
 ```typescript
+// factory.ts
 import { LogFactory, ConsoleAppender } from 'base-log-factory';
 
-export default new LogFactory();
-```
+export default new LogFactory({
+  appenders: [new ConsoleAppender()]
+});
 
-`main.ts`:
-```typescript
+// main.ts
 import logFactory from './factory';
 
 const logger = logFactory.getLogger('app');
-
-logger.info('Server started on port 3000');
+logger.info('Server started successfully');
 ```
 
-### Configuration Example
+### 3. Advanced Configuration Example
 ```typescript
-import { LogFactory, ConsoleAppender, FileAppender, BasicLayout } from 'base-log-factory';
+// Configure rolling files, custom formats, and context
+import { 
+  LogFactory, 
+  ConsoleAppender, 
+  FileAppender, 
+  DateFileAppender, 
+  PatternLayout 
+} from 'base-log-factory';
 
 const logFactory = new LogFactory({
-  level: 'DEBUG',
+  level: 'DEBUG', // Set global log level
   appenders: [
     new ConsoleAppender(),
     new FileAppender('./logs/app.log', {
-      layout: new BasicLayout(),
+      layout: new PatternLayout('[%d{YYYY-MM-DD HH:mm:ss}] [%p] %c - %m %x{userId}'),
       maxSize: 1024 * 1024, // 1MB
-      backups: 5
+      backups: 5,
+      compress: true // Enable GZIP compression
+    }),
+    new DateFileAppender('./logs/app.daily.log', {
+      pattern: 'YYYY-MM-DD',
+      backups: 7 // Keep 7 days of logs
     })
   ]
 });
 ```
 
-## Core Concepts
+---
 
-### Log Levels
-| Level   | Value | Description               |
-|---------|-------|---------------------------|
-| TRACE   | 6     | Detailed tracking logs    |
-| DEBUG   | 5     | Debugging information     |
-| INFO    | 4     | Normal operational info  |
-| WARN    | 3     | Warning events            |
-| ERROR   | 2     | Error events              |
-| FATAL   | 1     | Critical errors           |
-| OFF     | 0     | Disable all logging       |
+## 🛠 Core Concepts
 
-### Appenders
-| Type               | Description                          |
-|--------------------|--------------------------------------|
-| `ConsoleAppender`  | Output to console                    |
-| `FileAppender`     | Roll by size (e.g., app.log.1)       |
-| `DateFileAppender` | Roll by date (e.g., app.2023-08-01.log) |
+### 1. Log Levels (with color coding)
+| Level   | Value | Description               | Recommended Use Cases               |
+|---------|-------|---------------------------|-------------------------------------|
+| TRACE   | 6     | Detailed tracking logs     | Debugging code flow                 |
+| DEBUG   | 5     | Debugging information      | Development-stage debugging         |
+| **INFO** | 4     | Operational information    | Key business process milestones     |
+| **WARN** | 3     | Non-critical issues       | Resource warnings (e.g., low memory)|
+| **ERROR** | 2    | Error events               | Failed operations                  |
+| **FATAL** | 1    | Critical system failures  | System crashes                     |
+| OFF     | 0     | Disable all logging        | Disable logging                    |
 
-### Layouts
+### 2. Appender Comparison
+| Type               | Features                          | Use Cases                  |
+|--------------------|-----------------------------------|---------------------------|
+| `ConsoleAppender`  | Realtime console output           | Development debugging     |
+| `FileAppender`     | Size-based rolling (e.g., app.log.1)| Production logging        |
+| `DateFileAppender` | Date-based rolling (e.g., app.2023-08-01.log)| Daily log archiving    |
+
+---
+
+## 🎁 Usage Examples
+
+### Example 1: Context-aware API Logging
 ```typescript
-// Custom format with PatternLayout
-new PatternLayout('[%d{YYYY-MM-DD HH:mm:ssZ}] %p %c - %m %x{user}')
-```
-
-Format specifiers:
-- `%d`: Date/time (with optional format)
-- `%p`: Log level
-- `%c`: Logger name
-- `%m`: Log message
-- `%x`: Context variables
-- `%t`: Thread information
-
-## Advanced Features
-
-### Context Management
-```typescript
-logger.addContext('user', '12345');
-logger.info('Processing user:'); // Automatically includes context
-```
-
-### File Rolling Configuration
-```typescript
-// Size-based rolling (keep 5 backups)
-new FileAppender('./logs/app.log', {
-  maxSize: 1024 * 1024, // 1MB
-  backups: 5,
-  compress: true // Enable GZIP compression
-});
-
-// Date-based rolling (daily files)
-new DateFileAppender('./logs/app.log', {
-  pattern: 'YYYY-MM-DD',
-  backups: 7 // Keep 7 days of logs
-});
-```
-
-### Custom Appender
-```typescript
-class CustomAppender implements IAppender {
-  write(event: ILogEvent) {
-    // Implement custom logic
+// Attach user ID to request logs
+app.get('/api/data', (req, res) => {
+  const userId = req.user.id;
+  logger.addContext('userId', userId);
+  try {
+    // Business logic
+    logger.debug('Processing request');
+    res.send(data);
+  } catch (err) {
+    logger.error('Request failed', err);
+  } finally {
+    logger.removeContext('userId'); // Clean up context
   }
-  close() { /* Cleanup resources */ }
-}
+});
 ```
 
-## Performance Optimization
+### Example 2: Custom Log Format
+```typescript
+// Define format with request ID and timestamp
+const layout = new PatternLayout(
+  '[%d{YYYY-MM-DD HH:mm:ss.SSS}] [%p] %c - %m %x{requestId} %t'
+);
 
-- **Synchronization strategy**: Control fsync frequency with `syncThreshold` and `syncInterval`
-- **File locking**: Enable `useLock: true` for cluster write safety
-- **Backpressure handling**: Automatic stream write pressure management to prevent memory overflow
+// Apply to FileAppender
+new FileAppender('./logs/app.log', { layout });
+```
 
-## Contribution Guide
+### Example 3: Cluster Configuration
+```typescript
+// Use worker ID for log separation
+const cluster = require('cluster');
+const logFactory = new LogFactory({
+  appenders: [
+    new FileAppender(`./logs/app_${cluster.worker.id}.log`, {
+      layout: new BasicLayout(),
+      maxSize: 1024 * 1024 * 5 // 5MB
+    })
+  ]
+});
+```
 
-Contributions are welcome! Please ensure:
-1. Pass ESLint checks
-2. Include test cases
-3. Update relevant documentation
+### Example 4: Dynamic Level Adjustment
+```typescript
+// Change global log level at runtime
+logFactory.level = 'DEBUG'; // Enable DEBUG level
+logger.debug('Debug message now visible'); // Output enabled
 
-## License
+// Restore default level
+logFactory.level = Level.INFO;
+```
+
+### Example 5: Resource Cleanup on Process Exit
+```typescript
+// Ensure all logs are flushed before exit
+process.on('exit', async () => {
+  await logFactory.dispose(); // Wait for appenders to finalize
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', async (err) => {
+  logger.error('Process crashed', err);
+  await logFactory.dispose();
+  process.exit(1);
+});
+```
+
+---
+
+## ⚡ Performance Recommendations
+
+1. **Asynchronous Writes**  
+   Use asynchronous mode with `syncThreshold` for controlled synchronization:
+   ```typescript
+   new FileAppender('app.log', {
+     syncThreshold: 10 * 1024, // Sync every 10KB
+     syncInterval: 5000 // Sync every 5 seconds
+   });
+   ```
+
+2. **File Locking**  
+   Enable `useLock: true` in cluster environments:
+   ```typescript
+   new FileAppender('app.log', { useLock: true });
+   ```
+
+---
+
+## 📝 Contribution Guide
+
+1. **Development Setup**  
+   ```bash
+   npm install
+   ```
+
+2. **Testing**  
+   ```bash
+   npm test # Run unit tests
+   ```
+
+3. **Before Submitting PRs**  
+   - Ensure ESLint is configured (VSCode plugin recommended)
+   - Add test cases for new features
+   - Update documentation
+
+---
+
+## 📄 License
 
 [MIT License](LICENSE)

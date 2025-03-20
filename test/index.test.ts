@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import PatternLayout from '../src/layouts/PatternLayout';
 import { join, dirname } from 'node:path';
-import { ConsoleAppender, LogFactory } from '../src';
+import { ConsoleAppender, Level, LogFactory } from '../src';
 import FileAppender from '../src/appenders/FileAppender';
 import { fileURLToPath } from 'node:url';
 import { DateFileAppender } from 'src/appenders/DateFileAppender';
@@ -28,7 +28,7 @@ describe('测试日志级别打印', () => {
 
   describe('测试工厂方式创建日志对象', () => {
     const factory = new LogFactory({
-      level: 'INFO',
+      level: Level.INFO,
       appenders: [
         new ConsoleAppender()
       ]
@@ -52,11 +52,11 @@ describe('测试日志级别打印', () => {
     it('测试打印DEBUG日志', () => {
       logger.level = 'DEBUG';
 
-      logger.info('hello');
-      expect(mockLog.mock.calls[0][1]).toBe('hello');
+      logger.info('hello 1');
+      expect(mockLog.mock.calls[0][1]).toBe('hello 1');
 
-      logger.debug('world');
-      expect(mockLog.mock.calls[1][1]).toBe('world');
+      logger.debug('world 1');
+      expect(mockLog.mock.calls[1][1]).toBe('world 1');
 
       logger.trace('end');
       expect(mockLog.mock.calls[2]).toBe(void 0);
@@ -64,10 +64,20 @@ describe('测试日志级别打印', () => {
       logger.error('error');
       expect(mockLog.mock.calls.length).toBe(3);
     });
+
+    it('测试修改日志级别', () => {
+      logger.level = Level.ERROR;
+      logger.info('hello 2');
+      expect(mockLog.mock.calls[0]).toBe(void 0);
+
+      factory.level = Level.DEBUG;
+      logger.debug('world 2');
+      expect(mockLog.mock.calls[0][1]).toBe('world 2');
+    });
   });
 
   describe('测试 PatternLayout', () => {
-    const layout = new PatternLayout('[%p] %m');
+    const layout = new PatternLayout('[%p] %m %x{user}');
     const factory = new LogFactory({
       level: 'INFO',
       appenders: [
@@ -85,7 +95,17 @@ describe('测试日志级别打印', () => {
 
     it('测试打印INFO日志', () => {
       logger.info('hello');
-      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello');
+      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello ');
+    });
+
+    it('测试MDC输出', () => {
+      logger.addContext('user', 'zhangsan');
+      logger.info('hello');
+      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello zhangsan');
+
+      logger.removeContext('user');
+      logger.info('world');
+      expect(mockLog.mock.calls[1][0]).toBe('[INFO] world ');
     });
   });
 });

@@ -53,19 +53,6 @@ export interface ILogEvent {
   timestamp: Date;
   loggerName: string;
   context: Record<string, any>;
-
-  nano?: bigint;
-  clusterMeta?: IClusterMeta;
-  sequence?: number;
-}
-
-/**
- * 集群元数据接口
- */
-export interface IClusterMeta {
-  instanceId: string;
-  startTime: bigint;
-  sequence: number;
 }
 
 /**
