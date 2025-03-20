@@ -1,126 +1,105 @@
-import { createAppender } from './appender';
-import { ILogger, LoggerOptions, IAppender, IFactory, TLogLevel } from './typings';
+import Level from './Level';
+import { IAppender, ILogEvent, ILogger, ILogOptions, TLevel } from './typings';
 
-const levels = [
-  { level: 'OFF', value: 0 },
-  { level: 'FATAL', value: 1 },
-  { level: 'ERROR', value: 2 },
-  { level: 'WARN', value: 3 },
-  { level: 'INFO', value: 4 },
-  { level: 'DEBUG', value: 5 },
-  { level: 'TRACE', value: 6 },
-  { level: 'ALL', value: Number.MAX_VALUE }
-];
-
-function getLevelValue(level: TLogLevel): number {
-  let levelValue = 0;
-  for (let i = 0, len = levels.length; i < len; i++) {
-    const obj = levels[i];
-    if (obj.level === level) {
-      levelValue = obj.value;
-      break;
+/**
+ * 日志记录器
+ */
+export default class Logger implements ILogger {
+  protected readonly appenders: IAppender[] = [];
+  protected context: Record<string, any> = {};
+  protected _level: Level = Level.INFO;
+  constructor(
+    readonly name: string,
+    { level, appenders = [] }: ILogOptions = {},
+  ) {
+    if (level) {
+      this.level = Level.INFO;
+    }
+    if (appenders) {
+      this.appenders = [...appenders];
     }
   }
-  return levelValue;
-}
-
-class Logger implements ILogger {
-  name: string;
-  fatal!: (...args: any[]) => void;
-  error!: (...args: any[]) => void;
-  warn!: (...args: any[]) => void;
-  info!: (...args: any[]) => void;
-  debug!: (...args: any[]) => void;
-  trace!: (...args: any[]) => void;
-
-  private _level: TLogLevel;
-  private readonly _appender: IAppender | IAppender[];
-
-  constructor(name: string, { level, appender }: LoggerOptions = {}) {
-    this.name = name;
-    this._level = level || 'INFO';
-    this._appender = appender || createAppender();
-    this.level(this._level);
+  get level(): Level {
+    return this._level;
   }
 
-  level(l: TLogLevel): void;
-  level(): TLogLevel;
-  level(l?: TLogLevel) {
-    if (!l) {
-      return this._level;
-    }
-
-    let level = l.toUpperCase() as TLogLevel;
-    const levelValue = getLevelValue(level);
-    if (!levelValue) {
-      level = 'OFF';
-    }
-
-    const { _appender } = this;
-    levels.forEach(({ level: currentLevel, value }) => {
-      if (currentLevel === 'OFF' || currentLevel === 'ALL') {
-        return;
+  set level(level: Level | TLevel) {
+    if (typeof level === 'string') {
+      level = Level[level.toUpperCase()];
+      if (level == null) {
+        level = Level.INFO;
       }
-
-      const method = currentLevel.toLowerCase();
-      this[method] = value > levelValue
-        ? () => {}
-        : Array.isArray(_appender)
-          ? function (...args: any[]) {
-            _appender.forEach((appender) => {
-              const now = new Date();
-              const { name } = this;
-              appender.log(args, {
-                level: currentLevel,
-                method,
-                date: now,
-                name
-              });
-            });
-          }
-          : function (...args: any[]) {
-            _appender.log(args, {
-              level: currentLevel,
-              method,
-              date: new Date(),
-              name: this.name
-            });
-          };
-    });
-    this._level = level;
+    }
+    this._level = level as Level;
   }
-}
 
-export function createFactory(opts: LoggerOptions = {}): IFactory {
-  let loggers: Record<string, ILogger> = Object.create(null);
-  const defaultOpts: LoggerOptions = {
-    level: 'INFO',
-    appender: createAppender()
-  };
+  addContext(key, value) {
+    this.context[key] = value;
+  }
 
-  return {
-    getLogger(name: string): ILogger {
-      let logger = loggers[name];
-      if (!logger) {
-        logger = new Logger(name, Object.assign({}, defaultOpts, opts));
-        loggers[name] = logger;
-      }
-      return logger;
-    },
+  removeContext(key) {
+    delete this.context[key];
+  }
 
-    setLevel(level) {
-      const levelValue = getLevelValue(level);
-      if (!levelValue) {
-        level = 'OFF';
-      }
-      defaultOpts.level = level;
-      Object.keys(loggers).forEach((name) => {
-        loggers[name].level(level);
-      });
-    },
+  clearContext() {
+    this.context = {};
+  }
 
-    clear() {
-      loggers = Object.create(null);
+  dispose() {
+    return Promise.allSettled(this.appenders.map((appender) => {
+      return appender.close();
+    }));
+  }
+
+  trace(...args: any[]): void {
+    this.log(Level.TRACE, args);
+  }
+
+  debug(...args: any[]): void {
+    this.log(Level.DEBUG, args);
+  }
+
+  info(...args: any[]): void {
+    this.log(Level.INFO, args);
+  }
+
+  warn(...args: any[]): void {
+    this.log(Level.WARN, args);
+  }
+
+  error(...args: any[]): void {
+    this.log(Level.ERROR, args);
+  }
+
+  fatal(...args: any[]): void {
+    this.log(Level.FATAL, args);
+  }
+
+  protected createEvent(level: Level, message: any[]): ILogEvent {
+    return {
+      level,
+      levelName: Level[level] as TLevel,
+      message,
+      timestamp: new Date(),
+      loggerName: this.name,
+      context: this.context
+    };
+  }
+
+  protected log(level: Level, message: any[]): void {
+    if (level > this._level) {
+      return;
     }
-  };
+
+    const event: ILogEvent = this.createEvent(level, message);
+
+    for (const appender of this.appenders) {
+      try {
+        appender.write(event);
+      }
+      catch (err: any) {
+        console.error('Appender error:', err);
+      }
+    }
+  }
 }
