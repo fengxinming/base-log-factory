@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: base-log-factory
-  text: 一个灵活简单的 JS 日志库，通过配置不同的 Appender 可以在不同的环境记录或收集日志内容
-  tagline: 适用于浏览器、NodeJS等环境
+  text: 一个灵活简单的 JS 日志库
+  tagline: 通过配置不同的 Appender 可以在不同的环境记录或收集日志内容。适用于浏览器、NodeJS等环境。
   actions:
     - theme: brand
       text: 指南
@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: 参考
       link: /zh/reference/use-appenders
+  image:
+    src: /logo.png
+    alt: base-log-factory
 
 features:
   - title: 多级别日志
