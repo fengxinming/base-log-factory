@@ -36,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/fengxinming/base-log-factory/issues"
   },
-  "homepage": "https://github.com/fengxinming/base-log-factory#readme",
+  "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
     "date-manip": "^2.0.4",
     "rolling-write-stream": "^1.0.1"
