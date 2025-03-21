@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
 import typescript from '@rollup/plugin-typescript';
-import external from 'vite-plugin-external';
 import { globSync } from 'tinyglobby';
+import { defineConfig } from 'vite';
+import external from 'vite-plugin-external';
 
 import pkg from './package.json';
 
