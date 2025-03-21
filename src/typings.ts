@@ -1,14 +1,15 @@
 import { DateRollingOptions, RollingOptions } from 'rolling-write-stream';
+
 import Level from './Level';
 import Logger from './Logger';
 
 /**
- * 日志级别字符串
+ * Log level name (日志级别名称)
  */
 export type TLevel = 'TRACE' | 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'FATAL' | 'OFF';
 
 /**
- * 日志工厂配置
+ * Log factory configuration (日志工厂配置)
  */
 export interface IConfig {
   level?: Level | TLevel;
@@ -17,7 +18,7 @@ export interface IConfig {
 }
 
 /**
- * 日志工厂
+ * Logger interface (日志接口)
  */
 export interface ILogger {
   name: string;
@@ -36,7 +37,7 @@ export interface ILogger {
 }
 
 /**
- * 日志配置
+ * Logger options (日志选项)
  */
 export interface ILogOptions {
   level?: Level | TLevel;
@@ -44,7 +45,7 @@ export interface ILogOptions {
 }
 
 /**
- * 日志事件接口
+ * Log event (日志事件)
  */
 export interface ILogEvent {
   level: Level;
@@ -56,7 +57,7 @@ export interface ILogEvent {
 }
 
 /**
- * Appender 接口
+ * Appender interface (日志记录器接口)
  */
 export interface IAppender {
   write(event: ILogEvent): void;
@@ -64,25 +65,30 @@ export interface IAppender {
 }
 
 /**
- * 布局格式化接口
+ * Layout interface (日志布局接口)
  */
 export interface ILayout {
   format(event: ILogEvent): string;
 }
 
 /**
- * Appender 基类配置
+ * Base appender options (日志记录器基础选项)
  */
 export type BaseAppenderOptions = {
   layout?: ILayout;
 } & Partial<RollingOptions>;
 
 /**
- * Appender 数量滚动配置
+ * File appender options (日志记录器文件选项)
  */
 export type FileAppenderOptions = BaseAppenderOptions;
 
 /**
- * Appender 时间滚动配置
+ * Date file appender options (日志记录器日期文件选项)
  */
 export type DateFileAppenderOptions = BaseAppenderOptions & Partial<DateRollingOptions>;
+
+/**
+ * Pattern layout converter (日志记录器模式转换器)
+ */
+export type TPatternLayoutConverter = (...args: any[]) => string;

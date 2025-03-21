@@ -1,12 +1,8 @@
-import { ILayout, ILogEvent } from '../typings';
 import { format as dateFormat } from 'date-manip';
-import BasicLayout from './BasicLayout';
+import transformMessage from 'src/_internal/transformMessage';
+
 import pad from '../_internal/pad';
-
-type TConverter = (...args: any[]) => string;
-
-const { transform } = BasicLayout;
-
+import { ILayout, ILogEvent, TPatternLayoutConverter } from '../typings';
 
 // 基础转换器实现
 function literalConverter(text: string): () => string {
@@ -44,7 +40,12 @@ function messageConverter(
   alignLeft: boolean = true
 ) {
   return (event: ILogEvent) => {
-    return transform(event.message, minWidth, maxLength, alignLeft);
+    return transformMessage(event.message, (msg: string) => {
+      if (maxLength > 0 && msg.length > maxLength) {
+        msg = `${msg.substring(0, maxLength)}...`;
+      }
+      return pad(msg, minWidth, alignLeft);
+    });
   };
 }
 
@@ -73,7 +74,7 @@ function createConverter(
   minWidth: number,
   maxLength: number,
   format?: string
-): TConverter {
+): TPatternLayoutConverter {
   switch (specifier.toLowerCase()) {
     case '%':
       return literalConverter('%');
@@ -102,14 +103,19 @@ function createConverter(
 }
 
 /**
- * 模式布局
+ * Pattern layout for logging messages (根据指定模版格式化日志内容)
  */
 export default class PatternLayout implements ILayout {
   private readonly patternRegex = /%(-)?(\d+)?(?:\.(\d+))?([a-zA-Z%])(?:\{([^}]+)\})?/g;
-  private readonly converters: TConverter[];
+  private readonly converters: TPatternLayoutConverter[];
+
+  /**
+   * Constructor (构造函数)
+   * @param pattern Pattern string (模版字符串)
+   */
 
   constructor(pattern: string = '[%d{YYYY-MM-DD HH:mm:ss.SSSZ}] %p %c - %m') {
-    const converters: TConverter[] = [];
+    const converters: TPatternLayoutConverter[] = [];
     let lastIndex = 0;
 
     let match: RegExpExecArray | null;
@@ -145,11 +151,19 @@ export default class PatternLayout implements ILayout {
     this.converters = converters;
   }
 
-  use(fn: TConverter): this {
+  /**
+   * Add a converter (添加转换器)
+   * @param fn Converter function (转换器函数)
+   */
+  use(fn: TPatternLayoutConverter): this {
     this.converters.push(fn);
     return this;
   }
 
+  /**
+   * Format a log event (格式化日志事件)
+   * @param event Log event (日志事件)
+   */
   format(event: ILogEvent): string {
     return this.converters
       .map((converter) => converter(event))

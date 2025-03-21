@@ -3,7 +3,7 @@ import Logger from './Logger';
 import { IAppender, IConfig, ILogger, TLevel } from './typings';
 
 /**
- * 日志管理器
+ * Log Factory (日志工厂)
  */
 export default class LogFactory {
   private readonly loggers = new Map<string, ILogger>();
@@ -11,14 +11,25 @@ export default class LogFactory {
   private defaultLevel: Level = Level.INFO;
   private appenders: IAppender[] = [];
 
+  /**
+   * Constructor (构造函数)
+   * @param config Configuration options (配置选项)
+   */
   constructor(config?: IConfig) {
     this.configure(config);
   }
 
+  /**
+   * Get or set the default log level (获取或设置默认日志级别)
+   */
   get level(): Level {
     return this.defaultLevel;
   }
 
+  /**
+   * Set the default log level (设置默认日志级别)
+   * @param level Log level (日志级别)
+   */
   set level(level: Level | TLevel) {
     level = Logger.normalizeLevel(level);
     this.defaultLevel = level;
@@ -27,6 +38,10 @@ export default class LogFactory {
     });
   }
 
+  /**
+   * Configure the log factory (配置日志工厂)
+   * @param param Configuration options (配置选项)
+   */
   configure({
     LoggerClass,
     level,
@@ -43,6 +58,10 @@ export default class LogFactory {
     }
   }
 
+  /**
+   * Get a logger instance (获取日志实例)
+   * @param name Logger name (日志名称)
+   */
   getLogger(name: string): ILogger {
     let logger = this.loggers.get(name);
     if (!logger) {
@@ -56,6 +75,10 @@ export default class LogFactory {
     return logger;
   }
 
+  /**
+   * Clear the logger cache (清除日志缓存)
+   * @param name Logger name (日志名称)
+   */
   clear(name?: string): void {
     if (name) {
       this.loggers.delete(name);
@@ -65,6 +88,9 @@ export default class LogFactory {
     }
   }
 
+  /**
+   * Dispose the log factory (销毁日志工厂)
+   */
   dispose(): Promise<any[]> {
     const promises: Array<Promise<any>> = [];
     this.loggers.forEach((logger) => {

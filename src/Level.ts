@@ -1,5 +1,5 @@
 /**
- * 日志级别枚举
+ * Log levels for logging (日志级别枚举)
  */
 enum Level {
   TRACE = 6,

@@ -1,9 +1,17 @@
 import { DateFileStream } from 'rolling-write-stream';
-import BaseFileAppender from './BaseFileAppender';
-import { DateFileAppenderOptions } from '../typings';
 
-// 时间滚动实现
-export class DateFileAppender extends BaseFileAppender {
+import { DateFileAppenderOptions } from '../typings';
+import BaseFileAppender from './BaseFileAppender';
+
+/**
+ * Date File Appender (日期文件记录器)
+ */
+export default class DateFileAppender extends BaseFileAppender {
+  /**
+   * Constructor (构造函数)
+   * @param filePath File path (文件路径)
+   * @param options Options (选项)
+   */
   constructor(
     filePath: string,
     protected readonly options: DateFileAppenderOptions
@@ -11,6 +19,11 @@ export class DateFileAppender extends BaseFileAppender {
     super(filePath, options);
   }
 
+  /**
+   * Get stream (获取流)
+   * @param filePath File path (文件路径)
+   * @param options Options (选项)
+   */
   protected getStream(filePath, options) {
     return new DateFileStream(filePath, options);
   }

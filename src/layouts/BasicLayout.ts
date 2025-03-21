@@ -1,38 +1,30 @@
-import basicLogPrefix from 'src/_internal/basicLogPrefix';
+import transformMessage from 'src/_internal/transformMessage';
+
+import basicLogPrefix from '../_internal/basicLogPrefix';
 import { ILayout, ILogEvent } from '../typings';
-import pad from '../_internal/pad';
 
+function returnValue(value: string): string {
+  return value;
+}
+
+/**
+ * Basic layout for logging messages (基础的日志布局)
+ */
 export default class BasicLayout implements ILayout {
-  static transform(
-    message: any[],
-    minWidth: number = 0,
-    maxLength: number = 0,
-    alignLeft: boolean = true
-  ): string {
-    return message.reduce((prev: string, curr, index) => {
-      let msg: string;
 
-      if (curr instanceof Error) {
-        msg = curr.stack || curr.message;
-      }
-      else if (typeof curr === 'object') {
-        msg = JSON.stringify(curr);
-      }
-      else {
-        msg = String(curr);
-      }
-
-      if (maxLength > 0 && msg.length > maxLength) {
-        msg = `${msg.substring(0, maxLength)}...`;
-      }
-
-      msg = pad(msg, minWidth, alignLeft);
-
-      return index === 0 ? msg : `${prev} ${msg}`;
-    }, '');
+  /**
+   * Transform the message (转换消息)
+   * @param message Message (消息)
+   */
+  static transform(message: any[]) {
+    return transformMessage(message, returnValue);
   }
 
+  /**
+   * Format the log event (格式化日志事件)
+   * @param event Log event (日志事件)
+   */
   format(event: ILogEvent): string {
-    return basicLogPrefix(event) + BasicLayout.transform(event.message);
+    return `${basicLogPrefix(event)} ${BasicLayout.transform(event.message)}`;
   }
 }
