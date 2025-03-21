@@ -1,126 +1,178 @@
-import { createAppender } from './appender';
-import { ILogger, LoggerOptions, IAppender, IFactory, TLogLevel } from './typings';
+import Level from './Level';
+import { IAppender, ILogEvent, ILogger, ILogOptions, TLevel } from './typings';
 
-const levels = [
-  { level: 'OFF', value: 0 },
-  { level: 'FATAL', value: 1 },
-  { level: 'ERROR', value: 2 },
-  { level: 'WARN', value: 3 },
-  { level: 'INFO', value: 4 },
-  { level: 'DEBUG', value: 5 },
-  { level: 'TRACE', value: 6 },
-  { level: 'ALL', value: Number.MAX_VALUE }
-];
+/**
+ * Logger instance (日志实例)
+ */
+export default class Logger implements ILogger {
+  protected readonly appenders: IAppender[] = [];
+  protected context: Record<string, any> = {};
+  protected _level: Level = Level.INFO;
 
-function getLevelValue(level: TLogLevel): number {
-  let levelValue = 0;
-  for (let i = 0, len = levels.length; i < len; i++) {
-    const obj = levels[i];
-    if (obj.level === level) {
-      levelValue = obj.value;
-      break;
+  /**
+   * Create a logger instance (创建日志实例)
+   * @param name Logger name (日志名称)
+   * @param options Logging options (日志选项)
+   */
+  constructor(
+    readonly name: string,
+    { level, appenders = [] }: ILogOptions = {},
+  ) {
+    if (level) {
+      this.level = Level.INFO;
+    }
+    if (appenders) {
+      this.appenders = [...appenders];
     }
   }
-  return levelValue;
-}
 
-class Logger implements ILogger {
-  name: string;
-  fatal!: (...args: any[]) => void;
-  error!: (...args: any[]) => void;
-  warn!: (...args: any[]) => void;
-  info!: (...args: any[]) => void;
-  debug!: (...args: any[]) => void;
-  trace!: (...args: any[]) => void;
-
-  private _level: TLogLevel;
-  private readonly _appender: IAppender | IAppender[];
-
-  constructor(name: string, { level, appender }: LoggerOptions = {}) {
-    this.name = name;
-    this._level = level || 'INFO';
-    this._appender = appender || createAppender();
-    this.level(this._level);
+  /**
+   * Log level (日志级别)
+   */
+  get level(): Level {
+    return this._level;
   }
 
-  level(l: TLogLevel): void;
-  level(): TLogLevel;
-  level(l?: TLogLevel) {
-    if (!l) {
-      return this._level;
-    }
-
-    let level = l.toUpperCase() as TLogLevel;
-    const levelValue = getLevelValue(level);
-    if (!levelValue) {
-      level = 'OFF';
-    }
-
-    const { _appender } = this;
-    levels.forEach(({ level: currentLevel, value }) => {
-      if (currentLevel === 'OFF' || currentLevel === 'ALL') {
-        return;
-      }
-
-      const method = currentLevel.toLowerCase();
-      this[method] = value > levelValue
-        ? () => {}
-        : Array.isArray(_appender)
-          ? function (...args: any[]) {
-            _appender.forEach((appender) => {
-              const now = new Date();
-              const { name } = this;
-              appender.log(args, {
-                level: currentLevel,
-                method,
-                date: now,
-                name
-              });
-            });
-          }
-          : function (...args: any[]) {
-            _appender.log(args, {
-              level: currentLevel,
-              method,
-              date: new Date(),
-              name: this.name
-            });
-          };
-    });
-    this._level = level;
+  /**
+   * Set log level (设置日志级别)
+   * @param level Log level (日志级别)
+   */
+  set level(level: Level | TLevel) {
+    this._level = Logger.normalizeLevel(level);
   }
-}
 
-export function createFactory(opts: LoggerOptions = {}): IFactory {
-  let loggers: Record<string, ILogger> = Object.create(null);
-  const defaultOpts: LoggerOptions = {
-    level: 'INFO',
-    appender: createAppender()
-  };
-
-  return {
-    getLogger(name: string): ILogger {
-      let logger = loggers[name];
-      if (!logger) {
-        logger = new Logger(name, Object.assign({}, defaultOpts, opts));
-        loggers[name] = logger;
+  /**
+   * Normalize log level (归一化日志级别)
+   * @param level Log level (日志级别)
+   * @returns Normalized log level (归一化后的日志级别)
+   */
+  static normalizeLevel(level: Level | TLevel): Level {
+    if (typeof level === 'string') {
+      level = Level[level.toUpperCase()];
+      if (level == null) {
+        level = Level.INFO;
       }
-      return logger;
-    },
-
-    setLevel(level) {
-      const levelValue = getLevelValue(level);
-      if (!levelValue) {
-        level = 'OFF';
-      }
-      defaultOpts.level = level;
-      Object.keys(loggers).forEach((name) => {
-        loggers[name].level(level);
-      });
-    },
-
-    clear() {
-      loggers = Object.create(null);
     }
-  };
+    return level as Level;
+  }
+
+  /**
+   * Add context (添加上下文)
+   * @param key Context key (上下文键)
+   * @param value Context value (上下文值)
+   */
+  addContext(key, value) {
+    this.context[key] = value;
+  }
+
+  /**
+   * Remove context (移除上下文)
+   * @param key Context key (上下文键)
+   */
+  removeContext(key) {
+    delete this.context[key];
+  }
+
+  /**
+   * Clear context (清除上下文)
+   */
+  clearContext() {
+    this.context = {};
+  }
+
+  /**
+   * Dispose all appenders (关闭所有appenders)
+   */
+  dispose() {
+    return Promise.allSettled(this.appenders.map((appender) => {
+      return appender.close();
+    }));
+  }
+
+  /**
+   * Log a message of level TRACE (记录TRACE级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  trace(...args: any[]): void {
+    this.log(Level.TRACE, args);
+  }
+
+  /**
+   * Log a message of level DEBUG (记录DEBUG级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  debug(...args: any[]): void {
+    this.log(Level.DEBUG, args);
+  }
+
+  /**
+   * Log a message of level INFO (记录INFO级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  info(...args: any[]): void {
+    this.log(Level.INFO, args);
+  }
+
+  /**
+   * Log a message of level WARN (记录WARN级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  warn(...args: any[]): void {
+    this.log(Level.WARN, args);
+  }
+
+  /**
+   * Log a message of level ERROR (记录ERROR级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  error(...args: any[]): void {
+    this.log(Level.ERROR, args);
+  }
+
+  /**
+   * Log a message of level FATAL (记录FATAL级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  fatal(...args: any[]): void {
+    this.log(Level.FATAL, args);
+  }
+
+  /**
+   * Create a log event (创建日志事件)
+   * @param level Log level (日志级别)
+   * @param message Message (消息)
+   * @returns Log event (日志事件)
+   */
+  protected createEvent(level: Level, message: any[]): ILogEvent {
+    return {
+      level,
+      levelName: Level[level] as TLevel,
+      message,
+      timestamp: new Date(),
+      loggerName: this.name,
+      context: this.context
+    };
+  }
+
+  /**
+   * Log a message (记录日志)
+   * @param level Log level (日志级别)
+   * @param message Content (内容)
+   */
+  protected log(level: Level, message: any[]): void {
+    if (level > this._level) {
+      return;
+    }
+
+    const event: ILogEvent = this.createEvent(level, message);
+
+    for (const appender of this.appenders) {
+      try {
+        appender.write(event);
+      }
+      catch (err: any) {
+        console.error('Appender error:', err);
+      }
+    }
+  }
 }

@@ -1,4 +1,5 @@
-export * from './appender';
-export * from './format';
-export * from './logger';
+export { default as ConsoleAppender } from './appenders/ConsoleAppender';
+export { default as Level } from './Level';
+export { default as LogFactory } from './LogFactory';
+export { default as Logger } from './Logger';
 export * from './typings';

@@ -1,10 +1,19 @@
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createFactory } from '../src/logger';
 
-const factory = createFactory();
+import { ConsoleAppender, Level, LogFactory } from '../src';
+import DateFileAppender from '../src/appenders/DateFileAppender';
+import FileAppender from '../src/appenders/FileAppender';
+import PatternLayout from '../src/layouts/PatternLayout';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 describe('测试日志级别打印', () => {
-  const logger = factory.getLogger('name');
-
+  const logPath =  join(__dirname, '..', 'logs', 'test.log');
+  const logPath2 =  join(__dirname, '..', 'logs', 'test2.log');
   const { log } = console;
   let mockLog;
 
@@ -19,33 +28,86 @@ describe('测试日志级别打印', () => {
     console.log = log;
   });
 
-  it('测试打印INFO日志', () => {
-    logger.info('hello');
-    expect(mockLog.mock.calls[0][1]).toBe('hello');
+  describe('测试工厂方式创建日志对象', () => {
+    const factory = new LogFactory({
+      level: Level.INFO,
+      appenders: [
+        new ConsoleAppender()
+      ]
+    });
+    const logger = factory.getLogger('name');
 
-    logger.error('world');
-    expect(mockLog.mock.calls[1][1]).toBe('world');
+    it('测试打印INFO日志', () => {
+      logger.info('hello');
+      expect(mockLog.mock.calls[0][1]).toBe('hello');
 
-    logger.debug('debug');
-    expect(mockLog.mock.calls[2]).toBe(void 0);
+      logger.error('world');
+      expect(mockLog.mock.calls[1][1]).toBe('world');
 
-    logger.trace('trace');
-    expect(mockLog.mock.calls.length).toBe(2);
+      logger.debug('debug');
+      expect(mockLog.mock.calls[2]).toBe(void 0);
+
+      logger.trace('trace');
+      expect(mockLog.mock.calls.length).toBe(2);
+    });
+
+    it('测试打印DEBUG日志', () => {
+      logger.level = 'DEBUG';
+
+      logger.info('hello 1');
+      expect(mockLog.mock.calls[0][1]).toBe('hello 1');
+
+      logger.debug('world 1');
+      expect(mockLog.mock.calls[1][1]).toBe('world 1');
+
+      logger.trace('end');
+      expect(mockLog.mock.calls[2]).toBe(void 0);
+
+      logger.error('error');
+      expect(mockLog.mock.calls.length).toBe(3);
+    });
+
+    it('测试修改日志级别', () => {
+      logger.level = Level.ERROR;
+      logger.info('hello 2');
+      expect(mockLog.mock.calls[0]).toBe(void 0);
+
+      factory.level = Level.DEBUG;
+      logger.debug('world 2');
+      expect(mockLog.mock.calls[0][1]).toBe('world 2');
+    });
   });
 
-  it('测试打印DEBUG日志', () => {
-    logger.level('DEBUG');
+  describe('测试 PatternLayout', () => {
+    const layout = new PatternLayout('[%p] %m %x{user}');
+    const factory = new LogFactory({
+      level: 'INFO',
+      appenders: [
+        new ConsoleAppender(layout),
+        new FileAppender(logPath, { maxSize: 1024 }),
+        new DateFileAppender(logPath2, {
+          layout,
+          pattern: 'YYYY-MM-DD',
+          backups: 30,
+          maxSize: 1024
+        })
+      ]
+    });
+    const logger = factory.getLogger('name');
 
-    logger.info('hello');
-    expect(mockLog.mock.calls[0][1]).toBe('hello');
+    it('测试打印INFO日志', () => {
+      logger.info('hello');
+      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello ');
+    });
 
-    logger.debug('world');
-    expect(mockLog.mock.calls[1][1]).toBe('world');
+    it('测试MDC输出', () => {
+      logger.addContext('user', 'zhangsan');
+      logger.info('hello');
+      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello zhangsan');
 
-    logger.trace('end');
-    expect(mockLog.mock.calls[2]).toBe(void 0);
-
-    logger.error('error');
-    expect(mockLog.mock.calls.length).toBe(3);
+      logger.removeContext('user');
+      logger.info('world');
+      expect(mockLog.mock.calls[1][0]).toBe('[INFO] world ');
+    });
   });
 });
