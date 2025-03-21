@@ -1,6 +1,6 @@
 import transformMessage from 'src/_internal/transformMessage';
 
-import basicLogPrefix from '../_internal/basicLogPrefix';
+import basicLogPrefix from '../basicLogPrefix';
 import { ILayout, ILogEvent } from '../typings';
 
 function returnValue(value: string): string {

@@ -1,4 +1,4 @@
-import basicLogPrefix from '../_internal/basicLogPrefix';
+import basicLogPrefix from '../basicLogPrefix';
 import { IAppender, ILayout, ILogEvent } from '../typings';
 
 /**
@@ -9,7 +9,7 @@ export default class ConsoleAppender implements IAppender {
    * Constructor (构造函数)
    * @param layout Layout (布局)
    */
-  constructor(private readonly layout?: ILayout) {}
+  constructor(readonly layout?: ILayout) {}
 
   /**
    * Write log (写入日志)
