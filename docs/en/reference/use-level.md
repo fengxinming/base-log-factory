@@ -1,8 +1,7 @@
-# Dynamic Logging Level Adjustment
-
-## Adjusting Logging Levels in Request Handling Functions
+# Dynamically Modify Log Level
 
 Configure LogFactory `./factory.ts`
+
 ```typescript
 import { 
   Level,
@@ -17,26 +16,30 @@ const logFactory = new LogFactory({
 });
 ```
 
+## Dynamically Adjust Log Level for Individual Logger
+
 Get Logger `./main1.ts`
+
 ```typescript
 import { Level } from 'base-log-factory';
 import logFactory from './factory';
 
 const logger = logFactory.getLogger('app');
-// Dynamically adjust the logging level of a single logger instance
 logger.level = Level.DEBUG; // Set to DEBUG level
 
-logger.debug('Debug messages will now be displayed'); // Logging enabled
+logger.debug('Debug information will now be displayed'); // Output takes effect
 ```
 
+## Dynamically Adjust Global Log Level
+
 Get Logger `./main2.ts`
+
 ```typescript
 import { Level } from 'base-log-factory';
 import logFactory from './factory';
 
 const logger = logFactory.getLogger('app2');
-// Dynamically adjust global logging level
 logFactory.level = Level.ERROR; // Set to ERROR level
 
-logger.debug('Debug messages will not be displayed'); // Logging disabled
+logger.debug('Debug information will not be displayed'); // Output does not take effect
 ```

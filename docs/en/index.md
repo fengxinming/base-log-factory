@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: base-log-factory
-  text: A flexible and simple JS logging library that allows logging or collecting logs in different environments by configuring various Appenders
-  tagline: Suitable for browser, NodeJS and other environments
+  text: A flexible and simple JS logging library
+  tagline: Allows logging or collecting logs in different environments by configuring various Appenders. Suitable for browser, NodeJS and other environments.
   actions:
     - theme: brand
       text: Guide
@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: Reference
       link: /zh/reference/use-appenders
+  image:
+    src: /logo.png
+    alt: base-log-factory
 
 features:
   - title: Multi-level Logging

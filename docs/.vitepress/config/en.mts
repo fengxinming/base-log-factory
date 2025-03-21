@@ -39,7 +39,7 @@ export const en = defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fengxinming/date-manip.git' }
+      { icon: 'github', link: 'https://github.com/fengxinming/base-log-factory.git' }
     ]
   }
 })
