@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Guide
-      link: /zh/guide/what-is-this
+      link: /zh/guide/introduce
     - theme: alt
       text: Reference
       link: /zh/reference/use-appenders

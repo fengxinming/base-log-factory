@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 指南
-      link: /zh/guide/what-is-this
+      link: /zh/guide/introduce
     - theme: alt
       text: 参考
       link: /zh/reference/use-appenders

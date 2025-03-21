@@ -65,11 +65,11 @@ logger.info('Server started successfully');
 ### 1. Log Levels (with color coding)
 | Level   | Value | Description               | Recommended Use Cases               |
 |---------|-------|---------------------------|-------------------------------------|
-| TRACE   | 6     | Detailed tracking logs     | Debugging code flow                 |
-| DEBUG   | 5     | Debugging information      | Development-stage debugging         |
-| **INFO** | 4     | Operational information    | Key business process milestones     |
+| **TRACE** | 6    | Detailed tracking logs   | Debugging code flow                 |
+| **DEBUG** | 5    | Debugging information    | Development-stage debugging         |
+| **INFO** | 4     | Operational information   | Key business process milestones    |
 | **WARN** | 3     | Non-critical issues       | Resource warnings (e.g., low memory)|
-| **ERROR** | 2    | Error events               | Failed operations                  |
+| **ERROR** | 2    | Error events              | Failed operations                  |
 | **FATAL** | 1    | Critical system failures  | System crashes                     |
 | OFF     | 0     | Disable all logging        | Disable logging                    |
 

@@ -1,6 +1,6 @@
 {
   "name": "base-log-factory",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A flexible and simple JS logging library that allows logging or collecting logs in different environments by configuring various Appenders. Suitable for browser, NodeJS and other environments.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/fengxinming/base-log-factory/issues"
   },
-  "homepage": "https://github.com/fengxinming/base-log-factory#readme",
+  "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
     "date-manip": "^2.0.4",
     "rolling-write-stream": "^1.0.1"

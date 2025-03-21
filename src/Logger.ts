@@ -5,7 +5,7 @@ import { IAppender, ILogEvent, ILogger, ILogOptions, TLevel } from './typings';
  * Logger instance (日志实例)
  */
 export default class Logger implements ILogger {
-  protected readonly appenders: IAppender[] = [];
+  readonly appenders: IAppender[] = [];
   protected context: Record<string, any> = {};
   protected _level: Level = Level.INFO;
 

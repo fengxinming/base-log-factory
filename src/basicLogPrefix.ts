@@ -1,6 +1,6 @@
 import { format } from 'date-manip';
 
-import { ILogEvent } from '../typings';
+import { ILogEvent } from './typings';
 
 const DEFAULT_FORMATTER = 'YYYY-MM-DD HH:mm:ss.SSSZ';
 
