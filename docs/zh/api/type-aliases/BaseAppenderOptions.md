@@ -8,7 +8,7 @@
 
 > **BaseAppenderOptions** = `object` & `Partial`\<`RollingOptions`\>
 
-定义于: [typings.ts:77](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L77)
+定义于: [typings.ts:79](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L79)
 
 Base appender options (日志记录器基础选项)
 

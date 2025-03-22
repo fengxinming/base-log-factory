@@ -6,7 +6,7 @@
 
 # Interface: ILayout
 
-Defined in: [typings.ts:70](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L70)
+Defined in: [typings.ts:72](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L72)
 
 Layout interface (日志布局接口)
 
@@ -16,7 +16,7 @@ Layout interface (日志布局接口)
 
 > **format**(`event`): `string`
 
-Defined in: [typings.ts:71](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L71)
+Defined in: [typings.ts:73](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L73)
 
 #### Parameters
 

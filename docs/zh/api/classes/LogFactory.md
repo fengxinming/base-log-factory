@@ -6,7 +6,7 @@
 
 # 类: LogFactory
 
-定义于: [LogFactory.ts:8](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L8)
+定义于: [LogFactory.ts:9](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L9)
 
 Log Factory (日志工厂)
 
@@ -16,7 +16,7 @@ Log Factory (日志工厂)
 
 > **new LogFactory**(`config`?): `LogFactory`
 
-定义于: [LogFactory.ts:18](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L18)
+定义于: [LogFactory.ts:19](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L19)
 
 Constructor (构造函数)
 
@@ -40,7 +40,7 @@ Configuration options (配置选项)
 
 > **get** **level**(): [`Level`](../enumerations/Level.md)
 
-定义于: [LogFactory.ts:25](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L25)
+定义于: [LogFactory.ts:26](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L26)
 
 Get or set the default log level (获取或设置默认日志级别)
 
@@ -52,7 +52,7 @@ Get or set the default log level (获取或设置默认日志级别)
 
 > **set** **level**(`level`): `void`
 
-定义于: [LogFactory.ts:33](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L33)
+定义于: [LogFactory.ts:34](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L34)
 
 Set the default log level (设置默认日志级别)
 
@@ -74,7 +74,7 @@ Log level (日志级别)
 
 > **clear**(`name`?): `void`
 
-定义于: [LogFactory.ts:82](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L82)
+定义于: [LogFactory.ts:83](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L83)
 
 Clear the logger cache (清除日志缓存)
 
@@ -96,7 +96,7 @@ Logger name (日志名称)
 
 > **configure**(`param`): `void`
 
-定义于: [LogFactory.ts:45](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L45)
+定义于: [LogFactory.ts:46](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L46)
 
 Configure the log factory (配置日志工厂)
 
@@ -118,7 +118,7 @@ Configuration options (配置选项)
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-定义于: [LogFactory.ts:94](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L94)
+定义于: [LogFactory.ts:95](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L95)
 
 Dispose the log factory (销毁日志工厂)
 
@@ -132,7 +132,7 @@ Dispose the log factory (销毁日志工厂)
 
 > **getLogger**(`name`): [`ILogger`](../interfaces/ILogger.md)
 
-定义于: [LogFactory.ts:65](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/LogFactory.ts#L65)
+定义于: [LogFactory.ts:66](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/LogFactory.ts#L66)
 
 Get a logger instance (获取日志实例)
 

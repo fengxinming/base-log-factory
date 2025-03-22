@@ -7,6 +7,7 @@ import BaseFileAppender from './BaseFileAppender';
  * Date File Appender (日期文件记录器)
  */
 export default class DateFileAppender extends BaseFileAppender {
+  name = 'dateFile';
   /**
    * Constructor (构造函数)
    * @param filePath File path (文件路径)

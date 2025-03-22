@@ -6,7 +6,7 @@
 
 # Interface: ILogOptions
 
-Defined in: [typings.ts:42](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L42)
+Defined in: [typings.ts:43](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L43)
 
 Logger options (日志选项)
 
@@ -16,7 +16,7 @@ Logger options (日志选项)
 
 > `optional` **appenders**: [`IAppender`](IAppender.md)[]
 
-Defined in: [typings.ts:44](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L44)
+Defined in: [typings.ts:45](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L45)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: [typings.ts:44](https://github.com/fengxinming/log-base/blob/91b255b
 
 > `optional` **level**: [`TLevel`](../type-aliases/TLevel.md) \| [`Level`](../enumerations/Level.md)
 
-Defined in: [typings.ts:43](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L43)
+Defined in: [typings.ts:44](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L44)

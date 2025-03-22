@@ -8,7 +8,7 @@
 
 > **TPatternLayoutConverter** = (...`args`) => `string`
 
-定义于: [typings.ts:94](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L94)
+定义于: [typings.ts:96](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L96)
 
 Pattern layout converter (日志记录器模式转换器)
 

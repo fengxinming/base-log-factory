@@ -6,7 +6,7 @@
 
 # Class: Logger
 
-Defined in: Logger.ts:7
+Defined in: [Logger.ts:8](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L8)
 
 Logger instance (日志实例)
 
@@ -20,7 +20,7 @@ Logger instance (日志实例)
 
 > **new Logger**(`name`, `options`): `Logger`
 
-Defined in: Logger.ts:17
+Defined in: [Logger.ts:18](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L18)
 
 Create a logger instance (创建日志实例)
 
@@ -48,15 +48,19 @@ Logging options (日志选项)
 
 > `protected` **\_level**: [`Level`](../enumerations/Level.md) = `Level.INFO`
 
-Defined in: Logger.ts:10
+Defined in: [Logger.ts:11](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L11)
 
 ***
 
 ### appenders
 
-> `protected` `readonly` **appenders**: [`IAppender`](../interfaces/IAppender.md)[] = `[]`
+> `readonly` **appenders**: `Map`\<`string`, [`IAppender`](../interfaces/IAppender.md)\>
 
-Defined in: Logger.ts:8
+Defined in: [Logger.ts:9](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L9)
+
+#### Implementation of
+
+[`ILogger`](../interfaces/ILogger.md).[`appenders`](../interfaces/ILogger.md#appenders)
 
 ***
 
@@ -64,7 +68,7 @@ Defined in: Logger.ts:8
 
 > `protected` **context**: `Record`\<`string`, `any`\> = `{}`
 
-Defined in: Logger.ts:9
+Defined in: [Logger.ts:10](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L10)
 
 ***
 
@@ -72,7 +76,7 @@ Defined in: Logger.ts:9
 
 > `readonly` **name**: `string`
 
-Defined in: Logger.ts:18
+Defined in: [Logger.ts:19](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L19)
 
 Logger name (日志名称)
 
@@ -88,7 +92,7 @@ Logger name (日志名称)
 
 > **get** **level**(): [`Level`](../enumerations/Level.md)
 
-Defined in: Logger.ts:32
+Defined in: [Logger.ts:35](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L35)
 
 Log level (日志级别)
 
@@ -100,7 +104,7 @@ Log level (日志级别)
 
 > **set** **level**(`level`): `void`
 
-Defined in: Logger.ts:40
+Defined in: [Logger.ts:43](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L43)
 
 Set log level (设置日志级别)
 
@@ -126,7 +130,7 @@ Log level (日志级别)
 
 > **addContext**(`key`, `value`): `void`
 
-Defined in: Logger.ts:64
+Defined in: [Logger.ts:52](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L52)
 
 Add context (添加上下文)
 
@@ -158,7 +162,7 @@ Context value (上下文值)
 
 > **clearContext**(): `void`
 
-Defined in: Logger.ts:79
+Defined in: [Logger.ts:67](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L67)
 
 Clear context (清除上下文)
 
@@ -176,7 +180,7 @@ Clear context (清除上下文)
 
 > `protected` **createEvent**(`level`, `message`): [`ILogEvent`](../interfaces/ILogEvent.md)
 
-Defined in: Logger.ts:146
+Defined in: [Logger.ts:136](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L136)
 
 Create a log event (创建日志事件)
 
@@ -206,7 +210,7 @@ Log event (日志事件)
 
 > **debug**(...`args`): `void`
 
-Defined in: Logger.ts:104
+Defined in: [Logger.ts:94](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L94)
 
 Log a message of level DEBUG (记录DEBUG级别的日志)
 
@@ -232,7 +236,7 @@ Message arguments (消息参数)
 
 > **dispose**(): `Promise`\<`PromiseSettledResult`\<`void`\>[]\>
 
-Defined in: Logger.ts:86
+Defined in: [Logger.ts:74](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L74)
 
 Dispose all appenders (关闭所有appenders)
 
@@ -250,7 +254,7 @@ Dispose all appenders (关闭所有appenders)
 
 > **error**(...`args`): `void`
 
-Defined in: Logger.ts:128
+Defined in: [Logger.ts:118](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L118)
 
 Log a message of level ERROR (记录ERROR级别的日志)
 
@@ -276,7 +280,7 @@ Message arguments (消息参数)
 
 > **fatal**(...`args`): `void`
 
-Defined in: Logger.ts:136
+Defined in: [Logger.ts:126](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L126)
 
 Log a message of level FATAL (记录FATAL级别的日志)
 
@@ -302,7 +306,7 @@ Message arguments (消息参数)
 
 > **info**(...`args`): `void`
 
-Defined in: Logger.ts:112
+Defined in: [Logger.ts:102](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L102)
 
 Log a message of level INFO (记录INFO级别的日志)
 
@@ -328,7 +332,7 @@ Message arguments (消息参数)
 
 > `protected` **log**(`level`, `message`): `void`
 
-Defined in: Logger.ts:162
+Defined in: [Logger.ts:152](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L152)
 
 Log a message (记录日志)
 
@@ -356,7 +360,7 @@ Content (内容)
 
 > **removeContext**(`key`): `void`
 
-Defined in: Logger.ts:72
+Defined in: [Logger.ts:60](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L60)
 
 Remove context (移除上下文)
 
@@ -382,7 +386,7 @@ Context key (上下文键)
 
 > **trace**(...`args`): `void`
 
-Defined in: Logger.ts:96
+Defined in: [Logger.ts:86](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L86)
 
 Log a message of level TRACE (记录TRACE级别的日志)
 
@@ -408,7 +412,7 @@ Message arguments (消息参数)
 
 > **warn**(...`args`): `void`
 
-Defined in: Logger.ts:120
+Defined in: [Logger.ts:110](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Logger.ts#L110)
 
 Log a message of level WARN (记录WARN级别的日志)
 
@@ -427,27 +431,3 @@ Message arguments (消息参数)
 #### Implementation of
 
 [`ILogger`](../interfaces/ILogger.md).[`warn`](../interfaces/ILogger.md#warn)
-
-***
-
-### normalizeLevel()
-
-> `static` **normalizeLevel**(`level`): [`Level`](../enumerations/Level.md)
-
-Defined in: Logger.ts:49
-
-Normalize log level (归一化日志级别)
-
-#### Parameters
-
-##### level
-
-Log level (日志级别)
-
-[`TLevel`](../type-aliases/TLevel.md) | [`Level`](../enumerations/Level.md)
-
-#### Returns
-
-[`Level`](../enumerations/Level.md)
-
-Normalized log level (归一化后的日志级别)

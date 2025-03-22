@@ -22,6 +22,7 @@ export interface IConfig {
  */
 export interface ILogger {
   name: string;
+  appenders: Map<string, IAppender>;
   set level(l: Level | TLevel);
   get level(): Level;
   addContext(key: string, value: any): void;
@@ -60,6 +61,7 @@ export interface ILogEvent {
  * Appender interface (日志记录器接口)
  */
 export interface IAppender {
+  name: string;
   write(event: ILogEvent): void;
   close(): Promise<void>;
 }

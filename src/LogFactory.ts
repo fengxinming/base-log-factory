@@ -1,5 +1,6 @@
 import Level from './Level';
 import Logger from './Logger';
+import normalizeLevel from './normalizeLevel';
 import { IAppender, IConfig, ILogger, TLevel } from './typings';
 
 /**
@@ -31,7 +32,7 @@ export default class LogFactory {
    * @param level Log level (日志级别)
    */
   set level(level: Level | TLevel) {
-    level = Logger.normalizeLevel(level);
+    level = normalizeLevel(level);
     this.defaultLevel = level;
     this.loggers.forEach((logger) => {
       logger.level = level;
@@ -51,7 +52,7 @@ export default class LogFactory {
       this.LoggerClass = LoggerClass;
     }
     if (level) {
-      this.defaultLevel = Logger.normalizeLevel(level);
+      this.defaultLevel = normalizeLevel(level);
     }
     if (appenders) {
       this.appenders = appenders;

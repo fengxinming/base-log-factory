@@ -8,6 +8,6 @@
 
 > **FileAppenderOptions** = [`BaseAppenderOptions`](BaseAppenderOptions.md)
 
-Defined in: [typings.ts:84](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L84)
+Defined in: [typings.ts:86](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L86)
 
 File appender options (日志记录器文件选项)

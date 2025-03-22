@@ -6,7 +6,7 @@
 
 # 接口: ILogEvent
 
-定义于: [typings.ts:50](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L50)
+定义于: [typings.ts:51](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L51)
 
 Log event (日志事件)
 
@@ -16,7 +16,7 @@ Log event (日志事件)
 
 > **context**: `Record`\<`string`, `any`\>
 
-定义于: [typings.ts:56](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L56)
+定义于: [typings.ts:57](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L57)
 
 ***
 
@@ -24,7 +24,7 @@ Log event (日志事件)
 
 > **level**: [`Level`](../enumerations/Level.md)
 
-定义于: [typings.ts:51](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L51)
+定义于: [typings.ts:52](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L52)
 
 ***
 
@@ -32,7 +32,7 @@ Log event (日志事件)
 
 > **levelName**: [`TLevel`](../type-aliases/TLevel.md)
 
-定义于: [typings.ts:52](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L52)
+定义于: [typings.ts:53](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L53)
 
 ***
 
@@ -40,7 +40,7 @@ Log event (日志事件)
 
 > **loggerName**: `string`
 
-定义于: [typings.ts:55](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L55)
+定义于: [typings.ts:56](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L56)
 
 ***
 
@@ -48,7 +48,7 @@ Log event (日志事件)
 
 > **message**: `any`[]
 
-定义于: [typings.ts:53](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L53)
+定义于: [typings.ts:54](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L54)
 
 ***
 
@@ -56,4 +56,4 @@ Log event (日志事件)
 
 > **timestamp**: `Date`
 
-定义于: [typings.ts:54](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L54)
+定义于: [typings.ts:55](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L55)
