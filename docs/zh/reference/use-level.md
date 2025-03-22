@@ -39,7 +39,7 @@ import { Level } from 'base-log-factory';
 import logFactory from './factory';
 
 const logger = logFactory.getLogger('app2');
-logFactory.level = Level.ERROR; // 设置为ERROR级别
+factory.updateLevel(Level.ERROR); // 设置为ERROR级别
 
 logger.debug('调试信息现在不会显示'); // 输出不生效
 ```

@@ -2,15 +2,15 @@ import { EOL } from 'node:os';
 import { Writable } from 'node:stream';
 
 import BasicLayout from '../layouts/BasicLayout';
-import { BaseAppenderOptions, IAppender, ILogEvent } from '../typings';
+import { BaseAppenderOptions, IAppender, ILayout, ILogEvent } from '../typings';
 
 /**
  * Base file appender (文件日志基类)
  */
 export default abstract class BaseFileAppender implements IAppender {
   name = 'baseFile';
-  protected writeQueue: Promise<void> = Promise.resolve();
   protected stream: Writable;
+  private readonly layout: ILayout;
 
   /**
    * Constructor
@@ -21,7 +21,7 @@ export default abstract class BaseFileAppender implements IAppender {
     protected readonly filePath: string,
     protected readonly options: BaseAppenderOptions
   ) {
-    options.layout = options.layout || new BasicLayout();
+    this.layout = options.layout || new BasicLayout();
     this.stream = this.getStream(filePath, options);
   }
 
@@ -30,7 +30,7 @@ export default abstract class BaseFileAppender implements IAppender {
    * @param logEvent Log event (日志事件)
    */
   write(logEvent: ILogEvent) {
-    const formatted = this.options.layout!.format(logEvent);
+    const formatted = this.layout.format(logEvent);
     this.stream.write(`${formatted}${EOL}`, (err) => {
       if (err) {
         console.error('Log write failed:', err);
@@ -42,15 +42,7 @@ export default abstract class BaseFileAppender implements IAppender {
    * Close appender
    */
   async close() {
-    await this.writeQueue;
-    return new Promise<void>((resolve, reject) => {
-      this.stream.end((err) => {
-        if (err) {
-          return reject(err);
-        }
-        resolve();
-      });
-    });
+    this.stream.destroy();
   }
 
   /**

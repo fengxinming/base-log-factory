@@ -21,22 +21,42 @@ export default class LogFactory {
   }
 
   /**
-   * Get or set the default log level (获取或设置默认日志级别)
+   * Get the default log level (获取或设置默认日志级别)
    */
   get level(): Level {
     return this.defaultLevel;
   }
 
   /**
-   * Set the default log level (设置默认日志级别)
-   * @param level Log level (日志级别)
+   * Get the default log level name (获取或设置默认日志级别名称)
    */
-  set level(level: Level | TLevel) {
-    level = normalizeLevel(level);
-    this.defaultLevel = level;
-    this.loggers.forEach((logger) => {
-      logger.level = level;
-    });
+  get levelName(): string {
+    return Level[this.defaultLevel];
+  }
+
+  /**
+   * Update the default log level (更新默认日志级别)
+   * @param level Log level (日志级别)
+   * @param updateCachedLoggers Whether to update the cached loggers (是否更新缓存的日志器)
+   * @returns Update level success if true (如果为 true 表示更新成功)
+   */
+  updateLevel(level: Level | TLevel, updateCachedLoggers?: boolean): boolean {
+    const normalizedLevel = normalizeLevel(level);
+    const isValidLevel = normalizedLevel !== void 0;
+
+    if (isValidLevel) {
+      this.defaultLevel = normalizedLevel;
+
+      // 更新缓存的 Logger 的日志级别
+      // Update cached Logger's log level
+      if (updateCachedLoggers !== false) {
+        this.loggers.forEach((logger) => {
+          logger.level = normalizedLevel;
+        });
+      }
+    }
+
+    return isValidLevel;
   }
 
   /**
@@ -52,7 +72,7 @@ export default class LogFactory {
       this.LoggerClass = LoggerClass;
     }
     if (level) {
-      this.defaultLevel = normalizeLevel(level);
+      this.updateLevel(level, false);
     }
     if (appenders) {
       this.appenders = appenders;

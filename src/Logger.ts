@@ -19,14 +19,22 @@ export default class Logger implements ILogger {
     readonly name: string,
     { level, appenders = [] }: ILogOptions = {},
   ) {
-    if (level) {
+    if (level == null) {
       this.level = Level.INFO;
     }
+
     if (appenders) {
       appenders.forEach((appender) => {
         this.appenders.set(appender.name, appender);
       });
     }
+  }
+
+  /**
+   * Log level name (日志级别名称)
+   */
+  get levelName(): string {
+    return Level[this._level];
   }
 
   /**
@@ -41,7 +49,10 @@ export default class Logger implements ILogger {
    * @param level Log level (日志级别)
    */
   set level(level: Level | TLevel) {
-    this._level = normalizeLevel(level);
+    const normalizedLevel = normalizeLevel(level);
+    if (normalizedLevel !== void 0) {
+      this._level = normalizedLevel;
+    }
   }
 
   /**

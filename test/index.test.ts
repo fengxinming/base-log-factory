@@ -72,7 +72,7 @@ describe('测试日志级别打印', () => {
       logger.info('hello 2');
       expect(mockLog.mock.calls[0]).toBe(void 0);
 
-      factory.level = Level.DEBUG;
+      factory.updateLevel(Level.DEBUG);
       logger.debug('world 2');
       expect(mockLog.mock.calls[0][1]).toBe('world 2');
     });
