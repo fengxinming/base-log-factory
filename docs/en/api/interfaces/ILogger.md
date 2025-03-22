@@ -6,17 +6,25 @@
 
 # Interface: ILogger
 
-Defined in: [typings.ts:23](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L23)
+Defined in: [typings.ts:23](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L23)
 
 Logger interface (日志接口)
 
 ## Properties
 
+### appenders
+
+> **appenders**: `Map`\<`string`, [`IAppender`](IAppender.md)\>
+
+Defined in: [typings.ts:25](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L25)
+
+***
+
 ### name
 
 > **name**: `string`
 
-Defined in: [typings.ts:24](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L24)
+Defined in: [typings.ts:24](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L24)
 
 ## Accessors
 
@@ -26,7 +34,7 @@ Defined in: [typings.ts:24](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **get** **level**(): [`Level`](../enumerations/Level.md)
 
-Defined in: [typings.ts:26](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L26)
+Defined in: [typings.ts:27](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L27)
 
 ##### Returns
 
@@ -36,7 +44,7 @@ Defined in: [typings.ts:26](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **set** **level**(`l`): `void`
 
-Defined in: [typings.ts:25](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L25)
+Defined in: [typings.ts:26](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L26)
 
 ##### Parameters
 
@@ -54,7 +62,7 @@ Defined in: [typings.ts:25](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **addContext**(`key`, `value`): `void`
 
-Defined in: [typings.ts:27](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L27)
+Defined in: [typings.ts:28](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L28)
 
 #### Parameters
 
@@ -76,7 +84,7 @@ Defined in: [typings.ts:27](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **clearContext**(): `void`
 
-Defined in: [typings.ts:29](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L29)
+Defined in: [typings.ts:30](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L30)
 
 #### Returns
 
@@ -88,7 +96,7 @@ Defined in: [typings.ts:29](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **debug**(...`args`): `void`
 
-Defined in: [typings.ts:32](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L32)
+Defined in: [typings.ts:33](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L33)
 
 #### Parameters
 
@@ -106,7 +114,7 @@ Defined in: [typings.ts:32](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-Defined in: [typings.ts:30](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L30)
+Defined in: [typings.ts:31](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L31)
 
 #### Returns
 
@@ -118,7 +126,7 @@ Defined in: [typings.ts:30](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **error**(...`args`): `void`
 
-Defined in: [typings.ts:35](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L35)
+Defined in: [typings.ts:36](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L36)
 
 #### Parameters
 
@@ -136,7 +144,7 @@ Defined in: [typings.ts:35](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **fatal**(...`args`): `void`
 
-Defined in: [typings.ts:36](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L36)
+Defined in: [typings.ts:37](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L37)
 
 #### Parameters
 
@@ -154,7 +162,7 @@ Defined in: [typings.ts:36](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **info**(...`args`): `void`
 
-Defined in: [typings.ts:33](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L33)
+Defined in: [typings.ts:34](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L34)
 
 #### Parameters
 
@@ -172,7 +180,7 @@ Defined in: [typings.ts:33](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **removeContext**(`key`): `void`
 
-Defined in: [typings.ts:28](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L28)
+Defined in: [typings.ts:29](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L29)
 
 #### Parameters
 
@@ -190,7 +198,7 @@ Defined in: [typings.ts:28](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **trace**(...`args`): `void`
 
-Defined in: [typings.ts:31](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L31)
+Defined in: [typings.ts:32](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L32)
 
 #### Parameters
 
@@ -208,7 +216,7 @@ Defined in: [typings.ts:31](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **warn**(...`args`): `void`
 
-Defined in: [typings.ts:34](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L34)
+Defined in: [typings.ts:35](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L35)
 
 #### Parameters
 

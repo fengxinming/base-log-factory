@@ -6,7 +6,7 @@
 
 # 类: ConsoleAppender
 
-定义于: [appenders/ConsoleAppender.ts:7](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/appenders/ConsoleAppender.ts#L7)
+定义于: [appenders/ConsoleAppender.ts:7](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/appenders/ConsoleAppender.ts#L7)
 
 Console appender (控制台输出)
 
@@ -20,7 +20,7 @@ Console appender (控制台输出)
 
 > **new ConsoleAppender**(`layout`?): `ConsoleAppender`
 
-定义于: [appenders/ConsoleAppender.ts:12](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/appenders/ConsoleAppender.ts#L12)
+定义于: [appenders/ConsoleAppender.ts:13](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/appenders/ConsoleAppender.ts#L13)
 
 Constructor (构造函数)
 
@@ -36,13 +36,35 @@ Layout (布局)
 
 `ConsoleAppender`
 
+## 属性
+
+### layout?
+
+> `readonly` `optional` **layout**: [`ILayout`](../interfaces/ILayout.md)
+
+定义于: [appenders/ConsoleAppender.ts:13](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/appenders/ConsoleAppender.ts#L13)
+
+Layout (布局)
+
+***
+
+### name
+
+> **name**: `string` = `'console'`
+
+定义于: [appenders/ConsoleAppender.ts:8](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/appenders/ConsoleAppender.ts#L8)
+
+#### 实现了
+
+[`IAppender`](../interfaces/IAppender.md).[`name`](../interfaces/IAppender.md#name)
+
 ## 方法
 
 ### close()
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [appenders/ConsoleAppender.ts:33](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/appenders/ConsoleAppender.ts#L33)
+定义于: [appenders/ConsoleAppender.ts:34](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/appenders/ConsoleAppender.ts#L34)
 
 Close appender (关闭输出)
 
@@ -60,7 +82,7 @@ Close appender (关闭输出)
 
 > **write**(`event`): `void`
 
-定义于: [appenders/ConsoleAppender.ts:18](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/appenders/ConsoleAppender.ts#L18)
+定义于: [appenders/ConsoleAppender.ts:19](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/appenders/ConsoleAppender.ts#L19)
 
 Write log (写入日志)
 

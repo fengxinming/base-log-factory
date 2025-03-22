@@ -6,17 +6,25 @@
 
 # 接口: ILogger
 
-定义于: [typings.ts:23](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L23)
+定义于: [typings.ts:23](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L23)
 
 Logger interface (日志接口)
 
 ## 属性
 
+### appenders
+
+> **appenders**: `Map`\<`string`, [`IAppender`](IAppender.md)\>
+
+定义于: [typings.ts:25](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L25)
+
+***
+
 ### name
 
 > **name**: `string`
 
-定义于: [typings.ts:24](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L24)
+定义于: [typings.ts:24](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L24)
 
 ## 访问器
 
@@ -26,7 +34,7 @@ Logger interface (日志接口)
 
 > **get** **level**(): [`Level`](../enumerations/Level.md)
 
-定义于: [typings.ts:26](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L26)
+定义于: [typings.ts:27](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L27)
 
 ##### 返回
 
@@ -36,7 +44,7 @@ Logger interface (日志接口)
 
 > **set** **level**(`l`): `void`
 
-定义于: [typings.ts:25](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L25)
+定义于: [typings.ts:26](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L26)
 
 ##### 参数
 
@@ -54,7 +62,7 @@ Logger interface (日志接口)
 
 > **addContext**(`key`, `value`): `void`
 
-定义于: [typings.ts:27](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L27)
+定义于: [typings.ts:28](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L28)
 
 #### 参数
 
@@ -76,7 +84,7 @@ Logger interface (日志接口)
 
 > **clearContext**(): `void`
 
-定义于: [typings.ts:29](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L29)
+定义于: [typings.ts:30](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L30)
 
 #### 返回
 
@@ -88,7 +96,7 @@ Logger interface (日志接口)
 
 > **debug**(...`args`): `void`
 
-定义于: [typings.ts:32](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L32)
+定义于: [typings.ts:33](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L33)
 
 #### 参数
 
@@ -106,7 +114,7 @@ Logger interface (日志接口)
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-定义于: [typings.ts:30](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L30)
+定义于: [typings.ts:31](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L31)
 
 #### 返回
 
@@ -118,7 +126,7 @@ Logger interface (日志接口)
 
 > **error**(...`args`): `void`
 
-定义于: [typings.ts:35](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L35)
+定义于: [typings.ts:36](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L36)
 
 #### 参数
 
@@ -136,7 +144,7 @@ Logger interface (日志接口)
 
 > **fatal**(...`args`): `void`
 
-定义于: [typings.ts:36](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L36)
+定义于: [typings.ts:37](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L37)
 
 #### 参数
 
@@ -154,7 +162,7 @@ Logger interface (日志接口)
 
 > **info**(...`args`): `void`
 
-定义于: [typings.ts:33](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L33)
+定义于: [typings.ts:34](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L34)
 
 #### 参数
 
@@ -172,7 +180,7 @@ Logger interface (日志接口)
 
 > **removeContext**(`key`): `void`
 
-定义于: [typings.ts:28](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L28)
+定义于: [typings.ts:29](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L29)
 
 #### 参数
 
@@ -190,7 +198,7 @@ Logger interface (日志接口)
 
 > **trace**(...`args`): `void`
 
-定义于: [typings.ts:31](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L31)
+定义于: [typings.ts:32](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L32)
 
 #### 参数
 
@@ -208,7 +216,7 @@ Logger interface (日志接口)
 
 > **warn**(...`args`): `void`
 
-定义于: [typings.ts:34](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L34)
+定义于: [typings.ts:35](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L35)
 
 #### 参数
 

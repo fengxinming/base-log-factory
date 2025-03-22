@@ -8,6 +8,7 @@ import { BaseAppenderOptions, IAppender, ILogEvent } from '../typings';
  * Base file appender (文件日志基类)
  */
 export default abstract class BaseFileAppender implements IAppender {
+  name = 'baseFile';
   protected writeQueue: Promise<void> = Promise.resolve();
   protected stream: Writable;
 

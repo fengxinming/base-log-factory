@@ -5,6 +5,7 @@ import { IAppender, ILayout, ILogEvent } from '../typings';
  * Console appender (控制台输出)
  */
 export default class ConsoleAppender implements IAppender {
+  name = 'console';
   /**
    * Constructor (构造函数)
    * @param layout Layout (布局)

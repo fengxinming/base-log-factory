@@ -30,3 +30,8 @@
 - [FileAppenderOptions](type-aliases/FileAppenderOptions.md)
 - [TLevel](type-aliases/TLevel.md)
 - [TPatternLayoutConverter](type-aliases/TPatternLayoutConverter.md)
+
+## 函数
+
+- [basicLogPrefix](functions/basicLogPrefix.md)
+- [normalizeLevel](functions/normalizeLevel.md)

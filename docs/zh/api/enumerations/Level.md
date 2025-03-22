@@ -6,7 +6,7 @@
 
 # 枚举: Level
 
-定义于: [Level.ts:4](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L4)
+定义于: [Level.ts:4](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L4)
 
 Log levels for logging (日志级别枚举)
 
@@ -16,7 +16,7 @@ Log levels for logging (日志级别枚举)
 
 > **DEBUG**: `5`
 
-定义于: [Level.ts:6](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L6)
+定义于: [Level.ts:6](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L6)
 
 ***
 
@@ -24,7 +24,7 @@ Log levels for logging (日志级别枚举)
 
 > **ERROR**: `2`
 
-定义于: [Level.ts:9](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L9)
+定义于: [Level.ts:9](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L9)
 
 ***
 
@@ -32,7 +32,7 @@ Log levels for logging (日志级别枚举)
 
 > **FATAL**: `1`
 
-定义于: [Level.ts:10](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L10)
+定义于: [Level.ts:10](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L10)
 
 ***
 
@@ -40,7 +40,7 @@ Log levels for logging (日志级别枚举)
 
 > **INFO**: `4`
 
-定义于: [Level.ts:7](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L7)
+定义于: [Level.ts:7](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L7)
 
 ***
 
@@ -48,7 +48,7 @@ Log levels for logging (日志级别枚举)
 
 > **OFF**: `0`
 
-定义于: [Level.ts:11](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L11)
+定义于: [Level.ts:11](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L11)
 
 ***
 
@@ -56,7 +56,7 @@ Log levels for logging (日志级别枚举)
 
 > **TRACE**: `6`
 
-定义于: [Level.ts:5](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L5)
+定义于: [Level.ts:5](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L5)
 
 ***
 
@@ -64,4 +64,4 @@ Log levels for logging (日志级别枚举)
 
 > **WARN**: `3`
 
-定义于: [Level.ts:8](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L8)
+定义于: [Level.ts:8](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L8)

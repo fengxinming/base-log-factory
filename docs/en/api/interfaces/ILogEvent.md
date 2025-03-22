@@ -6,7 +6,7 @@
 
 # Interface: ILogEvent
 
-Defined in: [typings.ts:50](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L50)
+Defined in: [typings.ts:51](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L51)
 
 Log event (日志事件)
 
@@ -16,7 +16,7 @@ Log event (日志事件)
 
 > **context**: `Record`\<`string`, `any`\>
 
-Defined in: [typings.ts:56](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L56)
+Defined in: [typings.ts:57](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L57)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [typings.ts:56](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **level**: [`Level`](../enumerations/Level.md)
 
-Defined in: [typings.ts:51](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L51)
+Defined in: [typings.ts:52](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L52)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [typings.ts:51](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **levelName**: [`TLevel`](../type-aliases/TLevel.md)
 
-Defined in: [typings.ts:52](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L52)
+Defined in: [typings.ts:53](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L53)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [typings.ts:52](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **loggerName**: `string`
 
-Defined in: [typings.ts:55](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L55)
+Defined in: [typings.ts:56](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L56)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [typings.ts:55](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **message**: `any`[]
 
-Defined in: [typings.ts:53](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L53)
+Defined in: [typings.ts:54](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L54)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [typings.ts:53](https://github.com/fengxinming/log-base/blob/91b255b
 
 > **timestamp**: `Date`
 
-Defined in: [typings.ts:54](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/typings.ts#L54)
+Defined in: [typings.ts:55](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/typings.ts#L55)

@@ -6,7 +6,7 @@
 
 # Enumeration: Level
 
-Defined in: [Level.ts:4](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L4)
+Defined in: [Level.ts:4](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L4)
 
 Log levels for logging (日志级别枚举)
 
@@ -16,7 +16,7 @@ Log levels for logging (日志级别枚举)
 
 > **DEBUG**: `5`
 
-Defined in: [Level.ts:6](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L6)
+Defined in: [Level.ts:6](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L6)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [Level.ts:6](https://github.com/fengxinming/log-base/blob/91b255be28
 
 > **ERROR**: `2`
 
-Defined in: [Level.ts:9](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L9)
+Defined in: [Level.ts:9](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L9)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [Level.ts:9](https://github.com/fengxinming/log-base/blob/91b255be28
 
 > **FATAL**: `1`
 
-Defined in: [Level.ts:10](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L10)
+Defined in: [Level.ts:10](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L10)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [Level.ts:10](https://github.com/fengxinming/log-base/blob/91b255be2
 
 > **INFO**: `4`
 
-Defined in: [Level.ts:7](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L7)
+Defined in: [Level.ts:7](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L7)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [Level.ts:7](https://github.com/fengxinming/log-base/blob/91b255be28
 
 > **OFF**: `0`
 
-Defined in: [Level.ts:11](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L11)
+Defined in: [Level.ts:11](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L11)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [Level.ts:11](https://github.com/fengxinming/log-base/blob/91b255be2
 
 > **TRACE**: `6`
 
-Defined in: [Level.ts:5](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L5)
+Defined in: [Level.ts:5](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L5)
 
 ***
 
@@ -64,4 +64,4 @@ Defined in: [Level.ts:5](https://github.com/fengxinming/log-base/blob/91b255be28
 
 > **WARN**: `3`
 
-Defined in: [Level.ts:8](https://github.com/fengxinming/log-base/blob/91b255be28ea77ad9d32ba66866f8cc509fce400/src/Level.ts#L8)
+Defined in: [Level.ts:8](https://github.com/fengxinming/log-base/blob/a5fb852e6e988415aefb3bad08caae82eaa58e63/src/Level.ts#L8)

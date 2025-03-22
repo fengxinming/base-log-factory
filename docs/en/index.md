@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Guide
-      link: /zh/guide/introduce
+      link: /guide/introduce
     - theme: alt
       text: Reference
-      link: /zh/reference/use-appenders
+      link: /reference/use-appenders
   image:
     src: /logo.png
     alt: base-log-factory

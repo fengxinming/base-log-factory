@@ -1,11 +1,12 @@
 import Level from './Level';
+import normalizeLevel from './normalizeLevel';
 import { IAppender, ILogEvent, ILogger, ILogOptions, TLevel } from './typings';
 
 /**
  * Logger instance (日志实例)
  */
 export default class Logger implements ILogger {
-  readonly appenders: IAppender[] = [];
+  readonly appenders = new Map<string, IAppender>();
   protected context: Record<string, any> = {};
   protected _level: Level = Level.INFO;
 
@@ -22,7 +23,9 @@ export default class Logger implements ILogger {
       this.level = Level.INFO;
     }
     if (appenders) {
-      this.appenders = [...appenders];
+      appenders.forEach((appender) => {
+        this.appenders.set(appender.name, appender);
+      });
     }
   }
 
@@ -38,22 +41,7 @@ export default class Logger implements ILogger {
    * @param level Log level (日志级别)
    */
   set level(level: Level | TLevel) {
-    this._level = Logger.normalizeLevel(level);
-  }
-
-  /**
-   * Normalize log level (归一化日志级别)
-   * @param level Log level (日志级别)
-   * @returns Normalized log level (归一化后的日志级别)
-   */
-  static normalizeLevel(level: Level | TLevel): Level {
-    if (typeof level === 'string') {
-      level = Level[level.toUpperCase()];
-      if (level == null) {
-        level = Level.INFO;
-      }
-    }
-    return level as Level;
+    this._level = normalizeLevel(level);
   }
 
   /**
@@ -84,9 +72,11 @@ export default class Logger implements ILogger {
    * Dispose all appenders (关闭所有appenders)
    */
   dispose() {
-    return Promise.allSettled(this.appenders.map((appender) => {
-      return appender.close();
-    }));
+    const promises: Array<Promise<void>> = [];
+    this.appenders.forEach((appender) => {
+      promises.push(appender.close());
+    });
+    return Promise.allSettled(promises);
   }
 
   /**
@@ -166,13 +156,13 @@ export default class Logger implements ILogger {
 
     const event: ILogEvent = this.createEvent(level, message);
 
-    for (const appender of this.appenders) {
+    this.appenders.forEach((appender) => {
       try {
         appender.write(event);
       }
       catch (err: any) {
         console.error('Appender error:', err);
       }
-    }
+    });
   }
 }
