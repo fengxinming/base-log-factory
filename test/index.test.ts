@@ -1,6 +1,7 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import pc from 'picocolors';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { ConsoleAppender, Level, LogFactory } from '../src';
@@ -97,17 +98,17 @@ describe('测试日志级别打印', () => {
 
     it('测试打印INFO日志', () => {
       logger.info('hello');
-      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello ');
+      expect(mockLog.mock.calls[0][0]).toBe(pc.green('[INFO] hello '));
     });
 
     it('测试MDC输出', () => {
       logger.addContext('user', 'zhangsan');
       logger.info('hello');
-      expect(mockLog.mock.calls[0][0]).toBe('[INFO] hello zhangsan');
+      expect(mockLog.mock.calls[0][0]).toBe(pc.green('[INFO] hello zhangsan'));
 
       logger.removeContext('user');
       logger.info('world');
-      expect(mockLog.mock.calls[1][0]).toBe('[INFO] world ');
+      expect(mockLog.mock.calls[1][0]).toBe(pc.green('[INFO] world '));
     });
   });
 });
