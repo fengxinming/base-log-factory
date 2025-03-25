@@ -1,6 +1,6 @@
 {
   "name": "base-log-factory",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "A flexible and simple JS logging library that allows logging or collecting logs in different environments by configuring various Appenders. Suitable for browser, NodeJS and other environments.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,7 +10,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
-    }
+    },
+    "./dist/*": [
+      "./dist/*",
+      "./dist/*.d.ts"
+    ]
   },
   "scripts": {
     "clean": "rm -rf node_modules",
@@ -20,6 +24,7 @@
     "eslint": "eslint --ext .js,.mjs,.jsx,.ts,.tsx --fix --ignore-path .eslintignore ./",
     "prepublishOnly": "npm run build",
     "typedoc": "typedoc && typedoc --options typedoc.zh.json",
+    "use": "vite-node ./use.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -38,7 +43,10 @@
   },
   "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
+    "@types/debug": "^4.1.12",
     "date-manip": "^2.0.4",
+    "debug": "^4.4.0",
+    "picocolors": "^1.1.1",
     "rolling-write-stream": "^1.0.1"
   },
   "devDependencies": {
