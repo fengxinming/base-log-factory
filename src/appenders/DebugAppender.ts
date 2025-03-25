@@ -1,15 +1,17 @@
+import { format } from 'date-manip';
+import createDebug from 'debug';
 import pc from 'picocolors';
-import Level from 'src/Level';
 
-import basicLogPrefix from '../basicLogPrefix';
 import defaultColors from '../colors';
-import { IAppender, ILayout, ILogEvent } from '../typings';
+import Level from '../Level';
+import { IAppender, ILayout, ILogEvent, ILogger } from '../typings';
 
 /**
  * Console appender (控制台输出)
  */
-export default class ConsoleAppender implements IAppender {
-  name = 'console';
+export default class DebugAppender implements IAppender {
+  name = 'debug';
+  debug!: createDebug.Debugger;
   colors: Record<Level, string>;
   /**
    * Constructor (构造函数)
@@ -19,8 +21,11 @@ export default class ConsoleAppender implements IAppender {
     this.colors = colors || defaultColors;
   }
 
-  setup(): void {
+  setup({ name }: ILogger): void {
+    const debug = createDebug(name);
+    createDebug.enable(name);
 
+    this.debug = debug;
   }
 
   /**
@@ -36,8 +41,10 @@ export default class ConsoleAppender implements IAppender {
       console.log(formatter(layout.format(event)));
     }
     else {
-      // eslint-disable-next-line no-console
-      console.log(formatter(basicLogPrefix(event)), ...event.message);
+      this.debug(
+        formatter(`[${format(event.timestamp, 'HH:mm:ssZ')}] [${event.levelName}] -`),
+        ...event.message
+      );
     }
   }
 

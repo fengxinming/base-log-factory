@@ -25,6 +25,7 @@ export default class Logger implements ILogger {
 
     if (appenders) {
       appenders.forEach((appender) => {
+        appender.setup(this);
         this.appenders.set(appender.name, appender);
       });
     }

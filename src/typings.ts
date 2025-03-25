@@ -62,6 +62,7 @@ export interface ILogEvent {
  */
 export interface IAppender {
   name: string;
+  setup(logger: ILogger): void;
   write(event: ILogEvent): void;
   close(): Promise<void>;
 }

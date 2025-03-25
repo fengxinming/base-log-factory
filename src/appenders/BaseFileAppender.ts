@@ -25,6 +25,10 @@ export default abstract class BaseFileAppender implements IAppender {
     this.stream = this.getStream(filePath, options);
   }
 
+  setup(): void {
+
+  }
+
   /**
    * Write log event
    * @param logEvent Log event (日志事件)
