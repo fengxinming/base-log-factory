@@ -6,7 +6,7 @@
 
 # Interface: ILayout
 
-Defined in: base-log-factory/src/typings.ts:46
+Defined in: [base-log-factory/src/typings.ts:46](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L46)
 
 Layout interface (日志布局接口)
 
@@ -16,7 +16,7 @@ Layout interface (日志布局接口)
 
 > **format**(`event`): `string`
 
-Defined in: base-log-factory/src/typings.ts:47
+Defined in: [base-log-factory/src/typings.ts:47](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L47)
 
 #### Parameters
 

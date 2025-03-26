@@ -15,7 +15,7 @@
 - [base-log-factory/src/Logger](base-log-factory/src/Logger/index.md)
 - [base-log-factory/src/LogLevel](base-log-factory/src/LogLevel/index.md)
 - [base-log-factory/src/normalizeLevel](base-log-factory/src/normalizeLevel/index.md)
-- [base-log-factory/src/padString](base-log-factory/src/padString/index.md)
+- [base-log-factory/src/pad](base-log-factory/src/pad/index.md)
 - [base-log-factory/src/PatternLayout](base-log-factory/src/PatternLayout/index.md)
 - [base-log-factory/src/typings](base-log-factory/src/typings/index.md)
 - [colorful-appender/src/ColorfulAppender](colorful-appender/src/ColorfulAppender/index.md)

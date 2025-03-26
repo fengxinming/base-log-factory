@@ -4,7 +4,7 @@
     "sourceMap": false,
     "target": "ES2017",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "newLine": "LF",
     "strict": true,
     "allowJs": true,
@@ -16,6 +16,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "removeComments": false,
+    "skipLibCheck": true,
     "jsx": "preserve",
     "lib": [
       "ESNext",
