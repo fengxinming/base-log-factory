@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: npm run deps
+      # - run: npm run deps
       - run: npm run build:blf
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
