@@ -6,7 +6,7 @@
 
 # Interface: Config
 
-Defined in: [base-log-factory/src/typings.ts:12](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L12)
+Defined in: [base-log-factory/src/typings.ts:12](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L12)
 
 Log factory configuration (日志工厂配置)
 
@@ -16,7 +16,7 @@ Log factory configuration (日志工厂配置)
 
 > `optional` **appenders**: [`IAppender`](IAppender.md)[]
 
-Defined in: [base-log-factory/src/typings.ts:14](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L14)
+Defined in: [base-log-factory/src/typings.ts:14](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L14)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [base-log-factory/src/typings.ts:14](https://github.com/fengxinming/
 
 > `optional` **level**: [`default`](../../LogLevel/enumerations/default.md) \| [`TLevel`](../type-aliases/TLevel.md)
 
-Defined in: [base-log-factory/src/typings.ts:13](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L13)
+Defined in: [base-log-factory/src/typings.ts:13](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L13)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [base-log-factory/src/typings.ts:13](https://github.com/fengxinming/
 
 > `optional` **LoggerClass**: *typeof* [`default`](../../Logger/classes/default.md)
 
-Defined in: [base-log-factory/src/typings.ts:15](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L15)
+Defined in: [base-log-factory/src/typings.ts:15](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L15)

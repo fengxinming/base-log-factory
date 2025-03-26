@@ -16,7 +16,6 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "removeComments": false,
-    "skipLibCheck": true,
     "jsx": "preserve",
     "lib": [
       "ESNext",
