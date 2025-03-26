@@ -4,34 +4,22 @@
 
 # base-log-factory
 
-## 枚举
+## 模块
 
-- [Level](enumerations/Level.md)
-
-## 类
-
-- [ConsoleAppender](classes/ConsoleAppender.md)
-- [LogFactory](classes/LogFactory.md)
-- [Logger](classes/Logger.md)
-
-## 接口
-
-- [IAppender](interfaces/IAppender.md)
-- [IConfig](interfaces/IConfig.md)
-- [ILayout](interfaces/ILayout.md)
-- [ILogEvent](interfaces/ILogEvent.md)
-- [ILogger](interfaces/ILogger.md)
-- [ILogOptions](interfaces/ILogOptions.md)
-
-## 类型别名
-
-- [BaseAppenderOptions](type-aliases/BaseAppenderOptions.md)
-- [DateFileAppenderOptions](type-aliases/DateFileAppenderOptions.md)
-- [FileAppenderOptions](type-aliases/FileAppenderOptions.md)
-- [TLevel](type-aliases/TLevel.md)
-- [TPatternLayoutConverter](type-aliases/TPatternLayoutConverter.md)
-
-## 函数
-
-- [basicLogPrefix](functions/basicLogPrefix.md)
-- [normalizeLevel](functions/normalizeLevel.md)
+- [\_internal/pad](internal/pad/index.md)
+- [\_internal/transformMessage](internal/transformMessage/index.md)
+- [appenders/BaseFileAppender](appenders/BaseFileAppender/index.md)
+- [appenders/ConsoleAppender](appenders/ConsoleAppender/index.md)
+- [appenders/DateFileAppender](appenders/DateFileAppender/index.md)
+- [appenders/DebugAppender](appenders/DebugAppender/index.md)
+- [appenders/FileAppender](appenders/FileAppender/index.md)
+- [basicLogPrefix](basicLogPrefix/index.md)
+- [colors](colors/index.md)
+- [index](index/index.md)
+- [layouts/BasicLayout](layouts/BasicLayout/index.md)
+- [layouts/PatternLayout](layouts/PatternLayout/index.md)
+- [Level](Level/index.md)
+- [LogFactory](LogFactory/index.md)
+- [Logger](Logger/index.md)
+- [normalizeLevel](normalizeLevel/index.md)
+- [typings](typings/index.md)
