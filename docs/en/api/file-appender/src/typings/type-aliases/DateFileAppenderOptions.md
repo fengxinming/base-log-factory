@@ -8,6 +8,6 @@
 
 > **DateFileAppenderOptions** = [`BaseAppenderOptions`](BaseAppenderOptions.md) & `Partial`\<`DateRollingOptions`\>
 
-Defined in: [file-appender/src/typings.ts:20](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/typings.ts#L20)
+Defined in: [file-appender/src/typings.ts:20](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/file-appender/src/typings.ts#L20)
 
 Date file appender options (日志记录器日期文件选项)

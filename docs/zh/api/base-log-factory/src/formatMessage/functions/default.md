@@ -8,7 +8,7 @@
 
 > **default**(`message`, `callback`): `string`
 
-定义于: [base-log-factory/src/formatMessage.ts:5](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/formatMessage.ts#L5)
+定义于: [base-log-factory/src/formatMessage.ts:5](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/formatMessage.ts#L5)
 
 ## 参数
 

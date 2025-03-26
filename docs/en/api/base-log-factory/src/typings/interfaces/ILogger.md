@@ -6,7 +6,7 @@
 
 # Interface: ILogger
 
-Defined in: [base-log-factory/src/typings.ts:64](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L64)
+Defined in: [base-log-factory/src/typings.ts:64](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L64)
 
 Logger interface (日志接口)
 
@@ -16,7 +16,7 @@ Logger interface (日志接口)
 
 > **appenders**: `Map`\<`string`, [`IAppender`](IAppender.md)\>
 
-Defined in: [base-log-factory/src/typings.ts:66](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L66)
+Defined in: [base-log-factory/src/typings.ts:66](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L66)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [base-log-factory/src/typings.ts:66](https://github.com/fengxinming/
 
 > **name**: `string`
 
-Defined in: [base-log-factory/src/typings.ts:65](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L65)
+Defined in: [base-log-factory/src/typings.ts:65](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L65)
 
 ## Accessors
 
@@ -34,7 +34,7 @@ Defined in: [base-log-factory/src/typings.ts:65](https://github.com/fengxinming/
 
 > **get** **level**(): [`default`](../../LogLevel/enumerations/default.md)
 
-Defined in: [base-log-factory/src/typings.ts:68](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L68)
+Defined in: [base-log-factory/src/typings.ts:68](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L68)
 
 ##### Returns
 
@@ -44,7 +44,7 @@ Defined in: [base-log-factory/src/typings.ts:68](https://github.com/fengxinming/
 
 > **set** **level**(`l`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:67](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L67)
+Defined in: [base-log-factory/src/typings.ts:67](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L67)
 
 ##### Parameters
 
@@ -62,7 +62,7 @@ Defined in: [base-log-factory/src/typings.ts:67](https://github.com/fengxinming/
 
 > **addContext**(`key`, `value`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:69](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L69)
+Defined in: [base-log-factory/src/typings.ts:69](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L69)
 
 #### Parameters
 
@@ -84,7 +84,7 @@ Defined in: [base-log-factory/src/typings.ts:69](https://github.com/fengxinming/
 
 > **clearContext**(): `void`
 
-Defined in: [base-log-factory/src/typings.ts:71](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L71)
+Defined in: [base-log-factory/src/typings.ts:71](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L71)
 
 #### Returns
 
@@ -96,7 +96,7 @@ Defined in: [base-log-factory/src/typings.ts:71](https://github.com/fengxinming/
 
 > **debug**(...`args`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:74](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L74)
+Defined in: [base-log-factory/src/typings.ts:74](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L74)
 
 #### Parameters
 
@@ -114,7 +114,7 @@ Defined in: [base-log-factory/src/typings.ts:74](https://github.com/fengxinming/
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-Defined in: [base-log-factory/src/typings.ts:72](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L72)
+Defined in: [base-log-factory/src/typings.ts:72](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L72)
 
 #### Returns
 
@@ -126,7 +126,7 @@ Defined in: [base-log-factory/src/typings.ts:72](https://github.com/fengxinming/
 
 > **error**(...`args`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:77](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L77)
+Defined in: [base-log-factory/src/typings.ts:77](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L77)
 
 #### Parameters
 
@@ -144,7 +144,7 @@ Defined in: [base-log-factory/src/typings.ts:77](https://github.com/fengxinming/
 
 > **fatal**(...`args`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:78](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L78)
+Defined in: [base-log-factory/src/typings.ts:78](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L78)
 
 #### Parameters
 
@@ -162,7 +162,7 @@ Defined in: [base-log-factory/src/typings.ts:78](https://github.com/fengxinming/
 
 > **info**(...`args`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:75](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L75)
+Defined in: [base-log-factory/src/typings.ts:75](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L75)
 
 #### Parameters
 
@@ -180,7 +180,7 @@ Defined in: [base-log-factory/src/typings.ts:75](https://github.com/fengxinming/
 
 > **removeContext**(`key`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:70](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L70)
+Defined in: [base-log-factory/src/typings.ts:70](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L70)
 
 #### Parameters
 
@@ -198,7 +198,7 @@ Defined in: [base-log-factory/src/typings.ts:70](https://github.com/fengxinming/
 
 > **trace**(...`args`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:73](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L73)
+Defined in: [base-log-factory/src/typings.ts:73](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L73)
 
 #### Parameters
 
@@ -216,7 +216,7 @@ Defined in: [base-log-factory/src/typings.ts:73](https://github.com/fengxinming/
 
 > **warn**(...`args`): `void`
 
-Defined in: [base-log-factory/src/typings.ts:76](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L76)
+Defined in: [base-log-factory/src/typings.ts:76](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L76)
 
 #### Parameters
 

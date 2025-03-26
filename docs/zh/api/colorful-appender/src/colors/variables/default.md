@@ -8,7 +8,7 @@
 
 > **default**: `object`
 
-定义于: [colorful-appender/src/colors.ts:3](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/colorful-appender/src/colors.ts#L3)
+定义于: [colorful-appender/src/colors.ts:3](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/colorful-appender/src/colors.ts#L3)
 
 ## 类型声明
 

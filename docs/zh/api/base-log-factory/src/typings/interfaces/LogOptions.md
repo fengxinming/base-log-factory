@@ -6,7 +6,7 @@
 
 # 接口: LogOptions
 
-定义于: [base-log-factory/src/typings.ts:21](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L21)
+定义于: [base-log-factory/src/typings.ts:21](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L21)
 
 Logger options (日志选项)
 
@@ -16,7 +16,7 @@ Logger options (日志选项)
 
 > `optional` **appenders**: [`IAppender`](IAppender.md)[]
 
-定义于: [base-log-factory/src/typings.ts:23](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L23)
+定义于: [base-log-factory/src/typings.ts:23](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L23)
 
 ***
 
@@ -24,4 +24,4 @@ Logger options (日志选项)
 
 > `optional` **level**: [`default`](../../LogLevel/enumerations/default.md) \| [`TLevel`](../type-aliases/TLevel.md)
 
-定义于: [base-log-factory/src/typings.ts:22](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L22)
+定义于: [base-log-factory/src/typings.ts:22](https://github.com/fengxinming/log-base/blob/f6c9069a5cd1f743106018a69d7fd4022e94fab6/packages/base-log-factory/src/typings.ts#L22)
