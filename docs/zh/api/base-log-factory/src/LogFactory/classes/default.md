@@ -6,7 +6,7 @@
 
 # 类: default
 
-定义于: base-log-factory/src/LogFactory.ts:9
+定义于: [base-log-factory/src/LogFactory.ts:9](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L9)
 
 Log Factory (日志工厂)
 
@@ -16,7 +16,7 @@ Log Factory (日志工厂)
 
 > **new default**(`config`?): `LogFactory`
 
-定义于: base-log-factory/src/LogFactory.ts:19
+定义于: [base-log-factory/src/LogFactory.ts:19](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L19)
 
 Constructor (构造函数)
 
@@ -40,7 +40,7 @@ Configuration options (配置选项)
 
 > **get** **level**(): [`default`](../../LogLevel/enumerations/default.md)
 
-定义于: base-log-factory/src/LogFactory.ts:26
+定义于: [base-log-factory/src/LogFactory.ts:26](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L26)
 
 Get the default log level (获取或设置默认日志级别)
 
@@ -56,7 +56,7 @@ Get the default log level (获取或设置默认日志级别)
 
 > **get** **levelName**(): `string`
 
-定义于: base-log-factory/src/LogFactory.ts:33
+定义于: [base-log-factory/src/LogFactory.ts:33](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L33)
 
 Get the default log level name (获取或设置默认日志级别名称)
 
@@ -70,7 +70,7 @@ Get the default log level name (获取或设置默认日志级别名称)
 
 > **clear**(`name`?): `void`
 
-定义于: base-log-factory/src/LogFactory.ts:103
+定义于: [base-log-factory/src/LogFactory.ts:103](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L103)
 
 Clear the logger cache (清除日志缓存)
 
@@ -92,7 +92,7 @@ Logger name (日志名称)
 
 > **configure**(`param`): `void`
 
-定义于: base-log-factory/src/LogFactory.ts:66
+定义于: [base-log-factory/src/LogFactory.ts:66](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L66)
 
 Configure the log factory (配置日志工厂)
 
@@ -114,7 +114,7 @@ Configuration options (配置选项)
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-定义于: base-log-factory/src/LogFactory.ts:115
+定义于: [base-log-factory/src/LogFactory.ts:115](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L115)
 
 Dispose the log factory (销毁日志工厂)
 
@@ -128,7 +128,7 @@ Dispose the log factory (销毁日志工厂)
 
 > **getLogger**(`name`): [`ILogger`](../../typings/interfaces/ILogger.md)
 
-定义于: base-log-factory/src/LogFactory.ts:86
+定义于: [base-log-factory/src/LogFactory.ts:86](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L86)
 
 Get a logger instance (获取日志实例)
 
@@ -150,7 +150,7 @@ Logger name (日志名称)
 
 > **updateLevel**(`level`, `updateCachedLoggers`?): `boolean`
 
-定义于: base-log-factory/src/LogFactory.ts:43
+定义于: [base-log-factory/src/LogFactory.ts:43](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/LogFactory.ts#L43)
 
 Update the default log level (更新默认日志级别)
 

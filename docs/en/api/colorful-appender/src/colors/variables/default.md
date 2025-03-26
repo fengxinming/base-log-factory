@@ -8,7 +8,7 @@
 
 > **default**: `object`
 
-Defined in: colorful-appender/src/colors.ts:3
+Defined in: [colorful-appender/src/colors.ts:3](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/colorful-appender/src/colors.ts#L3)
 
 ## Type declaration
 

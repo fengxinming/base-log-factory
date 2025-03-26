@@ -103,4 +103,4 @@ logger.info('Server started successfully');
 
 ## 📄 License
 
-[MIT License](LICENSE)
+[MIT License](../../LICENSE)

@@ -6,7 +6,7 @@
 
 # 接口: IAppender
 
-定义于: base-log-factory/src/typings.ts:54
+定义于: [base-log-factory/src/typings.ts:54](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L54)
 
 Appender interface (日志记录器接口)
 
@@ -16,7 +16,7 @@ Appender interface (日志记录器接口)
 
 > **name**: `string`
 
-定义于: base-log-factory/src/typings.ts:55
+定义于: [base-log-factory/src/typings.ts:55](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L55)
 
 ## 方法
 
@@ -24,7 +24,7 @@ Appender interface (日志记录器接口)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: base-log-factory/src/typings.ts:58
+定义于: [base-log-factory/src/typings.ts:58](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L58)
 
 #### 返回
 
@@ -36,7 +36,7 @@ Appender interface (日志记录器接口)
 
 > **setup**(`logger`): `void`
 
-定义于: base-log-factory/src/typings.ts:56
+定义于: [base-log-factory/src/typings.ts:56](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L56)
 
 #### 参数
 
@@ -54,7 +54,7 @@ Appender interface (日志记录器接口)
 
 > **write**(`event`): `void`
 
-定义于: base-log-factory/src/typings.ts:57
+定义于: [base-log-factory/src/typings.ts:57](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L57)
 
 #### 参数
 

@@ -6,7 +6,7 @@
 
 # 类: default
 
-定义于: debug-appender/src/DebugAppender.ts:9
+定义于: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/debug-appender/src/DebugAppender.ts#L9)
 
 Console appender (控制台输出)
 
@@ -74,7 +74,7 @@ Layout (布局)
 
 > **debug**: `Debugger`
 
-定义于: debug-appender/src/DebugAppender.ts:11
+定义于: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/debug-appender/src/DebugAppender.ts#L11)
 
 ***
 
@@ -94,7 +94,7 @@ Layout (布局)
 
 > **name**: `string` = `'debug'`
 
-定义于: debug-appender/src/DebugAppender.ts:10
+定义于: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/debug-appender/src/DebugAppender.ts#L10)
 
 #### 重写了
 
@@ -106,7 +106,7 @@ Layout (布局)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: debug-appender/src/DebugAppender.ts:42
+定义于: [debug-appender/src/DebugAppender.ts:42](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/debug-appender/src/DebugAppender.ts#L42)
 
 Close appender (关闭输出)
 
@@ -150,7 +150,7 @@ Close appender (关闭输出)
 
 > **setup**(`__namedParameters`): `void`
 
-定义于: debug-appender/src/DebugAppender.ts:13
+定义于: [debug-appender/src/DebugAppender.ts:13](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/debug-appender/src/DebugAppender.ts#L13)
 
 #### 参数
 
@@ -172,7 +172,7 @@ Close appender (关闭输出)
 
 > **write**(`event`): `void`
 
-定义于: debug-appender/src/DebugAppender.ts:24
+定义于: [debug-appender/src/DebugAppender.ts:24](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/debug-appender/src/DebugAppender.ts#L24)
 
 Write log (写入日志)
 

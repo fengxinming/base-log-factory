@@ -8,7 +8,7 @@
 
 > **TPatternConverter** = (...`args`) => `string`
 
-定义于: base-log-factory/src/typings.ts:41
+定义于: [base-log-factory/src/typings.ts:41](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/base-log-factory/src/typings.ts#L41)
 
 Pattern converter (日志记录器模式转换器)
 

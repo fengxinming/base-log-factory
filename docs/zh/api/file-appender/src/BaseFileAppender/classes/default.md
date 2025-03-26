@@ -6,7 +6,7 @@
 
 # 类: `abstract` default
 
-定义于: file-appender/src/BaseFileAppender.ts:12
+定义于: [file-appender/src/BaseFileAppender.ts:12](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L12)
 
 Base file appender (文件日志基类)
 
@@ -25,7 +25,7 @@ Base file appender (文件日志基类)
 
 > **new default**(`filePath`, `options`): `BaseFileAppender`
 
-定义于: file-appender/src/BaseFileAppender.ts:22
+定义于: [file-appender/src/BaseFileAppender.ts:22](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L22)
 
 Constructor
 
@@ -53,7 +53,7 @@ Options (选项)
 
 > `protected` `readonly` **filePath**: `string`
 
-定义于: file-appender/src/BaseFileAppender.ts:23
+定义于: [file-appender/src/BaseFileAppender.ts:23](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L23)
 
 File path (文件路径)
 
@@ -63,7 +63,7 @@ File path (文件路径)
 
 > `readonly` **layout**: `ILayout`
 
-定义于: file-appender/src/BaseFileAppender.ts:15
+定义于: [file-appender/src/BaseFileAppender.ts:15](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L15)
 
 ***
 
@@ -71,7 +71,7 @@ File path (文件路径)
 
 > **name**: `string` = `'baseFile'`
 
-定义于: file-appender/src/BaseFileAppender.ts:13
+定义于: [file-appender/src/BaseFileAppender.ts:13](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L13)
 
 #### 实现了
 
@@ -83,7 +83,7 @@ File path (文件路径)
 
 > `protected` `readonly` **options**: [`BaseAppenderOptions`](../../typings/type-aliases/BaseAppenderOptions.md) = `{}`
 
-定义于: file-appender/src/BaseFileAppender.ts:24
+定义于: [file-appender/src/BaseFileAppender.ts:24](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L24)
 
 Options (选项)
 
@@ -93,7 +93,7 @@ Options (选项)
 
 > **stream**: `Writable`
 
-定义于: file-appender/src/BaseFileAppender.ts:14
+定义于: [file-appender/src/BaseFileAppender.ts:14](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L14)
 
 ## 方法
 
@@ -101,7 +101,7 @@ Options (选项)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: file-appender/src/BaseFileAppender.ts:50
+定义于: [file-appender/src/BaseFileAppender.ts:50](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L50)
 
 Close appender
 
@@ -119,7 +119,7 @@ Close appender
 
 > `abstract` `protected` **getStream**(`filePath`, `options`): `Writable`
 
-定义于: file-appender/src/BaseFileAppender.ts:59
+定义于: [file-appender/src/BaseFileAppender.ts:59](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L59)
 
 Get stream (获取流)
 
@@ -147,7 +147,7 @@ Options (选项)
 
 > **setup**(): `void`
 
-定义于: file-appender/src/BaseFileAppender.ts:30
+定义于: [file-appender/src/BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L30)
 
 #### 返回
 
@@ -163,7 +163,7 @@ Options (选项)
 
 > **write**(`logEvent`): `void`
 
-定义于: file-appender/src/BaseFileAppender.ts:38
+定义于: [file-appender/src/BaseFileAppender.ts:38](https://github.com/fengxinming/log-base/blob/2c3efcb178d7ddc2410225a9c002fea10b6d1b2d/packages/file-appender/src/BaseFileAppender.ts#L38)
 
 Write log event
 

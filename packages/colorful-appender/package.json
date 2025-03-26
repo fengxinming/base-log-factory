@@ -1,7 +1,7 @@
 {
   "name": "blf-colorful-appender",
-  "version": "1.0.0",
-  "description": "A flexible and simple JS logging library that allows logging or collecting logs in different environments by configuring various Appenders. Suitable for browser, NodeJS and other environments.",
+  "version": "1.0.1",
+  "description": "A ColorfulAppender for `base-log-factory`.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
