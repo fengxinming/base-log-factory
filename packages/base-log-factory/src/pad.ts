@@ -1,4 +1,4 @@
-export default function padString(str: string, width: number, alignLeft: boolean = true): string {
+export default function pad(str: string, width: number, alignLeft: boolean = true): string {
   const diff = width - str.length;
 
   if (diff <= 0) {

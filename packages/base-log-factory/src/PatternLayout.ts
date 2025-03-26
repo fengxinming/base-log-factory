@@ -2,7 +2,7 @@ import { format as dateFormat } from 'date-manip';
 
 import compilePattern from './compilePattern';
 import formatMessage from './formatMessage';
-import pad from './padString';
+import pad from './pad';
 import { ILayout, LogEvent, TPatternConverter } from './typings';
 
 // 基础转换器实现
