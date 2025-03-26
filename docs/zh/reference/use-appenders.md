@@ -10,8 +10,8 @@ import {
   LogFactory, 
   ConsoleAppender,
 } from 'base-log-factory';
-import PatternLayout from 'base-log-factory/dist/PatternLayout';
-import FileAppender from 'base-log-factory/dist/FileAppender';
+import PatternLayout from 'base-log-factory/dist/layouts/PatternLayout';
+import FileAppender from 'base-log-factory/dist/appenders/FileAppender';
 
 const logFactory = new LogFactory({
   level: Level.DEBUG,  // 设置全局日志级别
@@ -47,8 +47,8 @@ import {
   ConsoleAppender, 
   PatternLayout 
 } from 'base-log-factory';
-import DateFileAppender from 'base-log-factory/dist/DateFileAppender';
-import PatternLayout from 'base-log-factory/dist/PatternLayout';
+import DateFileAppender from 'base-log-factory/dist/appenders/DateFileAppender';
+import PatternLayout from 'base-log-factory/dist/layouts/PatternLayout';
 
 const logFactory = new LogFactory({
   level: Level.DEBUG,  // 设置全局日志级别

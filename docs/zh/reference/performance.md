@@ -12,6 +12,7 @@ import {
   LogFactory, 
   ConsoleAppender
 } from 'base-log-factory';
+import FileAppender from 'base-log-factory/dist/appenders/FileAppender';
 const logFactory = new LogFactory({
   level: Level.INFO,  // 设置全局日志级别
   appenders: [
@@ -33,6 +34,7 @@ import {
   LogFactory, 
   ConsoleAppender
 } from 'base-log-factory';
+import FileAppender from 'base-log-factory/dist/appenders/FileAppender';
 const logFactory = new LogFactory({
   level: Level.INFO,  // 设置全局日志级别
   appenders: [
