@@ -1,7 +1,7 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "entryPoints": [
-    "src/**/*.ts"
+    "packages/*/src/*.ts"
   ],
   "name": "base-log-factory",
   "entryFileName": "index",
