@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, basename, join } from 'node:path'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 
-import pkg from '../../../package.json';
+import pkg from '../../../packages/base-log-factory/package.json';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

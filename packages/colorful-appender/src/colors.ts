@@ -1,11 +1,11 @@
-import { LogLevel } from 'base-log-factory';
+import { Level } from 'base-log-factory';
 
 export default {
-  [LogLevel.FATAL]: 'magenta',
-  [LogLevel.ERROR]: 'red',
-  [LogLevel.WARN]: 'yellow',
-  [LogLevel.INFO]: 'green',
-  [LogLevel.DEBUG]: 'cyan',
-  [LogLevel.TRACE]: 'blue',
-  [LogLevel.OFF]: 'reset'
+  [Level.FATAL]: 'magenta',
+  [Level.ERROR]: 'red',
+  [Level.WARN]: 'yellow',
+  [Level.INFO]: 'green',
+  [Level.DEBUG]: 'cyan',
+  [Level.TRACE]: 'blue',
+  [Level.OFF]: 'reset'
 };
