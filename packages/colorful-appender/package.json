@@ -1,6 +1,6 @@
 {
   "name": "blf-colorful-appender",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A ColorfulAppender for `base-log-factory`.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -41,7 +41,7 @@
   },
   "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
-    "base-log-factory": "^2.0.8",
+    "base-log-factory": "^2.0.9",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
