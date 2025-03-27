@@ -8,9 +8,9 @@ import {
   Level,
   LogFactory, 
   ConsoleAppender,
+  PatternLayout,
 } from 'base-log-factory';
-import PatternLayout from 'base-log-factory/dist/layouts/PatternLayout';
-import FileAppender from 'base-log-factory/dist/appenders/FileAppender';
+import { FileAppender } from 'blf-file-appender';
 
 const logFactory = new LogFactory({
   level: Level.DEBUG,  // Set global log level
@@ -42,10 +42,9 @@ import {
   Level,
   LogFactory, 
   ConsoleAppender, 
-  PatternLayout 
+  PatternLayout
 } from 'base-log-factory';
-import DateFileAppender from 'base-log-factory/dist/appenders/DateFileAppender';
-import PatternLayout from 'base-log-factory/dist/layouts/PatternLayout';
+import { FileAppender } from 'blf-file-appender';
 
 const logFactory = new LogFactory({
   level: Level.DEBUG,  // Set global log level

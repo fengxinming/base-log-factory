@@ -11,7 +11,8 @@ import {
   LogFactory, 
   ConsoleAppender
 } from 'base-log-factory';
-import FileAppender from 'base-log-factory/dist/appenders/FileAppender';
+import { FileAppender } from 'blf-file-appender';
+
 const logFactory = new LogFactory({
   level: Level.INFO,  // Set global log level
   appenders: [
@@ -33,7 +34,8 @@ import {
   LogFactory, 
   ConsoleAppender
 } from 'base-log-factory';
-import FileAppender from 'base-log-factory/dist/appenders/FileAppender';
+import { FileAppender } from 'blf-file-appender';
+
 const logFactory = new LogFactory({
   level: Level.INFO,  // Set global log level
   appenders: [

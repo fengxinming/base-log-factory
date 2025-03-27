@@ -17,11 +17,11 @@
     "test:da": "npm run build:blf && pnpm run --filter=blf-debug-appender test",
     "prepare": "husky",
     "eslint": "eslint --ext .js,.mjs,.jsx,.ts,.tsx --fix --ignore-path .eslintignore ./",
-    "typedoc": "typedoc && typedoc --options typedoc.zh.json",
-    "use": "vite-node ./use.ts",
+    "docs:api": "pnpm run -r typedoc",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "use": "vite-node ./use.ts"
   },
   "keywords": [
     "log"
@@ -38,8 +38,6 @@
   "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
     "markdown-it-mathjax3": "^4.3.2",
-    "typedoc": "^0.28.1",
-    "typedoc-plugin-markdown": "^4.5.2",
     "vitepress": "^1.6.3",
     "vitepress-plugin-group-icons": "^1.3.8"
   },

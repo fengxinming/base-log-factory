@@ -29,11 +29,10 @@ logger.info('hello world!');
 // Configure file rotation, custom format, and context
 import { 
   LogFactory, 
-  ConsoleAppender, 
-  FileAppender, 
-  DateFileAppender, 
+  ConsoleAppender,
   PatternLayout 
 } from 'base-log-factory';
+import { DateFileAppender, FileAppender } from 'blf-file-appender';
 
 const logFactory = new LogFactory({
   level: 'DEBUG',  // Set global log level

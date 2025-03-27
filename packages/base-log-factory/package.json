@@ -1,6 +1,6 @@
 {
   "name": "base-log-factory",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "A flexible and simple JS logging library that allows logging or collecting logs in different environments by configuring various Appenders. Suitable for browser, NodeJS and other environments.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -17,7 +17,8 @@
     "build": "vite build",
     "test": "vitest run --coverage",
     "prepublishOnly": "npm run build",
-    "release": "npm publish"
+    "release": "npm publish",
+    "typedoc": "typedoc && typedoc --options typedoc.zh.json"
   },
   "keywords": [
     "log",

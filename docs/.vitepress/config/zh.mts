@@ -10,7 +10,7 @@ export const zh = defineConfig({
     nav: [
       { text: '指南', link: '/zh/guide/introduce', activeMatch: '/zh/guide/' },
       { text: '参考', link: '/zh/reference/use-appenders', activeMatch: '/zh/reference/' },
-      { text: 'API', link: '/zh/api', activeMatch: '/zh/api/' }
+      { text: 'API', link: '/zh/api/base-log-factory', activeMatch: '/zh/api/' }
     ],
 
     sidebar: {

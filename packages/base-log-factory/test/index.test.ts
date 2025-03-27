@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import ConsoleAppender from '../src/ConsoleAppender';
+import LogLevel from '../src/Level';
 import LogFactory from '../src/LogFactory';
-import LogLevel from '../src/LogLevel';
 import PatternLayout from '../src/PatternLayout';
 
 describe('测试日志级别打印', () => {
