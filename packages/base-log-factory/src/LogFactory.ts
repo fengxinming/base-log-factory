@@ -1,5 +1,5 @@
+import Level from './Level';
 import Logger from './Logger';
-import Level from './LogLevel';
 import normalizeLevel from './normalizeLevel';
 import { Config, IAppender, ILogger, TLevel } from './typings';
 

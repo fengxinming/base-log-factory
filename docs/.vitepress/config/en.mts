@@ -10,7 +10,7 @@ export const en = defineConfig({
     nav: [
       { text: 'Guide', link: '/guide/introduce', activeMatch: '/guide/' },
       { text: 'Reference', link: '/reference/use-appenders', activeMatch: '/reference/' },
-      { text: 'API', link: '/api', activeMatch: '/api/' }
+      { text: 'API', link: '/api/base-log-factory', activeMatch: '/api/' }
     ],
 
     sidebar: {

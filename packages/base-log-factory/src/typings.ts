@@ -1,16 +1,22 @@
+import Level from './Level';
 import Logger from './Logger';
-import Level from './LogLevel';
 
 /**
  * Log level name (日志级别名称)
  */
-export type TLevel = 'TRACE' | 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'FATAL' | 'OFF';
+export type TLevel = keyof typeof Level;
+// export type TLevel = 'TRACE' | 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'FATAL' | 'OFF';
+
+/**
+ * Log level (日志级别)
+ */
+export type LogLevel = Level | TLevel;
 
 /**
  * Log factory configuration (日志工厂配置)
  */
 export interface Config {
-  level?: Level | TLevel;
+  level?: LogLevel;
   appenders?: IAppender[];
   LoggerClass?: typeof Logger;
 }
@@ -19,7 +25,7 @@ export interface Config {
  * Logger options (日志选项)
  */
 export interface LogOptions {
-  level?: Level | TLevel;
+  level?: LogLevel;
   appenders?: IAppender[];
 }
 
@@ -27,7 +33,7 @@ export interface LogOptions {
  * Log event (日志事件)
  */
 export interface LogEvent {
-  level: Level;
+  level: LogLevel;
   levelName: TLevel;
   message: any[];
   timestamp: Date;
@@ -64,8 +70,9 @@ export interface IAppender {
 export interface ILogger {
   name: string;
   appenders: Map<string, IAppender>;
-  set level(l: Level | TLevel);
+  set level(l: LogLevel);
   get level(): Level;
+  get levelName(): TLevel;
   addContext(key: string, value: any): void;
   removeContext(key: string): void;
   clearContext(): void;

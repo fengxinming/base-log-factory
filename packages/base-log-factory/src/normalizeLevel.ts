@@ -1,4 +1,4 @@
-import Level from './LogLevel';
+import Level from './Level';
 import { TLevel } from './typings';
 
 /**

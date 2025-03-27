@@ -1,6 +1,6 @@
-import Level from './LogLevel';
+import Level from './Level';
 import normalizeLevel from './normalizeLevel';
-import { IAppender, ILogger, LogEvent, LogOptions, TLevel } from './typings';
+import { IAppender, ILogger, LogEvent, LogLevel, LogOptions, TLevel } from './typings';
 
 /**
  * Logger instance (日志实例)
@@ -34,8 +34,8 @@ export default class Logger implements ILogger {
   /**
    * Log level name (日志级别名称)
    */
-  get levelName(): string {
-    return Level[this._level];
+  get levelName(): TLevel {
+    return Level[this._level] as TLevel;
   }
 
   /**
@@ -49,7 +49,7 @@ export default class Logger implements ILogger {
    * Set log level (设置日志级别)
    * @param level Log level (日志级别)
    */
-  set level(level: Level | TLevel) {
+  set level(level: LogLevel) {
     const normalizedLevel = normalizeLevel(level);
     if (normalizedLevel !== void 0) {
       this._level = normalizedLevel;
