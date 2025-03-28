@@ -132,5 +132,3 @@ dist
 # .npmrc
 logs/
 .DS_Store
-docs/en/api/
-docs/zh/api/
