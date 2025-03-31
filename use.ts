@@ -15,10 +15,11 @@ const factory = new LogFactory({
 });
 
 const appLogger = factory.getLogger('app');
-appLogger.info('Hello', 'world!', 1, null, undefined, true, Symbol(123), { foo: 'bar' }, new Error('I am Error'));
-
-debug.debug.namespace = 'app:debug';
+appLogger.info('Hello', 'world!', 1, null, undefined, true, Symbol(123), { foo: 'bar' });
+appLogger.info(new Error('I am Error'));
+appLogger.info({ a: { b: { c: { d: { f: 1 } } } } });
 function work() {
+  appLogger.name = `app:${Math.random().toString(36).slice(2)}`;
   appLogger.info('doing lots of uninteresting work');
   setTimeout(work, Math.random() * 1000);
 }
