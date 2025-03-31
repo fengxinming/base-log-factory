@@ -6,7 +6,7 @@ import { IAppender, ILayout, ILogger, LogEvent } from './typings';
  */
 export default class ConsoleAppender implements IAppender {
   name = 'console';
-  dateFormat = 'HH:mm:ss.SSSZ';
+  dateFormat = 'HH:mm:ss.SSS';
 
   /**
    * Constructor (构造函数)

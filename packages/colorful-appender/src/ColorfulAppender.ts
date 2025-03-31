@@ -1,7 +1,8 @@
-import { basicLogPrefix, ConsoleAppender, ILayout, Level, LogEvent } from 'base-log-factory';
+import { basicLogPrefix, ConsoleAppender, Level, LogEvent } from 'base-log-factory';
 import pc from 'picocolors';
 
 import defaultColors from './colors';
+import { ColorfulAppenderOptions } from './typings';
 
 /**
  * Console appender (控制台输出)
@@ -9,14 +10,12 @@ import defaultColors from './colors';
 export default class ColorfulAppender extends ConsoleAppender {
   name = 'colorful';
   colors: Record<Level, string>;
-  dateFormat = 'HH:mm:ss.SSSZ';
   /**
    * Constructor (构造函数)
-   * @param layout Layout (布局)
    */
-  constructor(layout?: ILayout, colors?: Record<Level, string>) {
-    super(layout);
-    this.colors = colors || defaultColors;
+  constructor(opts: ColorfulAppenderOptions = {}) {
+    super(opts.layout);
+    this.colors = opts.colors || defaultColors;
   }
 
   /**
