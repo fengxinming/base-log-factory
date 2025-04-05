@@ -44,7 +44,18 @@ export interface LogEvent {
 /**
  * Pattern converter (日志记录器模式转换器)
  */
-export type TPatternConverter = (...args: any[]) => string;
+export type TPatternConverter = (event: LogEvent) => string;
+
+/**
+ * Create converter function (创建转换器函数)
+ */
+export type TCreateConverter = (
+  specifier: string,
+  alignLeft: boolean,
+  minWidth: number,
+  maxLength: number,
+  format?: string
+) => TPatternConverter;
 
 /**
  * Layout interface (日志布局接口)

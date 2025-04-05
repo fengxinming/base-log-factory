@@ -1,9 +1,10 @@
 import { format as dateFormat } from 'date-manip';
+import { isFunction } from 'is-what-type';
 
 import compilePattern from './compilePattern';
 import formatMessage from './formatMessage';
 import pad from './pad';
-import { ILayout, LogEvent, TPatternConverter } from './typings';
+import { ILayout, LogEvent, TCreateConverter, TPatternConverter } from './typings';
 
 // 基础转换器实现
 function literalConverter(text: string): () => string {
@@ -69,40 +70,6 @@ function mdcConverter(
   };
 }
 
-function createConverter(
-  specifier: string,
-  alignLeft: boolean,
-  minWidth: number,
-  maxLength: number,
-  format?: string
-): TPatternConverter {
-  switch (specifier.toLowerCase()) {
-    case '%':
-      return literalConverter('%');
-
-    case 'd':
-      return dateConverter(format);
-
-    case 'p':
-      return levelConverter(minWidth, alignLeft);
-
-    case 'c':
-      return loggerConverter(minWidth, alignLeft);
-
-    case 'm':
-      return messageConverter(minWidth, maxLength, alignLeft);
-
-    case 't':
-      return threadConverter();
-
-    case 'x':
-      return mdcConverter(format || '', minWidth, alignLeft);
-
-    default:
-      return literalConverter(`%${specifier}`);
-  }
-}
-
 /**
  * Pattern layout for logging messages (根据指定模版格式化日志内容)
  */
@@ -114,10 +81,58 @@ export default class PatternLayout implements ILayout {
    * @param pattern Pattern string (模版字符串)
    */
 
-  constructor(pattern: string = '[%d{YYYY-MM-DD HH:mm:ss.SSSZ}] %p %c - %m') {
+  constructor(
+    pattern: string = '[%d{YYYY-MM-DD HH:mm:ss.SSSZ}] %p %c - %m',
+    createConverter?: TCreateConverter
+  ) {
     this.converters = compilePattern(
       pattern,
-      createConverter,
+      (
+        specifier: string,
+        alignLeft: boolean,
+        minWidth: number,
+        maxLength: number,
+        format?: string
+      ): TPatternConverter => {
+        if (isFunction<TCreateConverter>(createConverter)) {
+          const converter = createConverter(
+            specifier,
+            alignLeft,
+            minWidth,
+            maxLength,
+            format
+          );
+          if (isFunction<TPatternConverter>(converter)) {
+            return converter;
+          }
+        }
+
+        switch (specifier.toLowerCase()) {
+          case '%':
+            return literalConverter('%');
+
+          case 'd':
+            return dateConverter(format);
+
+          case 'p':
+            return levelConverter(minWidth, alignLeft);
+
+          case 'c':
+            return loggerConverter(minWidth, alignLeft);
+
+          case 'm':
+            return messageConverter(minWidth, maxLength, alignLeft);
+
+          case 't':
+            return threadConverter();
+
+          case 'x':
+            return mdcConverter(format || '', minWidth, alignLeft);
+
+          default:
+            return literalConverter(`%${specifier}`);
+        }
+      },
       literalConverter
     );
   }

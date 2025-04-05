@@ -10,7 +10,7 @@
 
 ### default
 
-Defined in: [BasicLayout.ts:8](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/BasicLayout.ts#L8)
+Defined in: [BasicLayout.ts:8](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/BasicLayout.ts#L8)
 
 Basic layout for logging messages (基础的日志布局)
 
@@ -34,7 +34,7 @@ Basic layout for logging messages (基础的日志布局)
 
 > **format**(`event`): `string`
 
-Defined in: [BasicLayout.ts:13](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/BasicLayout.ts#L13)
+Defined in: [BasicLayout.ts:13](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/BasicLayout.ts#L13)
 
 Format the log event (格式化日志事件)
 

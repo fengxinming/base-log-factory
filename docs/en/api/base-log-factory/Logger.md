@@ -10,7 +10,7 @@
 
 ### default
 
-Defined in: [Logger.ts:8](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L8)
+Defined in: [Logger.ts:8](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L8)
 
 Logger instance (日志实例)
 
@@ -24,7 +24,7 @@ Logger instance (日志实例)
 
 > **new default**(`name`, `options`): [`default`](#default)
 
-Defined in: [Logger.ts:18](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L18)
+Defined in: [Logger.ts:18](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L18)
 
 Create a logger instance (创建日志实例)
 
@@ -52,13 +52,13 @@ Logging options (日志选项)
 
 > `protected` **\_level**: [`default`](Level.md#default) = `Level.INFO`
 
-Defined in: [Logger.ts:11](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L11)
+Defined in: [Logger.ts:11](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L11)
 
 ##### appenders
 
 > `readonly` **appenders**: `Map`\<`string`, [`IAppender`](typings.md#iappender)\>
 
-Defined in: [Logger.ts:9](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L9)
+Defined in: [Logger.ts:9](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L9)
 
 ###### Implementation of
 
@@ -68,13 +68,13 @@ Defined in: [Logger.ts:9](https://github.com/fengxinming/log-base/blob/531de42a0
 
 > `protected` **context**: `Record`\<`string`, `any`\> = `{}`
 
-Defined in: [Logger.ts:10](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L10)
+Defined in: [Logger.ts:10](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L10)
 
 ##### name
 
 > **name**: `string`
 
-Defined in: [Logger.ts:19](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L19)
+Defined in: [Logger.ts:19](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L19)
 
 Logger name (日志名称)
 
@@ -90,7 +90,7 @@ Logger name (日志名称)
 
 > **get** **level**(): [`default`](Level.md#default)
 
-Defined in: [Logger.ts:44](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L44)
+Defined in: [Logger.ts:44](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L44)
 
 Log level (日志级别)
 
@@ -102,7 +102,7 @@ Log level (日志级别)
 
 > **set** **level**(`level`): `void`
 
-Defined in: [Logger.ts:52](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L52)
+Defined in: [Logger.ts:52](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L52)
 
 Set log level (设置日志级别)
 
@@ -128,7 +128,7 @@ Log level (日志级别)
 
 > **get** **levelName**(): `"TRACE"` \| `"DEBUG"` \| `"INFO"` \| `"WARN"` \| `"ERROR"` \| `"FATAL"` \| `"OFF"`
 
-Defined in: [Logger.ts:37](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L37)
+Defined in: [Logger.ts:37](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L37)
 
 Log level name (日志级别名称)
 
@@ -146,7 +146,7 @@ Log level name (日志级别名称)
 
 > **addContext**(`key`, `value`): `void`
 
-Defined in: [Logger.ts:64](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L64)
+Defined in: [Logger.ts:64](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L64)
 
 Add context (添加上下文)
 
@@ -176,7 +176,7 @@ Context value (上下文值)
 
 > **clearContext**(): `void`
 
-Defined in: [Logger.ts:79](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L79)
+Defined in: [Logger.ts:79](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L79)
 
 Clear context (清除上下文)
 
@@ -192,7 +192,7 @@ Clear context (清除上下文)
 
 > `protected` **createEvent**(`level`, `message`): [`LogEvent`](typings.md#logevent)
 
-Defined in: [Logger.ts:148](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L148)
+Defined in: [Logger.ts:148](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L148)
 
 Create a log event (创建日志事件)
 
@@ -220,7 +220,7 @@ Log event (日志事件)
 
 > **debug**(...`args`): `void`
 
-Defined in: [Logger.ts:106](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L106)
+Defined in: [Logger.ts:106](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L106)
 
 Log a message of level DEBUG (记录DEBUG级别的日志)
 
@@ -244,7 +244,7 @@ Message arguments (消息参数)
 
 > **dispose**(): `Promise`\<`PromiseSettledResult`\<`void`\>[]\>
 
-Defined in: [Logger.ts:86](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L86)
+Defined in: [Logger.ts:86](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L86)
 
 Dispose all appenders (关闭所有appenders)
 
@@ -260,7 +260,7 @@ Dispose all appenders (关闭所有appenders)
 
 > **error**(...`args`): `void`
 
-Defined in: [Logger.ts:130](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L130)
+Defined in: [Logger.ts:130](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L130)
 
 Log a message of level ERROR (记录ERROR级别的日志)
 
@@ -284,7 +284,7 @@ Message arguments (消息参数)
 
 > **fatal**(...`args`): `void`
 
-Defined in: [Logger.ts:138](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L138)
+Defined in: [Logger.ts:138](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L138)
 
 Log a message of level FATAL (记录FATAL级别的日志)
 
@@ -308,7 +308,7 @@ Message arguments (消息参数)
 
 > **info**(...`args`): `void`
 
-Defined in: [Logger.ts:114](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L114)
+Defined in: [Logger.ts:114](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L114)
 
 Log a message of level INFO (记录INFO级别的日志)
 
@@ -332,7 +332,7 @@ Message arguments (消息参数)
 
 > `protected` **log**(`level`, `message`): `void`
 
-Defined in: [Logger.ts:164](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L164)
+Defined in: [Logger.ts:164](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L164)
 
 Log a message (记录日志)
 
@@ -358,7 +358,7 @@ Content (内容)
 
 > **removeContext**(`key`): `void`
 
-Defined in: [Logger.ts:72](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L72)
+Defined in: [Logger.ts:72](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L72)
 
 Remove context (移除上下文)
 
@@ -382,7 +382,7 @@ Context key (上下文键)
 
 > **trace**(...`args`): `void`
 
-Defined in: [Logger.ts:98](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L98)
+Defined in: [Logger.ts:98](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L98)
 
 Log a message of level TRACE (记录TRACE级别的日志)
 
@@ -406,7 +406,7 @@ Message arguments (消息参数)
 
 > **warn**(...`args`): `void`
 
-Defined in: [Logger.ts:122](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/Logger.ts#L122)
+Defined in: [Logger.ts:122](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/Logger.ts#L122)
 
 Log a message of level WARN (记录WARN级别的日志)
 
