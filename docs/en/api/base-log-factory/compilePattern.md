@@ -12,7 +12,7 @@
 
 > **default**(`pattern`, `createConverter`, `literalConverter`): [`TPatternConverter`](typings.md#tpatternconverter)[]
 
-Defined in: [compilePattern.ts:5](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/compilePattern.ts#L5)
+Defined in: [compilePattern.ts:5](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/compilePattern.ts#L5)
 
 #### Parameters
 

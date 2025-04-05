@@ -10,7 +10,7 @@
 
 ### Config
 
-定义于: [typings.ts:18](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L18)
+定义于: [typings.ts:18](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L18)
 
 Log factory configuration (日志工厂配置)
 
@@ -20,25 +20,25 @@ Log factory configuration (日志工厂配置)
 
 > `optional` **appenders**: [`IAppender`](#iappender)[]
 
-定义于: [typings.ts:20](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L20)
+定义于: [typings.ts:20](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L20)
 
 ##### level?
 
 > `optional` **level**: [`LogLevel`](#loglevel)
 
-定义于: [typings.ts:19](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L19)
+定义于: [typings.ts:19](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L19)
 
 ##### LoggerClass?
 
 > `optional` **LoggerClass**: *typeof* [`default`](Logger.md#default)
 
-定义于: [typings.ts:21](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L21)
+定义于: [typings.ts:21](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L21)
 
 ***
 
 ### IAppender
 
-定义于: [typings.ts:71](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L71)
+定义于: [typings.ts:71](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L71)
 
 Appender interface (日志记录器接口)
 
@@ -48,7 +48,7 @@ Appender interface (日志记录器接口)
 
 > **name**: `string`
 
-定义于: [typings.ts:72](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L72)
+定义于: [typings.ts:72](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L72)
 
 #### 方法
 
@@ -56,7 +56,7 @@ Appender interface (日志记录器接口)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [typings.ts:75](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L75)
+定义于: [typings.ts:75](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L75)
 
 ###### 返回
 
@@ -66,7 +66,7 @@ Appender interface (日志记录器接口)
 
 > **setup**(`logger`): `void`
 
-定义于: [typings.ts:73](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L73)
+定义于: [typings.ts:73](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L73)
 
 ###### 参数
 
@@ -82,7 +82,7 @@ Appender interface (日志记录器接口)
 
 > **write**(`event`): `void`
 
-定义于: [typings.ts:74](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L74)
+定义于: [typings.ts:74](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L74)
 
 ###### 参数
 
@@ -98,7 +98,7 @@ Appender interface (日志记录器接口)
 
 ### ILayout
 
-定义于: [typings.ts:63](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L63)
+定义于: [typings.ts:63](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L63)
 
 Layout interface (日志布局接口)
 
@@ -108,7 +108,7 @@ Layout interface (日志布局接口)
 
 > **format**(`event`): `string`
 
-定义于: [typings.ts:64](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L64)
+定义于: [typings.ts:64](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L64)
 
 ###### 参数
 
@@ -124,7 +124,7 @@ Layout interface (日志布局接口)
 
 ### ILogger
 
-定义于: [typings.ts:81](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L81)
+定义于: [typings.ts:81](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L81)
 
 Logger interface (日志接口)
 
@@ -134,13 +134,13 @@ Logger interface (日志接口)
 
 > **appenders**: `Map`\<`string`, [`IAppender`](#iappender)\>
 
-定义于: [typings.ts:83](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L83)
+定义于: [typings.ts:83](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L83)
 
 ##### name
 
 > **name**: `string`
 
-定义于: [typings.ts:82](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L82)
+定义于: [typings.ts:82](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L82)
 
 #### 访问器
 
@@ -150,7 +150,7 @@ Logger interface (日志接口)
 
 > **get** **level**(): [`default`](Level.md#default)
 
-定义于: [typings.ts:85](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L85)
+定义于: [typings.ts:85](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L85)
 
 ###### 返回
 
@@ -160,7 +160,7 @@ Logger interface (日志接口)
 
 > **set** **level**(`l`): `void`
 
-定义于: [typings.ts:84](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L84)
+定义于: [typings.ts:84](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L84)
 
 ###### 参数
 
@@ -178,7 +178,7 @@ Logger interface (日志接口)
 
 > **get** **levelName**(): `"TRACE"` \| `"DEBUG"` \| `"INFO"` \| `"WARN"` \| `"ERROR"` \| `"FATAL"` \| `"OFF"`
 
-定义于: [typings.ts:86](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L86)
+定义于: [typings.ts:86](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L86)
 
 ###### 返回
 
@@ -190,7 +190,7 @@ Logger interface (日志接口)
 
 > **addContext**(`key`, `value`): `void`
 
-定义于: [typings.ts:87](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L87)
+定义于: [typings.ts:87](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L87)
 
 ###### 参数
 
@@ -210,7 +210,7 @@ Logger interface (日志接口)
 
 > **clearContext**(): `void`
 
-定义于: [typings.ts:89](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L89)
+定义于: [typings.ts:89](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L89)
 
 ###### 返回
 
@@ -220,7 +220,7 @@ Logger interface (日志接口)
 
 > **debug**(...`args`): `void`
 
-定义于: [typings.ts:92](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L92)
+定义于: [typings.ts:92](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L92)
 
 ###### 参数
 
@@ -236,7 +236,7 @@ Logger interface (日志接口)
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-定义于: [typings.ts:90](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L90)
+定义于: [typings.ts:90](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L90)
 
 ###### 返回
 
@@ -246,7 +246,7 @@ Logger interface (日志接口)
 
 > **error**(...`args`): `void`
 
-定义于: [typings.ts:95](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L95)
+定义于: [typings.ts:95](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L95)
 
 ###### 参数
 
@@ -262,7 +262,7 @@ Logger interface (日志接口)
 
 > **fatal**(...`args`): `void`
 
-定义于: [typings.ts:96](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L96)
+定义于: [typings.ts:96](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L96)
 
 ###### 参数
 
@@ -278,7 +278,7 @@ Logger interface (日志接口)
 
 > **info**(...`args`): `void`
 
-定义于: [typings.ts:93](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L93)
+定义于: [typings.ts:93](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L93)
 
 ###### 参数
 
@@ -294,7 +294,7 @@ Logger interface (日志接口)
 
 > **removeContext**(`key`): `void`
 
-定义于: [typings.ts:88](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L88)
+定义于: [typings.ts:88](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L88)
 
 ###### 参数
 
@@ -310,7 +310,7 @@ Logger interface (日志接口)
 
 > **trace**(...`args`): `void`
 
-定义于: [typings.ts:91](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L91)
+定义于: [typings.ts:91](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L91)
 
 ###### 参数
 
@@ -326,7 +326,7 @@ Logger interface (日志接口)
 
 > **warn**(...`args`): `void`
 
-定义于: [typings.ts:94](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L94)
+定义于: [typings.ts:94](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L94)
 
 ###### 参数
 
@@ -342,7 +342,7 @@ Logger interface (日志接口)
 
 ### LogEvent
 
-定义于: [typings.ts:35](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L35)
+定义于: [typings.ts:35](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L35)
 
 Log event (日志事件)
 
@@ -352,43 +352,43 @@ Log event (日志事件)
 
 > **context**: `Record`\<`string`, `any`\>
 
-定义于: [typings.ts:41](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L41)
+定义于: [typings.ts:41](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L41)
 
 ##### level
 
 > **level**: [`LogLevel`](#loglevel)
 
-定义于: [typings.ts:36](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L36)
+定义于: [typings.ts:36](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L36)
 
 ##### levelName
 
 > **levelName**: `"TRACE"` \| `"DEBUG"` \| `"INFO"` \| `"WARN"` \| `"ERROR"` \| `"FATAL"` \| `"OFF"`
 
-定义于: [typings.ts:37](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L37)
+定义于: [typings.ts:37](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L37)
 
 ##### loggerName
 
 > **loggerName**: `string`
 
-定义于: [typings.ts:40](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L40)
+定义于: [typings.ts:40](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L40)
 
 ##### message
 
 > **message**: `any`[]
 
-定义于: [typings.ts:38](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L38)
+定义于: [typings.ts:38](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L38)
 
 ##### timestamp
 
 > **timestamp**: `Date`
 
-定义于: [typings.ts:39](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L39)
+定义于: [typings.ts:39](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L39)
 
 ***
 
 ### LogOptions
 
-定义于: [typings.ts:27](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L27)
+定义于: [typings.ts:27](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L27)
 
 Logger options (日志选项)
 
@@ -398,13 +398,13 @@ Logger options (日志选项)
 
 > `optional` **appenders**: [`IAppender`](#iappender)[]
 
-定义于: [typings.ts:29](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L29)
+定义于: [typings.ts:29](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L29)
 
 ##### level?
 
 > `optional` **level**: [`LogLevel`](#loglevel)
 
-定义于: [typings.ts:28](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L28)
+定义于: [typings.ts:28](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L28)
 
 ## 类型别名
 
@@ -412,7 +412,7 @@ Logger options (日志选项)
 
 > **LogLevel** = [`default`](Level.md#default) \| [`TLevel`](#tlevel)
 
-定义于: [typings.ts:13](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L13)
+定义于: [typings.ts:13](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L13)
 
 Log level (日志级别)
 
@@ -420,9 +420,9 @@ Log level (日志级别)
 
 ### TCreateConverter()
 
-> **TCreateConverter** = (`specifier`, `alignLeft`, `minWidth`, `maxLength`, `format`?) => [`TPatternConverter`](#tpatternconverter)
+> **TCreateConverter** = (`specifier`, `alignLeft`, `minWidth`, `maxLength`, `format`?) => [`TPatternConverter`](#tpatternconverter) \| `null` \| `undefined`
 
-定义于: [typings.ts:52](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L52)
+定义于: [typings.ts:52](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L52)
 
 Create converter function (创建转换器函数)
 
@@ -450,7 +450,7 @@ Create converter function (创建转换器函数)
 
 #### 返回
 
-[`TPatternConverter`](#tpatternconverter)
+[`TPatternConverter`](#tpatternconverter) \| `null` \| `undefined`
 
 ***
 
@@ -458,7 +458,7 @@ Create converter function (创建转换器函数)
 
 > **TLevel** = keyof *typeof* [`default`](Level.md#default)
 
-定义于: [typings.ts:7](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L7)
+定义于: [typings.ts:7](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L7)
 
 Log level name (日志级别名称)
 
@@ -468,7 +468,7 @@ Log level name (日志级别名称)
 
 > **TPatternConverter** = (`event`) => `string`
 
-定义于: [typings.ts:47](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L47)
+定义于: [typings.ts:47](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/typings.ts#L47)
 
 Pattern converter (日志记录器模式转换器)
 

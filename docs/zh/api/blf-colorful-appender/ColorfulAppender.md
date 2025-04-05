@@ -10,7 +10,7 @@
 
 ### default
 
-定义于: [colorful-appender/src/ColorfulAppender.ts:10](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/colorful-appender/src/ColorfulAppender.ts#L10)
+定义于: [colorful-appender/src/ColorfulAppender.ts:10](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L10)
 
 Console appender (控制台输出)
 
@@ -24,7 +24,7 @@ Console appender (控制台输出)
 
 > **new default**(`opts`): [`default`](#default)
 
-定义于: [colorful-appender/src/ColorfulAppender.ts:16](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/colorful-appender/src/ColorfulAppender.ts#L16)
+定义于: [colorful-appender/src/ColorfulAppender.ts:16](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L16)
 
 Constructor (构造函数)
 
@@ -48,7 +48,7 @@ Constructor (构造函数)
 
 > **colors**: `Record`\<`Level`, `string`\>
 
-定义于: [colorful-appender/src/ColorfulAppender.ts:12](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/colorful-appender/src/ColorfulAppender.ts#L12)
+定义于: [colorful-appender/src/ColorfulAppender.ts:12](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L12)
 
 ##### dateFormat
 
@@ -74,7 +74,7 @@ Constructor (构造函数)
 
 > **name**: `string` = `'colorful'`
 
-定义于: [colorful-appender/src/ColorfulAppender.ts:11](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/colorful-appender/src/ColorfulAppender.ts#L11)
+定义于: [colorful-appender/src/ColorfulAppender.ts:11](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L11)
 
 ###### 重写了
 
@@ -102,7 +102,7 @@ Close appender (关闭输出)
 
 > `protected` **color**(`str`, `event`): `string`
 
-定义于: [colorful-appender/src/ColorfulAppender.ts:37](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/colorful-appender/src/ColorfulAppender.ts#L37)
+定义于: [colorful-appender/src/ColorfulAppender.ts:37](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L37)
 
 ###### 参数
 
@@ -142,7 +142,7 @@ Close appender (关闭输出)
 
 > **write**(`event`): `void`
 
-定义于: [colorful-appender/src/ColorfulAppender.ts:25](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/colorful-appender/src/ColorfulAppender.ts#L25)
+定义于: [colorful-appender/src/ColorfulAppender.ts:25](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L25)
 
 Write log (写入日志)
 

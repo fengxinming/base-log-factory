@@ -55,7 +55,7 @@ export type TCreateConverter = (
   minWidth: number,
   maxLength: number,
   format?: string
-) => TPatternConverter;
+) => TPatternConverter | null | undefined;
 
 /**
  * Layout interface (日志布局接口)
