@@ -1,6 +1,6 @@
 {
   "name": "blf-debug-appender",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A DebugAppender for `base-log-factory`.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
