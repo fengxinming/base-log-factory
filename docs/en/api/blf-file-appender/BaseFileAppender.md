@@ -10,7 +10,7 @@
 
 ### `abstract` default
 
-Defined in: [BaseFileAppender.ts:12](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L12)
+Defined in: [BaseFileAppender.ts:12](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L12)
 
 Base file appender (文件日志基类)
 
@@ -29,7 +29,7 @@ Base file appender (文件日志基类)
 
 > **new default**(`filePath`, `options`): [`default`](#default)
 
-Defined in: [BaseFileAppender.ts:22](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L22)
+Defined in: [BaseFileAppender.ts:22](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L22)
 
 Constructor
 
@@ -57,7 +57,7 @@ Options (选项)
 
 > `protected` `readonly` **filePath**: `string`
 
-Defined in: [BaseFileAppender.ts:23](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L23)
+Defined in: [BaseFileAppender.ts:23](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L23)
 
 File path (文件路径)
 
@@ -65,13 +65,13 @@ File path (文件路径)
 
 > `readonly` **layout**: `ILayout`
 
-Defined in: [BaseFileAppender.ts:15](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L15)
+Defined in: [BaseFileAppender.ts:15](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L15)
 
 ##### name
 
 > **name**: `string` = `'baseFile'`
 
-Defined in: [BaseFileAppender.ts:13](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L13)
+Defined in: [BaseFileAppender.ts:13](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L13)
 
 ###### Implementation of
 
@@ -81,7 +81,7 @@ Defined in: [BaseFileAppender.ts:13](https://github.com/fengxinming/log-base/blo
 
 > `protected` `readonly` **options**: [`BaseAppenderOptions`](typings.md#baseappenderoptions) = `{}`
 
-Defined in: [BaseFileAppender.ts:24](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L24)
+Defined in: [BaseFileAppender.ts:24](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L24)
 
 Options (选项)
 
@@ -89,7 +89,7 @@ Options (选项)
 
 > **stream**: `Writable`
 
-Defined in: [BaseFileAppender.ts:14](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L14)
+Defined in: [BaseFileAppender.ts:14](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L14)
 
 #### Methods
 
@@ -97,7 +97,7 @@ Defined in: [BaseFileAppender.ts:14](https://github.com/fengxinming/log-base/blo
 
 > **close**(): `Promise`\<`void`\>
 
-Defined in: [BaseFileAppender.ts:50](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L50)
+Defined in: [BaseFileAppender.ts:50](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L50)
 
 Close appender
 
@@ -113,7 +113,7 @@ Close appender
 
 > `abstract` `protected` **getStream**(`filePath`, `options`): `Writable`
 
-Defined in: [BaseFileAppender.ts:59](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L59)
+Defined in: [BaseFileAppender.ts:59](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L59)
 
 Get stream (获取流)
 
@@ -139,7 +139,7 @@ Options (选项)
 
 > **setup**(): `void`
 
-Defined in: [BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L30)
+Defined in: [BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L30)
 
 ###### Returns
 
@@ -153,7 +153,7 @@ Defined in: [BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blo
 
 > **write**(`logEvent`): `void`
 
-Defined in: [BaseFileAppender.ts:38](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/file-appender/src/BaseFileAppender.ts#L38)
+Defined in: [BaseFileAppender.ts:38](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L38)
 
 Write log event
 

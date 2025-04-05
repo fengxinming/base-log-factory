@@ -10,7 +10,7 @@
 
 ### default
 
-Defined in: [LogFactory.ts:9](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L9)
+Defined in: [LogFactory.ts:9](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L9)
 
 Log Factory (日志工厂)
 
@@ -20,7 +20,7 @@ Log Factory (日志工厂)
 
 > **new default**(`config`?): [`default`](#default)
 
-Defined in: [LogFactory.ts:19](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L19)
+Defined in: [LogFactory.ts:19](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L19)
 
 Constructor (构造函数)
 
@@ -44,7 +44,7 @@ Configuration options (配置选项)
 
 > **get** **level**(): [`default`](Level.md#default)
 
-Defined in: [LogFactory.ts:26](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L26)
+Defined in: [LogFactory.ts:26](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L26)
 
 Get the default log level (获取或设置默认日志级别)
 
@@ -58,7 +58,7 @@ Get the default log level (获取或设置默认日志级别)
 
 > **get** **levelName**(): `string`
 
-Defined in: [LogFactory.ts:33](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L33)
+Defined in: [LogFactory.ts:33](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L33)
 
 Get the default log level name (获取或设置默认日志级别名称)
 
@@ -72,7 +72,7 @@ Get the default log level name (获取或设置默认日志级别名称)
 
 > **clear**(`name`?): `void`
 
-Defined in: [LogFactory.ts:103](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L103)
+Defined in: [LogFactory.ts:103](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L103)
 
 Clear the logger cache (清除日志缓存)
 
@@ -92,7 +92,7 @@ Logger name (日志名称)
 
 > **configure**(`param`): `void`
 
-Defined in: [LogFactory.ts:66](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L66)
+Defined in: [LogFactory.ts:66](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L66)
 
 Configure the log factory (配置日志工厂)
 
@@ -112,7 +112,7 @@ Configuration options (配置选项)
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-Defined in: [LogFactory.ts:115](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L115)
+Defined in: [LogFactory.ts:115](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L115)
 
 Dispose the log factory (销毁日志工厂)
 
@@ -124,7 +124,7 @@ Dispose the log factory (销毁日志工厂)
 
 > **getLogger**(`name`): [`ILogger`](typings.md#ilogger)
 
-Defined in: [LogFactory.ts:86](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L86)
+Defined in: [LogFactory.ts:86](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L86)
 
 Get a logger instance (获取日志实例)
 
@@ -144,7 +144,7 @@ Logger name (日志名称)
 
 > **updateLevel**(`level`, `updateCachedLoggers`?): `boolean`
 
-Defined in: [LogFactory.ts:43](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/LogFactory.ts#L43)
+Defined in: [LogFactory.ts:43](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/LogFactory.ts#L43)
 
 Update the default log level (更新默认日志级别)
 

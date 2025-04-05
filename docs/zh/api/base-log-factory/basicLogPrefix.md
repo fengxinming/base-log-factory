@@ -12,7 +12,7 @@
 
 > **default**(`event`, `dateFormat`?): `string`
 
-定义于: [basicLogPrefix.ts:7](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/basicLogPrefix.ts#L7)
+定义于: [basicLogPrefix.ts:7](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/basicLogPrefix.ts#L7)
 
 #### 参数
 
