@@ -14,6 +14,7 @@ export default class DebugAppender extends ColorfulAppender {
   setup({ name }: ILogger): void {
     const debug = createDebug(name);
     debug.enabled = true;
+    debug.namespace = name;
 
     this.debug = debug;
   }

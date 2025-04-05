@@ -10,7 +10,7 @@
 
 ### default
 
-Defined in: [PatternLayout.ts:109](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/PatternLayout.ts#L109)
+Defined in: [PatternLayout.ts:76](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/PatternLayout.ts#L76)
 
 Pattern layout for logging messages (根据指定模版格式化日志内容)
 
@@ -22,9 +22,9 @@ Pattern layout for logging messages (根据指定模版格式化日志内容)
 
 ##### Constructor
 
-> **new default**(`pattern`): [`default`](#default)
+> **new default**(`pattern`, `createConverter`?): [`default`](#default)
 
-Defined in: [PatternLayout.ts:117](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/PatternLayout.ts#L117)
+Defined in: [PatternLayout.ts:84](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/PatternLayout.ts#L84)
 
 Constructor (构造函数)
 
@@ -36,6 +36,10 @@ Constructor (构造函数)
 
 Pattern string (模版字符串)
 
+###### createConverter?
+
+[`TCreateConverter`](typings.md#tcreateconverter)
+
 ###### Returns
 
 [`default`](#default)
@@ -46,7 +50,7 @@ Pattern string (模版字符串)
 
 > **format**(`event`): `string`
 
-Defined in: [PatternLayout.ts:138](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/PatternLayout.ts#L138)
+Defined in: [PatternLayout.ts:153](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/PatternLayout.ts#L153)
 
 Format a log event (格式化日志事件)
 
@@ -70,7 +74,7 @@ Log event (日志事件)
 
 > **use**(`fn`): `this`
 
-Defined in: [PatternLayout.ts:129](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/PatternLayout.ts#L129)
+Defined in: [PatternLayout.ts:144](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/PatternLayout.ts#L144)
 
 Add a converter (添加转换器)
 

@@ -1,16 +1,10 @@
-import { TPatternConverter } from './typings';
+import { TCreateConverter, TPatternConverter } from './typings';
 
 const PATTERN_REGEX = /%(-)?(\d+)?(?:\.(\d+))?([a-zA-Z%])(?:\{([^}]+)\})?/g;
 
 export default function compilePattern(
   pattern: string,
-  createConverter: (
-    specifier: string,
-    alignLeft: boolean,
-    minWidth: number,
-    maxLength: number,
-    format?: string
-  ) => TPatternConverter,
+  createConverter: TCreateConverter,
   literalConverter: (text: string) => TPatternConverter
 ): TPatternConverter[] {
   const converters: TPatternConverter[] = [];

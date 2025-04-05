@@ -8,7 +8,7 @@
 
 ### default
 
-定义于: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/debug-appender/src/DebugAppender.ts#L9)
+定义于: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L9)
 
 Console appender (控制台输出)
 
@@ -20,7 +20,7 @@ Console appender (控制台输出)
 
 ##### 构造函数
 
-> **new default**(`layout`?, `colors`?): [`default`](#default)
+> **new default**(`opts`?): [`default`](#default)
 
 定义于: colorful-appender/dist/ColorfulAppender.d.ts:13
 
@@ -28,15 +28,9 @@ Constructor (构造函数)
 
 ###### 参数
 
-###### layout?
+###### opts?
 
-`ILayout`
-
-Layout (布局)
-
-###### colors?
-
-`Record`\<`Level`, `string`\>
+`ColorfulAppenderOptions`
 
 ###### 返回
 
@@ -52,7 +46,7 @@ Layout (布局)
 
 > **colors**: `Record`\<`Level`, `string`\>
 
-定义于: colorful-appender/dist/ColorfulAppender.d.ts:7
+定义于: colorful-appender/dist/ColorfulAppender.d.ts:8
 
 ###### 继承自
 
@@ -60,11 +54,11 @@ Layout (布局)
 
 ##### dateFormat
 
-> **dateFormat**: `string`
+> **dateFormat**: `string` = `'HH:mm:ss'`
 
-定义于: colorful-appender/dist/ColorfulAppender.d.ts:8
+定义于: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L11)
 
-###### 继承自
+###### 重写了
 
 `ColorfulAppender.dateFormat`
 
@@ -72,7 +66,7 @@ Layout (布局)
 
 > **debug**: `Debugger`
 
-定义于: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/debug-appender/src/DebugAppender.ts#L11)
+定义于: [debug-appender/src/DebugAppender.ts:12](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L12)
 
 ##### layout?
 
@@ -88,7 +82,7 @@ Layout (布局)
 
 > **name**: `string` = `'debug'`
 
-定义于: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/debug-appender/src/DebugAppender.ts#L10)
+定义于: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L10)
 
 ###### 重写了
 
@@ -100,7 +94,7 @@ Layout (布局)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [debug-appender/src/DebugAppender.ts:42](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/debug-appender/src/DebugAppender.ts#L42)
+定义于: [debug-appender/src/DebugAppender.ts:45](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L45)
 
 Close appender (关闭输出)
 
@@ -140,7 +134,7 @@ Close appender (关闭输出)
 
 > **setup**(`__namedParameters`): `void`
 
-定义于: [debug-appender/src/DebugAppender.ts:13](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/debug-appender/src/DebugAppender.ts#L13)
+定义于: [debug-appender/src/DebugAppender.ts:14](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L14)
 
 ###### 参数
 
@@ -160,7 +154,7 @@ Close appender (关闭输出)
 
 > **write**(`event`): `void`
 
-定义于: [debug-appender/src/DebugAppender.ts:24](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/debug-appender/src/DebugAppender.ts#L24)
+定义于: [debug-appender/src/DebugAppender.ts:25](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/debug-appender/src/DebugAppender.ts#L25)
 
 Write log (写入日志)
 

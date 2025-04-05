@@ -10,7 +10,7 @@
 
 ### Config
 
-Defined in: [typings.ts:18](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L18)
+Defined in: [typings.ts:18](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L18)
 
 Log factory configuration (日志工厂配置)
 
@@ -20,25 +20,25 @@ Log factory configuration (日志工厂配置)
 
 > `optional` **appenders**: [`IAppender`](#iappender)[]
 
-Defined in: [typings.ts:20](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L20)
+Defined in: [typings.ts:20](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L20)
 
 ##### level?
 
 > `optional` **level**: [`LogLevel`](#loglevel)
 
-Defined in: [typings.ts:19](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L19)
+Defined in: [typings.ts:19](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L19)
 
 ##### LoggerClass?
 
 > `optional` **LoggerClass**: *typeof* [`default`](Logger.md#default)
 
-Defined in: [typings.ts:21](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L21)
+Defined in: [typings.ts:21](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L21)
 
 ***
 
 ### IAppender
 
-Defined in: [typings.ts:60](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L60)
+Defined in: [typings.ts:71](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L71)
 
 Appender interface (日志记录器接口)
 
@@ -48,7 +48,7 @@ Appender interface (日志记录器接口)
 
 > **name**: `string`
 
-Defined in: [typings.ts:61](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L61)
+Defined in: [typings.ts:72](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L72)
 
 #### Methods
 
@@ -56,7 +56,7 @@ Defined in: [typings.ts:61](https://github.com/fengxinming/log-base/blob/531de42
 
 > **close**(): `Promise`\<`void`\>
 
-Defined in: [typings.ts:64](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L64)
+Defined in: [typings.ts:75](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L75)
 
 ###### Returns
 
@@ -66,7 +66,7 @@ Defined in: [typings.ts:64](https://github.com/fengxinming/log-base/blob/531de42
 
 > **setup**(`logger`): `void`
 
-Defined in: [typings.ts:62](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L62)
+Defined in: [typings.ts:73](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L73)
 
 ###### Parameters
 
@@ -82,7 +82,7 @@ Defined in: [typings.ts:62](https://github.com/fengxinming/log-base/blob/531de42
 
 > **write**(`event`): `void`
 
-Defined in: [typings.ts:63](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L63)
+Defined in: [typings.ts:74](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L74)
 
 ###### Parameters
 
@@ -98,7 +98,7 @@ Defined in: [typings.ts:63](https://github.com/fengxinming/log-base/blob/531de42
 
 ### ILayout
 
-Defined in: [typings.ts:52](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L52)
+Defined in: [typings.ts:63](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L63)
 
 Layout interface (日志布局接口)
 
@@ -108,7 +108,7 @@ Layout interface (日志布局接口)
 
 > **format**(`event`): `string`
 
-Defined in: [typings.ts:53](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L53)
+Defined in: [typings.ts:64](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L64)
 
 ###### Parameters
 
@@ -124,7 +124,7 @@ Defined in: [typings.ts:53](https://github.com/fengxinming/log-base/blob/531de42
 
 ### ILogger
 
-Defined in: [typings.ts:70](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L70)
+Defined in: [typings.ts:81](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L81)
 
 Logger interface (日志接口)
 
@@ -134,13 +134,13 @@ Logger interface (日志接口)
 
 > **appenders**: `Map`\<`string`, [`IAppender`](#iappender)\>
 
-Defined in: [typings.ts:72](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L72)
+Defined in: [typings.ts:83](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L83)
 
 ##### name
 
 > **name**: `string`
 
-Defined in: [typings.ts:71](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L71)
+Defined in: [typings.ts:82](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L82)
 
 #### Accessors
 
@@ -150,7 +150,7 @@ Defined in: [typings.ts:71](https://github.com/fengxinming/log-base/blob/531de42
 
 > **get** **level**(): [`default`](Level.md#default)
 
-Defined in: [typings.ts:74](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L74)
+Defined in: [typings.ts:85](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L85)
 
 ###### Returns
 
@@ -160,7 +160,7 @@ Defined in: [typings.ts:74](https://github.com/fengxinming/log-base/blob/531de42
 
 > **set** **level**(`l`): `void`
 
-Defined in: [typings.ts:73](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L73)
+Defined in: [typings.ts:84](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L84)
 
 ###### Parameters
 
@@ -178,7 +178,7 @@ Defined in: [typings.ts:73](https://github.com/fengxinming/log-base/blob/531de42
 
 > **get** **levelName**(): `"TRACE"` \| `"DEBUG"` \| `"INFO"` \| `"WARN"` \| `"ERROR"` \| `"FATAL"` \| `"OFF"`
 
-Defined in: [typings.ts:75](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L75)
+Defined in: [typings.ts:86](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L86)
 
 ###### Returns
 
@@ -190,7 +190,7 @@ Defined in: [typings.ts:75](https://github.com/fengxinming/log-base/blob/531de42
 
 > **addContext**(`key`, `value`): `void`
 
-Defined in: [typings.ts:76](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L76)
+Defined in: [typings.ts:87](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L87)
 
 ###### Parameters
 
@@ -210,7 +210,7 @@ Defined in: [typings.ts:76](https://github.com/fengxinming/log-base/blob/531de42
 
 > **clearContext**(): `void`
 
-Defined in: [typings.ts:78](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L78)
+Defined in: [typings.ts:89](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L89)
 
 ###### Returns
 
@@ -220,7 +220,7 @@ Defined in: [typings.ts:78](https://github.com/fengxinming/log-base/blob/531de42
 
 > **debug**(...`args`): `void`
 
-Defined in: [typings.ts:81](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L81)
+Defined in: [typings.ts:92](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L92)
 
 ###### Parameters
 
@@ -236,7 +236,7 @@ Defined in: [typings.ts:81](https://github.com/fengxinming/log-base/blob/531de42
 
 > **dispose**(): `Promise`\<`any`[]\>
 
-Defined in: [typings.ts:79](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L79)
+Defined in: [typings.ts:90](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L90)
 
 ###### Returns
 
@@ -246,7 +246,7 @@ Defined in: [typings.ts:79](https://github.com/fengxinming/log-base/blob/531de42
 
 > **error**(...`args`): `void`
 
-Defined in: [typings.ts:84](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L84)
+Defined in: [typings.ts:95](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L95)
 
 ###### Parameters
 
@@ -262,7 +262,7 @@ Defined in: [typings.ts:84](https://github.com/fengxinming/log-base/blob/531de42
 
 > **fatal**(...`args`): `void`
 
-Defined in: [typings.ts:85](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L85)
+Defined in: [typings.ts:96](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L96)
 
 ###### Parameters
 
@@ -278,7 +278,7 @@ Defined in: [typings.ts:85](https://github.com/fengxinming/log-base/blob/531de42
 
 > **info**(...`args`): `void`
 
-Defined in: [typings.ts:82](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L82)
+Defined in: [typings.ts:93](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L93)
 
 ###### Parameters
 
@@ -294,7 +294,7 @@ Defined in: [typings.ts:82](https://github.com/fengxinming/log-base/blob/531de42
 
 > **removeContext**(`key`): `void`
 
-Defined in: [typings.ts:77](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L77)
+Defined in: [typings.ts:88](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L88)
 
 ###### Parameters
 
@@ -310,7 +310,7 @@ Defined in: [typings.ts:77](https://github.com/fengxinming/log-base/blob/531de42
 
 > **trace**(...`args`): `void`
 
-Defined in: [typings.ts:80](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L80)
+Defined in: [typings.ts:91](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L91)
 
 ###### Parameters
 
@@ -326,7 +326,7 @@ Defined in: [typings.ts:80](https://github.com/fengxinming/log-base/blob/531de42
 
 > **warn**(...`args`): `void`
 
-Defined in: [typings.ts:83](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L83)
+Defined in: [typings.ts:94](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L94)
 
 ###### Parameters
 
@@ -342,7 +342,7 @@ Defined in: [typings.ts:83](https://github.com/fengxinming/log-base/blob/531de42
 
 ### LogEvent
 
-Defined in: [typings.ts:35](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L35)
+Defined in: [typings.ts:35](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L35)
 
 Log event (日志事件)
 
@@ -352,43 +352,43 @@ Log event (日志事件)
 
 > **context**: `Record`\<`string`, `any`\>
 
-Defined in: [typings.ts:41](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L41)
+Defined in: [typings.ts:41](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L41)
 
 ##### level
 
 > **level**: [`LogLevel`](#loglevel)
 
-Defined in: [typings.ts:36](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L36)
+Defined in: [typings.ts:36](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L36)
 
 ##### levelName
 
 > **levelName**: `"TRACE"` \| `"DEBUG"` \| `"INFO"` \| `"WARN"` \| `"ERROR"` \| `"FATAL"` \| `"OFF"`
 
-Defined in: [typings.ts:37](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L37)
+Defined in: [typings.ts:37](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L37)
 
 ##### loggerName
 
 > **loggerName**: `string`
 
-Defined in: [typings.ts:40](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L40)
+Defined in: [typings.ts:40](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L40)
 
 ##### message
 
 > **message**: `any`[]
 
-Defined in: [typings.ts:38](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L38)
+Defined in: [typings.ts:38](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L38)
 
 ##### timestamp
 
 > **timestamp**: `Date`
 
-Defined in: [typings.ts:39](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L39)
+Defined in: [typings.ts:39](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L39)
 
 ***
 
 ### LogOptions
 
-Defined in: [typings.ts:27](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L27)
+Defined in: [typings.ts:27](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L27)
 
 Logger options (日志选项)
 
@@ -398,13 +398,13 @@ Logger options (日志选项)
 
 > `optional` **appenders**: [`IAppender`](#iappender)[]
 
-Defined in: [typings.ts:29](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L29)
+Defined in: [typings.ts:29](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L29)
 
 ##### level?
 
 > `optional` **level**: [`LogLevel`](#loglevel)
 
-Defined in: [typings.ts:28](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L28)
+Defined in: [typings.ts:28](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L28)
 
 ## Type Aliases
 
@@ -412,9 +412,45 @@ Defined in: [typings.ts:28](https://github.com/fengxinming/log-base/blob/531de42
 
 > **LogLevel** = [`default`](Level.md#default) \| [`TLevel`](#tlevel)
 
-Defined in: [typings.ts:13](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L13)
+Defined in: [typings.ts:13](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L13)
 
 Log level (日志级别)
+
+***
+
+### TCreateConverter()
+
+> **TCreateConverter** = (`specifier`, `alignLeft`, `minWidth`, `maxLength`, `format`?) => [`TPatternConverter`](#tpatternconverter)
+
+Defined in: [typings.ts:52](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L52)
+
+Create converter function (创建转换器函数)
+
+#### Parameters
+
+##### specifier
+
+`string`
+
+##### alignLeft
+
+`boolean`
+
+##### minWidth
+
+`number`
+
+##### maxLength
+
+`number`
+
+##### format?
+
+`string`
+
+#### Returns
+
+[`TPatternConverter`](#tpatternconverter)
 
 ***
 
@@ -422,7 +458,7 @@ Log level (日志级别)
 
 > **TLevel** = keyof *typeof* [`default`](Level.md#default)
 
-Defined in: [typings.ts:7](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L7)
+Defined in: [typings.ts:7](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L7)
 
 Log level name (日志级别名称)
 
@@ -430,17 +466,17 @@ Log level name (日志级别名称)
 
 ### TPatternConverter()
 
-> **TPatternConverter** = (...`args`) => `string`
+> **TPatternConverter** = (`event`) => `string`
 
-Defined in: [typings.ts:47](https://github.com/fengxinming/log-base/blob/531de42a0f94da12b314d5f0d519bbe6bce7c154/packages/base-log-factory/src/typings.ts#L47)
+Defined in: [typings.ts:47](https://github.com/fengxinming/log-base/blob/8667f4e9ec4dc1a7959cf628998a70ef9d3209f9/packages/base-log-factory/src/typings.ts#L47)
 
 Pattern converter (日志记录器模式转换器)
 
 #### Parameters
 
-##### args
+##### event
 
-...`any`[]
+[`LogEvent`](#logevent)
 
 #### Returns
 
