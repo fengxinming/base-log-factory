@@ -4,7 +4,7 @@ import { DebugAppender } from 'blf-debug-appender';
 
 const patternLayout = new PatternLayout('[%d{HH:mm:ss.SSSZ}] %p %c - %m');
 const console1 = new ConsoleAppender(patternLayout);
-const colorful =  new ColorfulAppender(patternLayout);
+const colorful =  new ColorfulAppender({ layout: patternLayout });
 const debug =    new DebugAppender();
 const factory = new LogFactory({
   appenders: [
