@@ -89,9 +89,9 @@ export default class PatternLayout implements ILayout {
       pattern,
       (
         specifier: string,
-        alignLeft: boolean,
-        minWidth: number,
-        maxLength: number,
+        alignLeft?: boolean,
+        minWidth?: number,
+        maxLength?: number,
         format?: string
       ): TPatternConverter => {
         if (isFunction<TCreateConverter>(createConverter)) {

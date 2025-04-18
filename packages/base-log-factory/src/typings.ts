@@ -51,9 +51,9 @@ export type TPatternConverter = (event: LogEvent) => string;
  */
 export type TCreateConverter = (
   specifier: string,
-  alignLeft: boolean,
-  minWidth: number,
-  maxLength: number,
+  alignLeft?: boolean,
+  minWidth?: number,
+  maxLength?: number,
   format?: string
 ) => TPatternConverter | null | undefined;
 
