@@ -1,13 +1,18 @@
-import { basicLogPrefix, ConsoleAppender, Level, LogEvent } from 'base-log-factory';
+import type { ILayout, Level } from 'base-log-factory';
+import { basicLogPrefix, ConsoleAppender, LogEvent } from 'base-log-factory';
 import pc from 'picocolors';
 
-import defaultColors from './colors';
-import { ColorfulAppenderOptions } from './typings';
+import { colors as defaultColors } from './colors';
+
+export interface ColorfulAppenderOptions {
+  layout?: ILayout;
+  colors?: Record<Level, string>;
+}
 
 /**
  * Console appender (控制台输出)
  */
-export default class ColorfulAppender extends ConsoleAppender {
+export class ColorfulAppender extends ConsoleAppender {
   name = 'colorful';
   colors: Record<Level, string>;
   /**

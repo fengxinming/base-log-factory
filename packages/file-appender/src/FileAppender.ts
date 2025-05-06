@@ -1,11 +1,17 @@
 import { FileStream } from 'rolling-write-stream';
 
-import BaseFileAppender from './BaseFileAppender';
+import type { BaseAppenderOptions } from './BaseFileAppender';
+import { BaseFileAppender } from './BaseFileAppender';
+
+/**
+ * File appender options (日志记录器文件选项)
+ */
+export type FileAppenderOptions = BaseAppenderOptions;
 
 /**
  * File Appender (文件记录器)
  */
-export default class FileAppender extends BaseFileAppender {
+export class FileAppender extends BaseFileAppender {
   name = 'file';
   /**
    * Get write stream (获取写入流)

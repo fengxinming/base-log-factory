@@ -8,11 +8,11 @@
 
 ## Variables
 
-### default
+### colors
 
-> **default**: `object`
+> `const` **colors**: `object`
 
-Defined in: [colorful-appender/src/colors.ts:3](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/colors.ts#L3)
+Defined in: [colorful-appender/src/colors.ts:3](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/colors.ts#L3)
 
 #### Type declaration
 

@@ -12,7 +12,7 @@
 
 > **default**(`message`, `callback`): `string`
 
-定义于: [formatMessage.ts:5](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/formatMessage.ts#L5)
+定义于: [formatMessage.ts:5](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/formatMessage.ts#L5)
 
 #### 参数
 

@@ -12,7 +12,7 @@
 
 > **default**(`level`): `undefined` \| [`default`](Level.md#default)
 
-定义于: [normalizeLevel.ts:9](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/normalizeLevel.ts#L9)
+定义于: [normalizeLevel.ts:9](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/normalizeLevel.ts#L9)
 
 Normalize log level (标准化日志级别)
 

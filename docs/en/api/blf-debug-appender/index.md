@@ -6,23 +6,23 @@
 
 ## Classes
 
-### default
+### DebugAppender
 
-Defined in: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L9)
+Defined in: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L9)
 
 Console appender (控制台输出)
 
 #### Extends
 
-- `default`
+- `ColorfulAppender`
 
 #### Constructors
 
 ##### Constructor
 
-> **new default**(`opts`?): [`default`](#default)
+> **new DebugAppender**(`opts?`): [`DebugAppender`](#debugappender)
 
-Defined in: colorful-appender/dist/ColorfulAppender.d.ts:13
+Defined in: colorful-appender/dist/ColorfulAppender.d.ts:15
 
 Constructor (构造函数)
 
@@ -34,7 +34,7 @@ Constructor (构造函数)
 
 ###### Returns
 
-[`default`](#default)
+[`DebugAppender`](#debugappender)
 
 ###### Inherited from
 
@@ -46,7 +46,7 @@ Constructor (构造函数)
 
 > **colors**: `Record`\<`Level`, `string`\>
 
-Defined in: colorful-appender/dist/ColorfulAppender.d.ts:8
+Defined in: colorful-appender/dist/ColorfulAppender.d.ts:11
 
 ###### Inherited from
 
@@ -56,7 +56,7 @@ Defined in: colorful-appender/dist/ColorfulAppender.d.ts:8
 
 > **dateFormat**: `string` = `'HH:mm:ss'`
 
-Defined in: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L11)
+Defined in: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L11)
 
 ###### Overrides
 
@@ -66,7 +66,7 @@ Defined in: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinm
 
 > **debug**: `Debugger`
 
-Defined in: [debug-appender/src/DebugAppender.ts:12](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L12)
+Defined in: [debug-appender/src/DebugAppender.ts:12](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L12)
 
 ##### layout?
 
@@ -82,7 +82,7 @@ Defined in: base-log-factory/dist/ConsoleAppender.d.ts:6
 
 > **name**: `string` = `'debug'`
 
-Defined in: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L10)
+Defined in: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L10)
 
 ###### Overrides
 
@@ -94,7 +94,7 @@ Defined in: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinm
 
 > **close**(): `Promise`\<`void`\>
 
-Defined in: [debug-appender/src/DebugAppender.ts:46](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L46)
+Defined in: [debug-appender/src/DebugAppender.ts:46](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L46)
 
 Close appender (关闭输出)
 
@@ -110,7 +110,7 @@ Close appender (关闭输出)
 
 > `protected` **color**(`str`, `event`): `string`
 
-Defined in: colorful-appender/dist/ColorfulAppender.d.ts:19
+Defined in: colorful-appender/dist/ColorfulAppender.d.ts:21
 
 ###### Parameters
 
@@ -134,7 +134,7 @@ Defined in: colorful-appender/dist/ColorfulAppender.d.ts:19
 
 > **setup**(`__namedParameters`): `void`
 
-Defined in: [debug-appender/src/DebugAppender.ts:14](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L14)
+Defined in: [debug-appender/src/DebugAppender.ts:14](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L14)
 
 ###### Parameters
 
@@ -154,7 +154,7 @@ Defined in: [debug-appender/src/DebugAppender.ts:14](https://github.com/fengxinm
 
 > **write**(`event`): `void`
 
-Defined in: [debug-appender/src/DebugAppender.ts:26](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L26)
+Defined in: [debug-appender/src/DebugAppender.ts:26](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L26)
 
 Write log (写入日志)
 

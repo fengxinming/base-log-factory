@@ -8,16 +8,16 @@
 
 ## 类
 
-### `abstract` default
+### `abstract` BaseFileAppender
 
-定义于: [BaseFileAppender.ts:12](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L12)
+定义于: [BaseFileAppender.ts:18](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L18)
 
 Base file appender (文件日志基类)
 
 #### 继承于
 
-- [`default`](DateFileAppender.md#default)
-- [`default`](FileAppender.md#default)
+- [`DateFileAppender`](DateFileAppender.md#datefileappender)
+- [`FileAppender`](FileAppender.md#fileappender)
 
 #### 实现
 
@@ -27,9 +27,9 @@ Base file appender (文件日志基类)
 
 ##### 构造函数
 
-> **new default**(`filePath`, `options`): [`default`](#default)
+> **new BaseFileAppender**(`filePath`, `options`): [`BaseFileAppender`](#basefileappender)
 
-定义于: [BaseFileAppender.ts:22](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L22)
+定义于: [BaseFileAppender.ts:28](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L28)
 
 Constructor
 
@@ -43,13 +43,13 @@ File path (文件路径)
 
 ###### options
 
-[`BaseAppenderOptions`](typings.md#baseappenderoptions) = `{}`
+[`BaseAppenderOptions`](#baseappenderoptions) = `{}`
 
 Options (选项)
 
 ###### 返回
 
-[`default`](#default)
+[`BaseFileAppender`](#basefileappender)
 
 #### 属性
 
@@ -57,7 +57,7 @@ Options (选项)
 
 > `protected` `readonly` **filePath**: `string`
 
-定义于: [BaseFileAppender.ts:23](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L23)
+定义于: [BaseFileAppender.ts:29](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L29)
 
 File path (文件路径)
 
@@ -65,13 +65,13 @@ File path (文件路径)
 
 > `readonly` **layout**: `ILayout`
 
-定义于: [BaseFileAppender.ts:15](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L15)
+定义于: [BaseFileAppender.ts:21](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L21)
 
 ##### name
 
 > **name**: `string` = `'baseFile'`
 
-定义于: [BaseFileAppender.ts:13](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L13)
+定义于: [BaseFileAppender.ts:19](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L19)
 
 ###### 实现了
 
@@ -79,9 +79,9 @@ File path (文件路径)
 
 ##### options
 
-> `protected` `readonly` **options**: [`BaseAppenderOptions`](typings.md#baseappenderoptions) = `{}`
+> `protected` `readonly` **options**: [`BaseAppenderOptions`](#baseappenderoptions) = `{}`
 
-定义于: [BaseFileAppender.ts:24](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L24)
+定义于: [BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L30)
 
 Options (选项)
 
@@ -89,7 +89,7 @@ Options (选项)
 
 > **stream**: `Writable`
 
-定义于: [BaseFileAppender.ts:14](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L14)
+定义于: [BaseFileAppender.ts:20](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L20)
 
 #### 方法
 
@@ -97,7 +97,7 @@ Options (选项)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [BaseFileAppender.ts:50](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L50)
+定义于: [BaseFileAppender.ts:56](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L56)
 
 Close appender
 
@@ -113,7 +113,7 @@ Close appender
 
 > `abstract` `protected` **getStream**(`filePath`, `options`): `Writable`
 
-定义于: [BaseFileAppender.ts:59](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L59)
+定义于: [BaseFileAppender.ts:65](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L65)
 
 Get stream (获取流)
 
@@ -127,7 +127,7 @@ File path (文件路径)
 
 ###### options
 
-[`BaseAppenderOptions`](typings.md#baseappenderoptions)
+[`BaseAppenderOptions`](#baseappenderoptions)
 
 Options (选项)
 
@@ -139,7 +139,7 @@ Options (选项)
 
 > **setup**(): `void`
 
-定义于: [BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L30)
+定义于: [BaseFileAppender.ts:36](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L36)
 
 ###### 返回
 
@@ -153,7 +153,7 @@ Options (选项)
 
 > **write**(`logEvent`): `void`
 
-定义于: [BaseFileAppender.ts:38](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L38)
+定义于: [BaseFileAppender.ts:44](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L44)
 
 Write log event
 
@@ -172,3 +172,19 @@ Log event (日志事件)
 ###### 实现了
 
 `IAppender.write`
+
+## 类型别名
+
+### BaseAppenderOptions
+
+> **BaseAppenderOptions** = `object` & `Partial`\<`RollingOptions`\>
+
+定义于: [BaseFileAppender.ts:11](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L11)
+
+Base appender options (日志记录器基础选项)
+
+#### 类型声明
+
+##### layout?
+
+> `optional` **layout**: `ILayout`

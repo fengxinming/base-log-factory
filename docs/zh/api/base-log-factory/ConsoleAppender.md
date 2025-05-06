@@ -10,7 +10,7 @@
 
 ### default
 
-定义于: [ConsoleAppender.ts:7](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L7)
+定义于: [ConsoleAppender.ts:7](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L7)
 
 Console appender (控制台输出)
 
@@ -22,9 +22,9 @@ Console appender (控制台输出)
 
 ##### 构造函数
 
-> **new default**(`layout`?): [`default`](#default)
+> **new default**(`layout?`): [`default`](#default)
 
-定义于: [ConsoleAppender.ts:15](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L15)
+定义于: [ConsoleAppender.ts:15](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L15)
 
 Constructor (构造函数)
 
@@ -46,13 +46,13 @@ Layout (布局)
 
 > **dateFormat**: `string` = `'HH:mm:ss.SSS'`
 
-定义于: [ConsoleAppender.ts:9](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L9)
+定义于: [ConsoleAppender.ts:9](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L9)
 
 ##### layout?
 
 > `optional` **layout**: [`ILayout`](typings.md#ilayout)
 
-定义于: [ConsoleAppender.ts:15](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L15)
+定义于: [ConsoleAppender.ts:15](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L15)
 
 Layout (布局)
 
@@ -60,7 +60,7 @@ Layout (布局)
 
 > **name**: `string` = `'console'`
 
-定义于: [ConsoleAppender.ts:8](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L8)
+定义于: [ConsoleAppender.ts:8](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L8)
 
 ###### 实现了
 
@@ -72,7 +72,7 @@ Layout (布局)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [ConsoleAppender.ts:42](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L42)
+定义于: [ConsoleAppender.ts:42](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L42)
 
 Close appender (关闭输出)
 
@@ -88,7 +88,7 @@ Close appender (关闭输出)
 
 > **setup**(`logger`): `void`
 
-定义于: [ConsoleAppender.ts:19](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L19)
+定义于: [ConsoleAppender.ts:19](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L19)
 
 ###### 参数
 
@@ -108,7 +108,7 @@ Close appender (关闭输出)
 
 > **write**(`event`): `void`
 
-定义于: [ConsoleAppender.ts:27](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/ConsoleAppender.ts#L27)
+定义于: [ConsoleAppender.ts:27](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/ConsoleAppender.ts#L27)
 
 Write log (写入日志)
 

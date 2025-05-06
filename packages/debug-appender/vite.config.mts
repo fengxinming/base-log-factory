@@ -1,4 +1,3 @@
-import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'vite';
 import combine from 'vite-plugin-combine';
 import external from 'vite-plugin-external';
@@ -18,10 +17,9 @@ export default defineConfig({
   plugins: [
     combine({
       src: 'src/*.ts',
-      target: 'src/index.ts'
-    }),
-    typescript({
-      tsconfig: './tsconfig.build.json'
+      target: 'src/index.ts',
+      exports: 'all',
+      dts: true
     }),
     external({
       nodeBuiltins: true,

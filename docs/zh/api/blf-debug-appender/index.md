@@ -6,23 +6,23 @@
 
 ## 类
 
-### default
+### DebugAppender
 
-定义于: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L9)
+定义于: [debug-appender/src/DebugAppender.ts:9](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L9)
 
 Console appender (控制台输出)
 
 #### 继承
 
-- `default`
+- `ColorfulAppender`
 
 #### 构造函数
 
 ##### 构造函数
 
-> **new default**(`opts`?): [`default`](#default)
+> **new DebugAppender**(`opts?`): [`DebugAppender`](#debugappender)
 
-定义于: colorful-appender/dist/ColorfulAppender.d.ts:13
+定义于: colorful-appender/dist/ColorfulAppender.d.ts:15
 
 Constructor (构造函数)
 
@@ -34,7 +34,7 @@ Constructor (构造函数)
 
 ###### 返回
 
-[`default`](#default)
+[`DebugAppender`](#debugappender)
 
 ###### 继承自
 
@@ -46,7 +46,7 @@ Constructor (构造函数)
 
 > **colors**: `Record`\<`Level`, `string`\>
 
-定义于: colorful-appender/dist/ColorfulAppender.d.ts:8
+定义于: colorful-appender/dist/ColorfulAppender.d.ts:11
 
 ###### 继承自
 
@@ -56,7 +56,7 @@ Constructor (构造函数)
 
 > **dateFormat**: `string` = `'HH:mm:ss'`
 
-定义于: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L11)
+定义于: [debug-appender/src/DebugAppender.ts:11](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L11)
 
 ###### 重写了
 
@@ -66,7 +66,7 @@ Constructor (构造函数)
 
 > **debug**: `Debugger`
 
-定义于: [debug-appender/src/DebugAppender.ts:12](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L12)
+定义于: [debug-appender/src/DebugAppender.ts:12](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L12)
 
 ##### layout?
 
@@ -82,7 +82,7 @@ Constructor (构造函数)
 
 > **name**: `string` = `'debug'`
 
-定义于: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L10)
+定义于: [debug-appender/src/DebugAppender.ts:10](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L10)
 
 ###### 重写了
 
@@ -94,7 +94,7 @@ Constructor (构造函数)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [debug-appender/src/DebugAppender.ts:46](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L46)
+定义于: [debug-appender/src/DebugAppender.ts:46](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L46)
 
 Close appender (关闭输出)
 
@@ -110,7 +110,7 @@ Close appender (关闭输出)
 
 > `protected` **color**(`str`, `event`): `string`
 
-定义于: colorful-appender/dist/ColorfulAppender.d.ts:19
+定义于: colorful-appender/dist/ColorfulAppender.d.ts:21
 
 ###### 参数
 
@@ -134,7 +134,7 @@ Close appender (关闭输出)
 
 > **setup**(`__namedParameters`): `void`
 
-定义于: [debug-appender/src/DebugAppender.ts:14](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L14)
+定义于: [debug-appender/src/DebugAppender.ts:14](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L14)
 
 ###### 参数
 
@@ -154,7 +154,7 @@ Close appender (关闭输出)
 
 > **write**(`event`): `void`
 
-定义于: [debug-appender/src/DebugAppender.ts:26](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/debug-appender/src/DebugAppender.ts#L26)
+定义于: [debug-appender/src/DebugAppender.ts:26](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/debug-appender/src/DebugAppender.ts#L26)
 
 Write log (写入日志)
 

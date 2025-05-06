@@ -1,6 +1,6 @@
 import { Level } from 'base-log-factory';
 
-export default {
+export const colors = {
   [Level.FATAL]: 'magenta',
   [Level.ERROR]: 'red',
   [Level.WARN]: 'yellow',
