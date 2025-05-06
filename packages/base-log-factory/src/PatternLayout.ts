@@ -1,4 +1,4 @@
-import { format as dateFormat } from 'date-manip';
+import { format } from 'date-manip';
 import { isFunction } from 'is-what-type';
 
 import compilePattern from './compilePattern';
@@ -11,9 +11,9 @@ function literalConverter(text: string): () => string {
   return () => text;
 }
 
-function dateConverter(format: string = 'ISO') {
+function dateConverter(dateFormat: string = 'ISO') {
   return (event: LogEvent) => {
-    return dateFormat(event.timestamp, format);
+    return format(event.timestamp, dateFormat);
   };
 }
 
