@@ -1,6 +1,6 @@
 {
   "name": "blf-file-appender",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "FileAppender and DateFileAppender for `base-log-factory`.",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
