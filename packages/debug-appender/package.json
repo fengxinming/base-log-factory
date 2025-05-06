@@ -1,22 +1,10 @@
 {
   "name": "blf-debug-appender",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A DebugAppender for `base-log-factory`.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./dist/*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.mjs",
-      "require": "./dist/*.js"
-    }
-  },
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf node_modules",
     "build": "vite build",
@@ -42,9 +30,9 @@
   "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
     "@types/debug": "^4.1.12",
-    "base-log-factory": "^2.0.8",
-    "blf-colorful-appender": "^1.0.3",
-    "date-manip": "^2.0.4",
+    "base-log-factory": "workspace:^",
+    "blf-colorful-appender": "workspace:^",
+    "date-manip": "^2.0.6",
     "debug": "^4.4.0"
   },
   "devDependencies": {
@@ -53,7 +41,7 @@
     "typedoc": "^0.28.1",
     "typedoc-plugin-markdown": "^4.5.2",
     "vite": "^6.2.2",
-    "vite-plugin-combine": "^6.1.0-rc.1",
+    "vite-plugin-combine": "^6.2.1",
     "vite-plugin-external": "^6.0.1",
     "vitest": "^3.0.8"
   },

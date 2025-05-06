@@ -12,7 +12,7 @@
 
 > **default**(`str`, `width`, `alignLeft`): `string`
 
-Defined in: [pad.ts:1](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/base-log-factory/src/pad.ts#L1)
+Defined in: [pad.ts:1](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/base-log-factory/src/pad.ts#L1)
 
 #### Parameters
 

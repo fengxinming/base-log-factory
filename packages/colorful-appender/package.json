@@ -1,22 +1,10 @@
 {
   "name": "blf-colorful-appender",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A ColorfulAppender for `base-log-factory`.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./dist/*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.mjs",
-      "require": "./dist/*.js"
-    }
-  },
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf node_modules",
     "build": "vite build",
@@ -41,7 +29,7 @@
   },
   "homepage": "https://fengxinming.github.io/base-log-factory/",
   "dependencies": {
-    "base-log-factory": "^2.0.9",
+    "base-log-factory": "workspace:^",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
@@ -50,7 +38,7 @@
     "typedoc": "^0.28.1",
     "typedoc-plugin-markdown": "^4.5.2",
     "vite": "^6.2.2",
-    "vite-plugin-combine": "^6.1.0-rc.1",
+    "vite-plugin-combine": "^6.2.1",
     "vite-plugin-external": "^6.0.1",
     "vitest": "^3.0.8"
   },

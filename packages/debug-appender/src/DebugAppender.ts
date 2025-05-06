@@ -6,7 +6,7 @@ import createDebug from 'debug';
 /**
  * Console appender (控制台输出)
  */
-export default class DebugAppender extends ColorfulAppender {
+export class DebugAppender extends ColorfulAppender {
   name = 'debug';
   dateFormat = 'HH:mm:ss';
   debug!: createDebug.Debugger;

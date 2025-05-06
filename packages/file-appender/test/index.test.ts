@@ -3,8 +3,8 @@ import path from 'node:path';
 import fs from 'fs-extra';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import DateFileAppender from '../src/DateFileAppender';
-import FileAppender from '../src/FileAppender';
+import { DateFileAppender } from '../src/DateFileAppender';
+import { FileAppender } from '../src/FileAppender';
 
 const TEST_DIR = path.resolve('logs');
 

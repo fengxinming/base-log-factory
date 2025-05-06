@@ -8,9 +8,9 @@
 
 ## Classes
 
-### default
+### ColorfulAppender
 
-Defined in: [colorful-appender/src/ColorfulAppender.ts:10](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L10)
+Defined in: [colorful-appender/src/ColorfulAppender.ts:15](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L15)
 
 Console appender (控制台输出)
 
@@ -22,9 +22,9 @@ Console appender (控制台输出)
 
 ##### Constructor
 
-> **new default**(`opts`): [`default`](#default)
+> **new ColorfulAppender**(`opts`): [`ColorfulAppender`](#colorfulappender)
 
-Defined in: [colorful-appender/src/ColorfulAppender.ts:16](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L16)
+Defined in: [colorful-appender/src/ColorfulAppender.ts:21](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L21)
 
 Constructor (构造函数)
 
@@ -32,11 +32,11 @@ Constructor (构造函数)
 
 ###### opts
 
-[`ColorfulAppenderOptions`](typings.md#colorfulappenderoptions) = `{}`
+[`ColorfulAppenderOptions`](#colorfulappenderoptions) = `{}`
 
 ###### Returns
 
-[`default`](#default)
+[`ColorfulAppender`](#colorfulappender)
 
 ###### Overrides
 
@@ -48,7 +48,7 @@ Constructor (构造函数)
 
 > **colors**: `Record`\<`Level`, `string`\>
 
-Defined in: [colorful-appender/src/ColorfulAppender.ts:12](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L12)
+Defined in: [colorful-appender/src/ColorfulAppender.ts:17](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L17)
 
 ##### dateFormat
 
@@ -74,7 +74,7 @@ Defined in: base-log-factory/dist/ConsoleAppender.d.ts:6
 
 > **name**: `string` = `'colorful'`
 
-Defined in: [colorful-appender/src/ColorfulAppender.ts:11](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L11)
+Defined in: [colorful-appender/src/ColorfulAppender.ts:16](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L16)
 
 ###### Overrides
 
@@ -102,7 +102,7 @@ Close appender (关闭输出)
 
 > `protected` **color**(`str`, `event`): `string`
 
-Defined in: [colorful-appender/src/ColorfulAppender.ts:37](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L37)
+Defined in: [colorful-appender/src/ColorfulAppender.ts:42](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L42)
 
 ###### Parameters
 
@@ -142,7 +142,7 @@ Defined in: base-log-factory/dist/ConsoleAppender.d.ts:14
 
 > **write**(`event`): `void`
 
-Defined in: [colorful-appender/src/ColorfulAppender.ts:25](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/colorful-appender/src/ColorfulAppender.ts#L25)
+Defined in: [colorful-appender/src/ColorfulAppender.ts:30](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L30)
 
 Write log (写入日志)
 
@@ -161,3 +161,23 @@ Log event (日志事件)
 ###### Overrides
 
 `ConsoleAppender.write`
+
+## Interfaces
+
+### ColorfulAppenderOptions
+
+Defined in: [colorful-appender/src/ColorfulAppender.ts:7](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L7)
+
+#### Properties
+
+##### colors?
+
+> `optional` **colors**: `Record`\<`Level`, `string`\>
+
+Defined in: [colorful-appender/src/ColorfulAppender.ts:9](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L9)
+
+##### layout?
+
+> `optional` **layout**: `ILayout`
+
+Defined in: [colorful-appender/src/ColorfulAppender.ts:8](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/colorful-appender/src/ColorfulAppender.ts#L8)

@@ -8,23 +8,23 @@
 
 ## 类
 
-### default
+### DateFileAppender
 
-定义于: [DateFileAppender.ts:9](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/DateFileAppender.ts#L9)
+定义于: [DateFileAppender.ts:16](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/DateFileAppender.ts#L16)
 
 Date File Appender (日期文件记录器)
 
 #### 继承
 
-- [`default`](BaseFileAppender.md#default)
+- [`BaseFileAppender`](BaseFileAppender.md#basefileappender)
 
 #### 构造函数
 
 ##### 构造函数
 
-> **new default**(`filePath`, `options`): [`default`](#default)
+> **new DateFileAppender**(`filePath`, `options`): [`DateFileAppender`](#datefileappender)
 
-定义于: [DateFileAppender.ts:16](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/DateFileAppender.ts#L16)
+定义于: [DateFileAppender.ts:23](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/DateFileAppender.ts#L23)
 
 Constructor (构造函数)
 
@@ -38,17 +38,17 @@ File path (文件路径)
 
 ###### options
 
-[`DateFileAppenderOptions`](typings.md#datefileappenderoptions)
+[`DateFileAppenderOptions`](#datefileappenderoptions-1)
 
 Options (选项)
 
 ###### 返回
 
-[`default`](#default)
+[`DateFileAppender`](#datefileappender)
 
 ###### 重写了
 
-[`default`](BaseFileAppender.md#default).[`constructor`](BaseFileAppender.md#default#constructor)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`constructor`](BaseFileAppender.md#basefileappender#constructor)
 
 #### 属性
 
@@ -56,55 +56,55 @@ Options (选项)
 
 > `protected` `readonly` **filePath**: `string`
 
-定义于: [BaseFileAppender.ts:23](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L23)
+定义于: [BaseFileAppender.ts:29](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L29)
 
 File path (文件路径)
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`filePath`](BaseFileAppender.md#default#filepath)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`filePath`](BaseFileAppender.md#basefileappender#filepath)
 
 ##### layout
 
 > `readonly` **layout**: `ILayout`
 
-定义于: [BaseFileAppender.ts:15](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L15)
+定义于: [BaseFileAppender.ts:21](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L21)
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`layout`](BaseFileAppender.md#default#layout)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`layout`](BaseFileAppender.md#basefileappender#layout)
 
 ##### name
 
 > **name**: `string` = `'dateFile'`
 
-定义于: [DateFileAppender.ts:10](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/DateFileAppender.ts#L10)
+定义于: [DateFileAppender.ts:17](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/DateFileAppender.ts#L17)
 
 ###### 重写了
 
-[`default`](BaseFileAppender.md#default).[`name`](BaseFileAppender.md#default#name)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`name`](BaseFileAppender.md#basefileappender#name)
 
 ##### options
 
-> `protected` `readonly` **options**: [`DateFileAppenderOptions`](typings.md#datefileappenderoptions)
+> `protected` `readonly` **options**: [`DateFileAppenderOptions`](#datefileappenderoptions-1)
 
-定义于: [DateFileAppender.ts:18](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/DateFileAppender.ts#L18)
+定义于: [DateFileAppender.ts:25](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/DateFileAppender.ts#L25)
 
 Options (选项)
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`options`](BaseFileAppender.md#default#options)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`options`](BaseFileAppender.md#basefileappender#options)
 
 ##### stream
 
 > **stream**: `Writable`
 
-定义于: [BaseFileAppender.ts:14](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L14)
+定义于: [BaseFileAppender.ts:20](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L20)
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`stream`](BaseFileAppender.md#default#stream)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`stream`](BaseFileAppender.md#basefileappender#stream)
 
 #### 方法
 
@@ -112,7 +112,7 @@ Options (选项)
 
 > **close**(): `Promise`\<`void`\>
 
-定义于: [BaseFileAppender.ts:50](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L50)
+定义于: [BaseFileAppender.ts:56](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L56)
 
 Close appender
 
@@ -122,13 +122,13 @@ Close appender
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`close`](BaseFileAppender.md#default#close)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`close`](BaseFileAppender.md#basefileappender#close)
 
 ##### getStream()
 
 > `protected` **getStream**(`filePath`, `options`): `DateFileStream`
 
-定义于: [DateFileAppender.ts:28](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/DateFileAppender.ts#L28)
+定义于: [DateFileAppender.ts:35](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/DateFileAppender.ts#L35)
 
 Get stream (获取流)
 
@@ -152,13 +152,13 @@ Options (选项)
 
 ###### 重写了
 
-[`default`](BaseFileAppender.md#default).[`getStream`](BaseFileAppender.md#default#getstream)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`getStream`](BaseFileAppender.md#basefileappender#getstream)
 
 ##### setup()
 
 > **setup**(): `void`
 
-定义于: [BaseFileAppender.ts:30](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L30)
+定义于: [BaseFileAppender.ts:36](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L36)
 
 ###### 返回
 
@@ -166,13 +166,13 @@ Options (选项)
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`setup`](BaseFileAppender.md#default#setup)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`setup`](BaseFileAppender.md#basefileappender#setup)
 
 ##### write()
 
 > **write**(`logEvent`): `void`
 
-定义于: [BaseFileAppender.ts:38](https://github.com/fengxinming/log-base/blob/c30fa7fc98ee6693b6730b597d133b63d7a6f155/packages/file-appender/src/BaseFileAppender.ts#L38)
+定义于: [BaseFileAppender.ts:44](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/BaseFileAppender.ts#L44)
 
 Write log event
 
@@ -190,4 +190,14 @@ Log event (日志事件)
 
 ###### 继承自
 
-[`default`](BaseFileAppender.md#default).[`write`](BaseFileAppender.md#default#write)
+[`BaseFileAppender`](BaseFileAppender.md#basefileappender).[`write`](BaseFileAppender.md#basefileappender#write)
+
+## 类型别名
+
+### DateFileAppenderOptions
+
+> **DateFileAppenderOptions** = [`BaseAppenderOptions`](BaseFileAppender.md#baseappenderoptions) & `Partial`\<`DateRollingOptions`\>
+
+定义于: [DateFileAppender.ts:10](https://github.com/fengxinming/log-base/blob/483618e5ef8d17f349bb26fef0da7eaaacfb7fef/packages/file-appender/src/DateFileAppender.ts#L10)
+
+Date file appender options (日志记录器日期文件选项)

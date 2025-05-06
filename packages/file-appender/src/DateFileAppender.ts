@@ -1,12 +1,19 @@
+import type { DateRollingOptions } from 'rolling-write-stream';
 import { DateFileStream } from 'rolling-write-stream';
 
-import BaseFileAppender from './BaseFileAppender';
-import { DateFileAppenderOptions } from './typings';
+import type { BaseAppenderOptions } from './BaseFileAppender';
+import { BaseFileAppender } from './BaseFileAppender';
+
+/**
+ * Date file appender options (日志记录器日期文件选项)
+ */
+export type DateFileAppenderOptions = BaseAppenderOptions & Partial<DateRollingOptions>;
+
 
 /**
  * Date File Appender (日期文件记录器)
  */
-export default class DateFileAppender extends BaseFileAppender {
+export class DateFileAppender extends BaseFileAppender {
   name = 'dateFile';
   /**
    * Constructor (构造函数)

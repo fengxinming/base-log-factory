@@ -1,5 +1,3 @@
-import { EOL } from 'node:os';
-
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'vite';
 import pluginCombine from 'vite-plugin-combine';
@@ -19,11 +17,10 @@ export default defineConfig({
   },
   plugins: [
     pluginCombine({
-      src: ['src/*.ts', '!src/typings.ts'],
+      src: 'src/*.ts',
       target: 'src/index.ts',
-      beforeWrite: (code) => {
-        return `${code}${EOL}export * from './typings';`;
-      }
+      exports: 'all',
+      dts: true
     }),
     pluginExternal({
       nodeBuiltins: true,
