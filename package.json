@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "deps": "npm run clean && pnpm install",
-    "clean": "rm -rf node_modules",
+    "clean": "rm -rf node_modules && rm -rf ./*/*/node_modules",
     "build:blf": "pnpm run --filter=base-log-factory build",
     "release:blf": "pnpm run --filter=base-log-factory release",
     "test:blf": "pnpm run --filter=base-log-factory test",

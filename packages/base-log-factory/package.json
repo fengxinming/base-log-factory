@@ -39,7 +39,7 @@
     "typedoc-plugin-markdown": "^4.5.2",
     "vite": "^6.2.2",
     "vite-plugin-combine": "^6.2.1",
-    "vite-plugin-external": "^6.0.1",
+    "vite-plugin-external": "6.0.1",
     "vite-plugin-separate-importer": "^6.1.0",
     "vitest": "^3.0.8"
   },
