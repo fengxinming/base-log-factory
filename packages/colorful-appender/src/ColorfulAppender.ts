@@ -1,5 +1,5 @@
-import type { ILayout, Level } from 'base-log-factory';
-import { basicLogPrefix, ConsoleAppender, LogEvent } from 'base-log-factory';
+import type { ILayout, Level, LogEvent } from 'base-log-factory';
+import { basicLogPrefix, ConsoleAppender } from 'base-log-factory';
 import pc from 'picocolors';
 
 import { colors as defaultColors } from './colors';

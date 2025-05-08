@@ -35,6 +35,15 @@ export default defineConfig({
             cjs: `${libName}/dist/${importer}`
           };
         }
+      }, {
+        name: 'blf-colorful-appender',
+        importFrom(importer, libName) {
+          return {
+            es: `${libName}/dist/${importer}.mjs`,
+            cjs: `${libName}/dist/${importer}`,
+            name: `{${importer}}`
+          };
+        }
       }]
     })
   ],

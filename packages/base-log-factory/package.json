@@ -1,6 +1,6 @@
 {
   "name": "base-log-factory",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "A flexible and simple JS logging library that allows logging or collecting logs in different environments by configuring various Appenders. Suitable for browser, NodeJS and other environments.",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
