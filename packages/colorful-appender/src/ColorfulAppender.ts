@@ -1,5 +1,7 @@
-import type { ILayout, Level } from 'base-log-factory';
-import { basicLogPrefix, ConsoleAppender, LogEvent } from 'base-log-factory';
+/* eslint-disable no-console */
+import type { ILayout, Level, LogEvent } from 'base-log-factory';
+import { ConsoleAppender } from 'base-log-factory';
+import { format } from 'date-manip';
 import pc from 'picocolors';
 
 import { colors as defaultColors } from './colors';
@@ -30,12 +32,16 @@ export class ColorfulAppender extends ConsoleAppender {
   write(event: LogEvent): void {
     const { layout } = this;
     if (layout) {
-      // eslint-disable-next-line no-console
       console.log(this.color(layout.format(event), event));
     }
     else {
-      // eslint-disable-next-line no-console
-      console.log(this.color(basicLogPrefix(event, this.dateFormat), event), ...event.message);
+      const args = [
+        format(event.timestamp, this.dateFormat),
+        `[${event.levelName}]`,
+        event.loggerName,
+        '-'
+      ];
+      console.log(this.color(args.join(' '), event), ...event.message);
     }
   }
 

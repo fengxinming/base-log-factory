@@ -19,13 +19,13 @@ export default defineConfig({
   },
   plugins: [
     combine({
-      src: ['src/*.ts', '!src/typings.ts'],
+      src: ['src/*.ts', '!src/types.ts'],
       target: 'src/index.ts',
       dts: {
         include: 'src/*.ts'
       },
       beforeWrite(code) {
-        return `${code + EOL}export * from './typings';`;
+        return `${code + EOL}export * from './types';`;
       }
     }),
     external({
@@ -39,6 +39,15 @@ export default defineConfig({
           return {
             es: `${libName}/dist/${importer}.mjs`,
             cjs: `${libName}/dist/${importer}`
+          };
+        }
+      }, {
+        name: 'is-what-type',
+        importFrom(importer, libName) {
+          return {
+            es: `${libName}/dist/${importer}.mjs`,
+            cjs: `${libName}/dist/${importer}`,
+            name: `{${importer}}`
           };
         }
       }]

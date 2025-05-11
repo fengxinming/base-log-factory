@@ -44,18 +44,18 @@ export interface LogEvent {
 /**
  * Pattern converter (日志记录器模式转换器)
  */
-export type TPatternConverter = (event: LogEvent) => string;
+export type TConverter = (event: LogEvent) => string;
 
 /**
  * Create converter function (创建转换器函数)
  */
 export type TCreateConverter = (
   specifier: string,
-  alignLeft?: boolean,
-  minWidth?: number,
-  maxLength?: number,
+  alignLeft: boolean,
+  minWidth: number,
+  maxLength: number,
   format?: string
-) => TPatternConverter | null | undefined;
+) => TConverter;
 
 /**
  * Layout interface (日志布局接口)
@@ -70,28 +70,6 @@ export interface ILayout {
  */
 export interface IAppender {
   name: string;
-  setup(logger: ILogger): void;
   write(event: LogEvent): void;
   close(): Promise<void>;
-}
-
-/**
- * Logger interface (日志接口)
- */
-export interface ILogger {
-  name: string;
-  appenders: Map<string, IAppender>;
-  set level(l: LogLevel);
-  get level(): Level;
-  get levelName(): TLevel;
-  addContext(key: string, value: any): void;
-  removeContext(key: string): void;
-  clearContext(): void;
-  dispose(): Promise<any[]>;
-  trace(...args: any[]): void;
-  debug(...args: any[]): void;
-  info(...args: any[]): void;
-  warn(...args: any[]): void;
-  error(...args: any[]): void;
-  fatal(...args: any[]): void;
 }

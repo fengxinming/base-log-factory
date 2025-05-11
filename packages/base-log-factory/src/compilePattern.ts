@@ -1,13 +1,13 @@
-import { TCreateConverter, TPatternConverter } from './typings';
+import type { TConverter, TCreateConverter } from './types';
 
 const PATTERN_REGEX = /%(-)?(\d+)?(?:\.(\d+))?([a-zA-Z%])(?:\{([^}]+)\})?/g;
 
 export default function compilePattern(
   pattern: string,
   createConverter: TCreateConverter,
-  literalConverter: (text: string) => TPatternConverter
-): TPatternConverter[] {
-  const converters: TPatternConverter[] = [];
+  literalConverter: (text: string) => TConverter
+): TConverter[] {
+  const converters: TConverter[] = [];
   let lastIndex = 0;
 
   let match: RegExpExecArray | null;

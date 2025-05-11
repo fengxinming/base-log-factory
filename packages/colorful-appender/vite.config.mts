@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import combine from 'vite-plugin-combine';
 import external from 'vite-plugin-external';
+import pluginSeparateImporter from 'vite-plugin-separate-importer';
 
 import pkg from './package.json';
 
@@ -24,6 +25,25 @@ export default defineConfig({
     external({
       nodeBuiltins: true,
       externalizeDeps: Object.keys(pkg.dependencies)
+    }),
+    pluginSeparateImporter({
+      libs: [{
+        name: 'base-log-factory',
+        importFrom(importer, libName) {
+          return {
+            es: `${libName}/dist/${importer}.mjs`,
+            cjs: `${libName}/dist/${importer}`
+          };
+        }
+      }, {
+        name: 'date-manip',
+        importFrom(importer, libName) {
+          return {
+            es: `${libName}/dist/${importer}.mjs`,
+            cjs: `${libName}/dist/${importer}`
+          };
+        }
+      }]
     })
   ],
   test: {

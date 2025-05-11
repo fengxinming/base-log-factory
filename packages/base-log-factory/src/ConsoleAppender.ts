@@ -1,5 +1,7 @@
-import basicLogPrefix from './basicLogPrefix';
-import { IAppender, ILayout, ILogger, LogEvent } from './typings';
+/* eslint-disable no-console */
+import { format } from 'date-manip';
+
+import { IAppender, ILayout, LogEvent } from './types';
 
 /**
  * Console appender (控制台输出)
@@ -15,11 +17,6 @@ export default class ConsoleAppender implements IAppender {
   constructor(public layout?: ILayout) {
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setup(logger: ILogger): void {
-
-  }
-
   /**
    * Write log (写入日志)
    * @param event Log event (日志事件)
@@ -27,13 +24,17 @@ export default class ConsoleAppender implements IAppender {
   write(event: LogEvent): void {
     const { layout } = this;
     if (layout) {
-      // eslint-disable-next-line no-console
       console.log(layout.format(event));
+      return;
     }
-    else {
-      // eslint-disable-next-line no-console
-      console.log(basicLogPrefix(event, this.dateFormat), ...event.message);
-    }
+
+    const args = [
+      format(event.timestamp, this.dateFormat),
+      `[${event.levelName}]`,
+      event.loggerName,
+      '-'
+    ].concat(event.message);
+    console.log(...args);
   }
 
   /**

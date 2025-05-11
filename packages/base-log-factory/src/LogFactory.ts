@@ -1,13 +1,13 @@
 import Level from './Level';
 import Logger from './Logger';
 import normalizeLevel from './normalizeLevel';
-import { Config, IAppender, ILogger, TLevel } from './typings';
+import type { Config, IAppender, TLevel } from './types';
 
 /**
  * Log Factory (日志工厂)
  */
 export default class LogFactory {
-  private readonly loggers = new Map<string, ILogger>();
+  private readonly loggers = new Map<string, Logger>();
   private LoggerClass: typeof Logger = Logger;
   private defaultLevel: Level = Level.INFO;
   private appenders: IAppender[] = [];
@@ -83,7 +83,7 @@ export default class LogFactory {
    * Get a logger instance (获取日志实例)
    * @param name Logger name (日志名称)
    */
-  getLogger(name: string): ILogger {
+  getLogger(name: string): Logger {
     let logger = this.loggers.get(name);
     if (!logger) {
       const { LoggerClass } = this;
