@@ -1,7 +1,10 @@
-import type { ILogger, LogEvent } from 'base-log-factory';
+import type { LogEvent } from 'base-log-factory';
+import type { ColorfulAppenderOptions } from 'blf-colorful-appender';
 import { ColorfulAppender } from 'blf-colorful-appender';
 import { format } from 'date-manip';
 import createDebug from 'debug';
+
+export type DebugAppenderOptions = ColorfulAppenderOptions;
 
 /**
  * Console appender (控制台输出)
@@ -11,10 +14,14 @@ export class DebugAppender extends ColorfulAppender {
   dateFormat = 'HH:mm:ss';
   debug!: createDebug.Debugger;
 
-  setup({ name }: ILogger): void {
-    const debug = createDebug(name);
+  /**
+   * Constructor (构造函数)
+   */
+  constructor(opts: DebugAppenderOptions = {}) {
+    super(opts);
+
+    const debug = createDebug('unknown');
     debug.enabled = true;
-    debug.namespace = name;
 
     this.debug = debug;
   }
@@ -29,14 +36,16 @@ export class DebugAppender extends ColorfulAppender {
     debug.namespace = event.loggerName;
 
     if (layout) {
-      // eslint-disable-next-line no-console
       debug(this.color(layout.format(event), event));
     }
     else {
-      debug(
-        this.color(`[${format(event.timestamp, this.dateFormat)}] [${event.levelName}] -`, event),
-        ...event.message
-      );
+      const args = [
+        format(event.timestamp, this.dateFormat),
+        `[${event.levelName}]`,
+        event.loggerName,
+        '-'
+      ];
+      debug(this.color(args.join(' '), event), ...event.message);
     }
   }
 

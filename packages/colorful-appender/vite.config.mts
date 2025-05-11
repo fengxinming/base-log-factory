@@ -35,6 +35,14 @@ export default defineConfig({
             cjs: `${libName}/dist/${importer}`
           };
         }
+      }, {
+        name: 'date-manip',
+        importFrom(importer, libName) {
+          return {
+            es: `${libName}/dist/${importer}.mjs`,
+            cjs: `${libName}/dist/${importer}`
+          };
+        }
       }]
     })
   ],

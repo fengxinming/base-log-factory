@@ -1,5 +1,5 @@
 import Level from './Level';
-import { TLevel } from './typings';
+import { TLevel } from './types';
 
 /**
    * Normalize log level (标准化日志级别)

@@ -19,13 +19,13 @@ export default defineConfig({
   },
   plugins: [
     combine({
-      src: ['src/*.ts', '!src/typings.ts'],
+      src: ['src/*.ts', '!src/types.ts'],
       target: 'src/index.ts',
       dts: {
         include: 'src/*.ts'
       },
       beforeWrite(code) {
-        return `${code + EOL}export * from './typings';`;
+        return `${code + EOL}export * from './types';`;
       }
     }),
     external({

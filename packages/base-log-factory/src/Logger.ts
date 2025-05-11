@@ -1,11 +1,77 @@
 import Level from './Level';
 import normalizeLevel from './normalizeLevel';
-import { IAppender, ILogger, LogEvent, LogLevel, LogOptions, TLevel } from './typings';
+import { IAppender, LogEvent, LogLevel, LogOptions, TLevel } from './types';
 
 /**
  * Logger instance (日志实例)
  */
-export default class Logger implements ILogger {
+export default class Logger {
+  /**
+   * Log a message of level TRACE (记录TRACE级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  trace!: (...args: any[]) => void;
+
+  /**
+   * Log a message of level DEBUG (记录DEBUG级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  debug!: (...args: any[]) => void;
+
+  /**
+   * Log a message of level INFO (记录INFO级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  info!: (...args: any[]) => void;
+
+  /**
+   * Log a message of level WARN (记录WARN级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  warn!: (...args: any[]) => void;
+
+  /**
+   * Log a message of level ERROR (记录ERROR级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  error!: (...args: any[]) => void;
+
+  /**
+   * Log a message of level FATAL (记录FATAL级别的日志)
+   * @param args Message arguments (消息参数)
+   */
+  fatal!: (...args: any[]) => void;
+
+  /**
+   * Check if TRACE level is enabled (检查TRACE级别是否启用)
+   */
+  isTraceEnabled!: () => void;
+
+  /**
+   * Check if DEBUG level is enabled (检查DEBUG级别是否启用)
+   */
+  isDebugEnabled!: () => void;
+
+  /**
+   * Check if INFO level is enabled (检查INFO级别是否启用)
+   */
+  isInfoEnabled!: () => void;
+
+  /**
+   * Check if WARN level is enabled (检查WARN级别是否启用)
+   */
+  isWarnEnabled!: () => void;
+
+  /**
+   * Check if ERROR level is enabled (检查ERROR级别是否启用)
+   */
+  isErrorEnabled!: (...args: any[]) => void;
+
+  /**
+   * Check if FATAL level is enabled (检查FATAL级别是否启用)
+   */
+  isFatalEnabled!: (...args: any[]) => void;
+
   readonly appenders = new Map<string, IAppender>();
   protected context: Record<string, any> = {};
   protected _level: Level = Level.INFO;
@@ -25,7 +91,6 @@ export default class Logger implements ILogger {
 
     if (appenders) {
       appenders.forEach((appender) => {
-        appender.setup(this);
         this.appenders.set(appender.name, appender);
       });
     }
@@ -54,6 +119,14 @@ export default class Logger implements ILogger {
     if (normalizedLevel !== void 0) {
       this._level = normalizedLevel;
     }
+  }
+
+  isEnabled(level: LogLevel): boolean {
+    const levelValue = normalizeLevel(level);
+    if (levelValue === void 0) {
+      return false;
+    }
+    return levelValue <= this._level;
   }
 
   /**
@@ -89,54 +162,6 @@ export default class Logger implements ILogger {
       promises.push(appender.close());
     });
     return Promise.allSettled(promises);
-  }
-
-  /**
-   * Log a message of level TRACE (记录TRACE级别的日志)
-   * @param args Message arguments (消息参数)
-   */
-  trace(...args: any[]): void {
-    this.log(Level.TRACE, args);
-  }
-
-  /**
-   * Log a message of level DEBUG (记录DEBUG级别的日志)
-   * @param args Message arguments (消息参数)
-   */
-  debug(...args: any[]): void {
-    this.log(Level.DEBUG, args);
-  }
-
-  /**
-   * Log a message of level INFO (记录INFO级别的日志)
-   * @param args Message arguments (消息参数)
-   */
-  info(...args: any[]): void {
-    this.log(Level.INFO, args);
-  }
-
-  /**
-   * Log a message of level WARN (记录WARN级别的日志)
-   * @param args Message arguments (消息参数)
-   */
-  warn(...args: any[]): void {
-    this.log(Level.WARN, args);
-  }
-
-  /**
-   * Log a message of level ERROR (记录ERROR级别的日志)
-   * @param args Message arguments (消息参数)
-   */
-  error(...args: any[]): void {
-    this.log(Level.ERROR, args);
-  }
-
-  /**
-   * Log a message of level FATAL (记录FATAL级别的日志)
-   * @param args Message arguments (消息参数)
-   */
-  fatal(...args: any[]): void {
-    this.log(Level.FATAL, args);
   }
 
   /**
@@ -178,3 +203,15 @@ export default class Logger implements ILogger {
     });
   }
 }
+
+const proto = Logger.prototype;
+'trace,debug,info,warn,error,fatal'.split(',').forEach((level: string) => {
+  const levelName = level.toUpperCase();
+  proto[level] = function (...args: any[]) {
+    this.log(Level[levelName], args);
+  };
+  const levelValue = Level[levelName];
+  proto[`is${level.charAt(0).toUpperCase()}${level.slice(1)}Enabled`] = function () {
+    return levelValue <= this._level;
+  };
+});

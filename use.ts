@@ -1,6 +1,8 @@
-import { ConsoleAppender, LogFactory, PatternLayout } from 'base-log-factory';
-import { ColorfulAppender } from 'blf-colorful-appender';
-import { DebugAppender } from 'blf-debug-appender';
+import ConsoleAppender from './packages/base-log-factory/src/ConsoleAppender';
+import LogFactory from './packages/base-log-factory/src/LogFactory';
+import PatternLayout from './packages/base-log-factory/src/PatternLayout';
+import { ColorfulAppender } from './packages/colorful-appender/src/ColorfulAppender';
+import { DebugAppender } from './packages/debug-appender/src/DebugAppender';
 
 const patternLayout = new PatternLayout('[%d{HH:mm:ss.SSSZ}] %p %c - %m');
 const console1 = new ConsoleAppender(patternLayout);

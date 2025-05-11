@@ -31,10 +31,10 @@ describe('测试日志级别打印', () => {
 
     it('测试打印INFO日志', () => {
       logger.info('hello');
-      expect(mockLog.mock.calls[0][1]).toBe('hello');
+      expect(mockLog.mock.calls[0][4]).toBe('hello');
 
       logger.error('world');
-      expect(mockLog.mock.calls[1][1]).toBe('world');
+      expect(mockLog.mock.calls[1][4]).toBe('world');
 
       logger.debug('debug');
       expect(mockLog.mock.calls[2]).toBe(void 0);
@@ -47,10 +47,10 @@ describe('测试日志级别打印', () => {
       logger.level = 'DEBUG';
 
       logger.info('hello 1');
-      expect(mockLog.mock.calls[0][1]).toBe('hello 1');
+      expect(mockLog.mock.calls[0][4]).toBe('hello 1');
 
       logger.debug('world 1');
-      expect(mockLog.mock.calls[1][1]).toBe('world 1');
+      expect(mockLog.mock.calls[1][4]).toBe('world 1');
 
       logger.trace('end');
       expect(mockLog.mock.calls[2]).toBe(void 0);
@@ -66,7 +66,7 @@ describe('测试日志级别打印', () => {
 
       factory.updateLevel(LogLevel.DEBUG);
       logger.debug('world 2');
-      expect(mockLog.mock.calls[0][1]).toBe('world 2');
+      expect(mockLog.mock.calls[0][4]).toBe('world 2');
     });
   });
 

@@ -1,8 +1,9 @@
 import { EOL } from 'node:os';
 import { Writable } from 'node:stream';
+import { inspect } from 'node:util';
 
-import type { IAppender, ILayout, LogEvent } from 'base-log-factory';
-import { BasicLayout } from 'base-log-factory';
+import type { IAppender, ILayout, LogEvent, TConverter } from 'base-log-factory';
+import { PatternLayout } from 'base-log-factory';
 import type { RollingOptions } from 'rolling-write-stream';
 
 /**
@@ -11,6 +12,23 @@ import type { RollingOptions } from 'rolling-write-stream';
 export type BaseAppenderOptions = {
   layout?: ILayout;
 } & Partial<RollingOptions>;
+
+function createConverter(specifier: string): TConverter | undefined {
+  if (specifier === 'm') {
+    return (event: LogEvent): string => {
+      return event.message.map((msg) => {
+        switch (typeof msg) {
+          case 'object':
+            return inspect(msg);
+          case 'symbol':
+            return msg.toString();
+          default:
+            return msg;
+        }
+      }).join(' ');
+    };
+  }
+}
 
 /**
  * Base file appender (文件日志基类)
@@ -29,12 +47,11 @@ export abstract class BaseFileAppender implements IAppender {
     protected readonly filePath: string,
     protected readonly options: BaseAppenderOptions = {}
   ) {
-    this.layout = options.layout || new BasicLayout();
+    this.layout = options.layout || new PatternLayout(
+      '%d{YYYY-MM-DD HH:mm:ss.SSSZ} [%p] %c - %m',
+      createConverter
+    );
     this.stream = this.getStream(filePath, options);
-  }
-
-  setup(): void {
-
   }
 
   /**
